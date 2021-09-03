@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Preview CAN201 W3 - divide÷</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="iam_felix"><meta name="msapplication-TileImage" content="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed05.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="iam_felix"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="This’s note is about the lecture and lab of Week2 CAN201.The lecture III - Application Layer.  Domain Name System (DNS) P2P Applications Socket Programming 套接字编程"><meta property="og:type" content="blog"><meta property="og:title" content="Preview CAN201 W3"><meta property="og:url" content="http://chenzhengde.github.io/2021/09/03/Preview-CAN201-W3/"><meta property="og:site_name" content="divide÷"><meta property="og:description" content="This’s note is about the lecture and lab of Week2 CAN201.The lecture III - Application Layer.  Domain Name System (DNS) P2P Applications Socket Programming 套接字编程"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://pic.imgdb.cn/item/612cc92544eaada7393b8796.png"><meta property="og:image" content="https://pic.imgdb.cn/item/612cd8f244eaada7395ecd04.png"><meta property="og:image" content="https://pic.imgdb.cn/item/612de49444eaada739537c16.png"><meta property="og:image" content="https://pic.imgdb.cn/item/612e126644eaada739ac3bc4.png"><meta property="og:image" content="https://pic.imgdb.cn/item/612e1b3344eaada739c09281.png"><meta property="og:image" content="https://pic.imgdb.cn/item/612e1b3344eaada739c0928b.png"><meta property="og:image" content="https://pic.imgdb.cn/item/612f31f744eaada739a0aa27.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6130ac8a44eaada7390b573f.png"><meta property="og:image" content="https://pic.imgdb.cn/item/61308e5544eaada739c963c8.png"><meta property="og:image" content="https://pic.imgdb.cn/item/61308e5544eaada739c963d1.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6130af4144eaada7390ff574.png"><meta property="article:published_time" content="2021-09-03T11:40:54.000Z"><meta property="article:modified_time" content="2021-09-03T11:41:09.625Z"><meta property="article:author" content="Felix Chen"><meta property="article:tag" content="XJTLU"><meta property="article:tag" content="CAN201"><meta property="article:tag" content="Lecture"><meta property="article:tag" content="Lab"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://pic.imgdb.cn/item/612cc92544eaada7393b8796.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://chenzhengde.github.io/2021/09/03/Preview-CAN201-W3/"},"headline":"Preview CAN201 W3","image":["https://pic.imgdb.cn/item/612cc92544eaada7393b8796.png","https://pic.imgdb.cn/item/612cd8f244eaada7395ecd04.png","https://pic.imgdb.cn/item/612de49444eaada739537c16.png","https://pic.imgdb.cn/item/612e126644eaada739ac3bc4.png","https://pic.imgdb.cn/item/612e1b3344eaada739c09281.png","https://pic.imgdb.cn/item/612e1b3344eaada739c0928b.png","https://pic.imgdb.cn/item/612f31f744eaada739a0aa27.png","https://pic.imgdb.cn/item/6130ac8a44eaada7390b573f.png","https://pic.imgdb.cn/item/61308e5544eaada739c963c8.png","https://pic.imgdb.cn/item/61308e5544eaada739c963d1.png","https://pic.imgdb.cn/item/6130af4144eaada7390ff574.png"],"datePublished":"2021-09-03T11:40:54.000Z","dateModified":"2021-09-03T11:41:09.625Z","author":{"@type":"Person","name":"Felix Chen"},"publisher":{"@type":"Organization","name":"divide÷","logo":{"@type":"ImageObject","url":"https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png"}},"description":"This’s note is about the lecture and lab of Week2 CAN201.The lecture III - Application Layer.  Domain Name System (DNS) P2P Applications Socket Programming 套接字编程"}</script><link rel="canonical" href="http://chenzhengde.github.io/2021/09/03/Preview-CAN201-W3/"><link rel="icon" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed05.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-90LF5XQCXG" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-90LF5XQCXG');</script><!--!--><!--!--><!--!--><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-09-03T11:40:54.000Z" title="2021/9/3 下午7:40:54">2021-09-03</time>发表</span><span class="level-item"><time dateTime="2021-09-03T11:41:09.625Z" title="2021/9/3 下午7:41:09">2021-09-03</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/XJTLU-note/">XJTLU note</a><span> / </span><a class="link-muted" href="/categories/XJTLU-note/CAN201/">CAN201</a></span><span class="level-item">12 分钟读完 (大约1763个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">Preview CAN201 W3</h1><div class="content"><p>This’s note is about the lecture and lab of Week2 CAN201.<br>The lecture III - <code>Application Layer</code>.</p>
+<ol>
+<li>Domain Name System (DNS)</li>
+<li>P2P Applications</li>
+<li>Socket Programming 套接字编程</li>
+</ol>
+<span id="more"></span>
+<h1 id="Lecture"><a href="#Lecture" class="headerlink" title="Lecture"></a>Lecture</h1><h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><p>aka <code>domain name system</code></p>
+<ul>
+<li>Application-layer protocol:<ul>
+<li>C/S architeture</li>
+<li>UDP (port53)</li>
+<li>hosts, name servers communicate to resolve names (name/address translation)</li>
+</ul>
+</li>
+<li>Distributed database implemented in <code>hierarchy</code> of many name servers 分布式数据库在多个名称服务器的层次结构中实现</li>
+</ul>
+<h3 id="services-structure"><a href="#services-structure" class="headerlink" title="services, structure"></a>services, structure</h3><p>DNS services</p>
+<ul>
+<li>Hostname to IP address translation (A)</li>
+<li>Host aliasing (cname)<ul>
+<li>canonical, alias names</li>
+</ul>
+</li>
+<li>Mail server aliasing (mx)</li>
+<li>Load distribution</li>
+<li>Replicated Web servers: many IP addresses correspond ot one name</li>
+</ul>
+<p>Why not centralize DNS?</p>
+<ul>
+<li>Single point of failure 单点故障</li>
+<li>Traffic volume 交通量</li>
+<li>Distant centralized database 远程集中式数据库</li>
+<li>Maintenance 维护</li>
+</ul>
+<h3 id="a-distributed-hierarchical-database"><a href="#a-distributed-hierarchical-database" class="headerlink" title="a distributed, hierarchical database"></a>a distributed, hierarchical database</h3><p><img src="https://pic.imgdb.cn/item/612cc92544eaada7393b8796.png" alt="DNS: a distributed, hierarchical database"><br>Client wants IP for <a target="_blank" rel="noopener" href="http://www.amazon.com/">www.amazon.com</a>:</p>
+<ul>
+<li>Client queries root server to find com DNS server</li>
+<li>Client queries .com DNS server to get amazon.com DNS server</li>
+<li>Client queries amazon.com DNS server to get IP address for <a target="_blank" rel="noopener" href="http://www.amazon.com/">www.amazon.com</a></li>
+</ul>
+<h3 id="root-name-servers"><a href="#root-name-servers" class="headerlink" title="root name servers"></a>root name servers</h3><ul>
+<li>contacted by local name server that can not resolve name</li>
+<li>root name server:<ul>
+<li>contacts authoritative name server if name mapping not known</li>
+<li>get mapping</li>
+<li>returns mapping to local name server<br><img src="https://pic.imgdb.cn/item/612cd8f244eaada7395ecd04.png" alt="root name servers"></li>
+</ul>
+</li>
+</ul>
+<h3 id="TLD-authoritative-servers"><a href="#TLD-authoritative-servers" class="headerlink" title="TLD, authoritative servers"></a>TLD, authoritative servers</h3><ul>
+<li><p>Top-level domain (TLD) servers:</p>
+<ul>
+<li>Responsible for com, org, net, edu, aero, jobs, museums, and all top-level country domains, e.g.: cn, uk, fr, ca, jp</li>
+<li>Network Solution maintains servers for .com TLD</li>
+<li>Educause for .edu TLD (<a target="_blank" rel="noopener" href="https://net.educause.edu//">https://net.educause.edu/\</a>)</li>
+</ul>
+</li>
+<li><p>Authoritative DNS servers:</p>
+<ul>
+<li>Organization’s own DNS servers, providing authoritative hostname to IP mappings for organization’s named hosts</li>
+<li>Can be maintained by organization or service provider</li>
+</ul>
+</li>
+</ul>
+<h3 id="Local-DNS-name-server"><a href="#Local-DNS-name-server" class="headerlink" title="Local DNS name server"></a>Local DNS name server</h3><ul>
+<li>Does not strictly belong to hierarchy</li>
+<li>Each ISP (residential ISP, company, university) has one<ul>
+<li>Also called “default name server”</li>
+</ul>
+</li>
+<li>When host makes DNS query, query is sent to its local DNS server<ul>
+<li>Has local cache of recent name-to-address translation pairs (but may be out of date!) 本地缓存最近的名称-地址转换对</li>
+<li>Acts as proxy, forwards query into hierarchy 充当代理，将查询转发到层次结构</li>
+</ul>
+</li>
+</ul>
+<h3 id="DNS-name-resolution-example"><a href="#DNS-name-resolution-example" class="headerlink" title="DNS name resolution example"></a>DNS name resolution example</h3><ul>
+<li>Host at XJTLU wants IP address for <a target="_blank" rel="noopener" href="http://www.feimax.com/">www.feimax.com</a></li>
+<li>Iterated query<ul>
+<li>contacted server replies with name of server to contact</li>
+<li>“I don’t know this name, but ask this server”<br><img src="https://pic.imgdb.cn/item/612de49444eaada739537c16.png" alt="DNS name resolution"></li>
+</ul>
+</li>
+<li>Recursive query<ul>
+<li>Puts burden of name resolution on contacted name server</li>
+<li>Heavy load at upper levels of hierarchy</li>
+</ul>
+</li>
+</ul>
+<h3 id="caching-updating-records"><a href="#caching-updating-records" class="headerlink" title="caching, updating records"></a>caching, updating records</h3><p>缓存，升级记录</p>
+<ul>
+<li>Once (any) name server learns mapping, it caches mapping<ul>
+<li>Cache entries timeout (disappear) after some time (TTL) 缓存条目超时后一段时间</li>
+<li>TLD servers typically cached in local name servers<ul>
+<li>thus root name servers not often visited</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cached entries may be out-of-date<ul>
+<li>if name host changes IP address, may not be known Internet-wide until all TTLs expire 如果主机名更改了IP地址，可能在所有ttl过期之前都不知道</li>
+</ul>
+</li>
+<li>Update/notify mechanisms proposed IETF standard 更新/通知机制提议的IETF标准<ul>
+<li>RFC 2136</li>
+</ul>
+</li>
+</ul>
+<h3 id="DNS-records"><a href="#DNS-records" class="headerlink" title="DNS records"></a>DNS records</h3><p><strong>DNS: distributed database storing resource records</strong> (RR)<br>RR format: (name, value, type, ttl)<br><img src="https://pic.imgdb.cn/item/612e126644eaada739ac3bc4.png" alt="four types of DNS records"></p>
+<h3 id="Loop-up-a-domain-name"><a href="#Loop-up-a-domain-name" class="headerlink" title="Loop up a domain name"></a>Loop up a domain name</h3><p>There’re several ways to deal with.</p>
+<ol>
+<li>Use <code>nslookup</code> command.</li>
+<li>Use <code>whois</code> command.</li>
+</ol>
+<h3 id="DNS-protocol-message"><a href="#DNS-protocol-message" class="headerlink" title="DNS protocol, message"></a>DNS protocol, message</h3><p><strong>Query and reply</strong> messages, both with same <strong>message format</strong>. 查询和回复消息，都使用相同的消息格式。<br><img src="https://pic.imgdb.cn/item/612e1b3344eaada739c09281.png" alt="message 1"><br><img src="https://pic.imgdb.cn/item/612e1b3344eaada739c0928b.png" alt="message 2"></p>
+<h3 id="Inserting-records-into-DNS"><a href="#Inserting-records-into-DNS" class="headerlink" title="Inserting records into DNS"></a>Inserting records into DNS</h3><ul>
+<li>Example: new startup “feimax.com”</li>
+<li>Register name feimax.com at <strong>DNS register</strong><ul>
+<li>Normally, you don’t need to set up the NS record</li>
+<li>Insert A record for the IP address of your host</li>
+<li>Insert MX record for email</li>
+</ul>
+</li>
+</ul>
+<p>Domain name is a scarce resource! 稀缺资源</p>
+<hr>
+<h2 id="Pure-P2P-architecture"><a href="#Pure-P2P-architecture" class="headerlink" title="Pure P2P architecture"></a>Pure P2P architecture</h2><ul>
+<li>no always-on server</li>
+<li>arbitrary end systems directly communicate</li>
+<li>peers change IP addresses<br>Examples: file distribution, streaming, VoIP</li>
+</ul>
+<h3 id="File-distribution-client-server-vs-P2P"><a href="#File-distribution-client-server-vs-P2P" class="headerlink" title="File distribution: client-server vs P2P"></a>File distribution: client-server vs P2P</h3><p>Q: how much time to distribute file (size F) from one server to N peers？<br>Peer upload/download capacity is limited resource.<br><img src="https://pic.imgdb.cn/item/612f31f744eaada739a0aa27.png" alt="client-server vs P2P"><br>Example:<br>client upload rate = u, F/u = 1hour, u_s = 10u, d_min &gt;= u_s<br><img src="https://pic.imgdb.cn/item/6130ac8a44eaada7390b573f.png"></p>
+<h3 id="File-distribution-time-client-server"><a href="#File-distribution-time-client-server" class="headerlink" title="File distribution time: client-server"></a>File distribution time: client-server</h3><ul>
+<li>server transmission: must sequentially send (upload) N file copies:<ul>
+<li>time to send one copy: F/u_s</li>
+<li>time to send <em>N</em> copies: NF/u_s</li>
+</ul>
+</li>
+<li>client: each client must download file copy<ul>
+<li>d_min = min client download rate</li>
+<li><strong>max client download time</strong>: F/d_min<br><img src="https://pic.imgdb.cn/item/61308e5544eaada739c963c8.png"></li>
+</ul>
+</li>
+</ul>
+<h3 id="File-distribution-time-P2P"><a href="#File-distribution-time-P2P" class="headerlink" title="File distribution time: P2P"></a>File distribution time: P2P</h3><ul>
+<li>server transmission: must sequentially send (upload) at least one file copies:<ul>
+<li>time to send one copy: F/us</li>
+</ul>
+</li>
+<li>client: each client must download file copy<ul>
+<li>min client download time: F/dmin </li>
+</ul>
+</li>
+<li>clients: as total must download NF bits<ul>
+<li>max upload rate (limiting max download rate) is us + Sui<br><img src="https://pic.imgdb.cn/item/61308e5544eaada739c963d1.png"></li>
+</ul>
+</li>
+</ul>
+<h3 id="P2P-file-distribution-BitTorrent-比特流"><a href="#P2P-file-distribution-BitTorrent-比特流" class="headerlink" title="P2P file distribution: BitTorrent 比特流"></a>P2P file distribution: BitTorrent 比特流</h3><ul>
+<li>File divided into 256Kb chunks</li>
+<li>Peers in torrent send/receive file chunks<br><img src="https://pic.imgdb.cn/item/6130af4144eaada7390ff574.png" alt="BitTorrent 比特流"></li>
+<li>Peer joining torrent:<ul>
+<li>has no chunks, but will accumulate them over time from other peers</li>
+<li>registers with tracker to get list of peers, connects to subset of peers</li>
+</ul>
+</li>
+<li>While downloading, peer uploads chunks to other peers</li>
+<li>Peer may change peers with whom it exchanges chunks</li>
+<li>Peers may come and go</li>
+<li>Once peer has entire file, it may leave or remain in torrent</li>
+</ul>
+<h3 id="BitTorrent-requesting-sending-file-chunks"><a href="#BitTorrent-requesting-sending-file-chunks" class="headerlink" title="BitTorrent: requesting, sending file chunks"></a>BitTorrent: requesting, sending file chunks</h3><p>Requesting chunks:</p>
+<ul>
+<li>at any given time, different peers have different subsets of file chunks</li>
+<li>Periodically, Alice asks each peer for list of chunks that they have</li>
+<li>Alice requests missing chunks from peers, rarest first</li>
+</ul>
+<p>Sending chunks: tit for tat</p>
+<ul>
+<li>Alice sends chunks to those four peers currently sending her chunks at highest rate<ul>
+<li>other peers are choked by Alice (do not receive chunks from her)</li>
+<li>re-evaluate top 4 every 10 secs</li>
+</ul>
+</li>
+<li>every 30 secs: randomly select another peer, starts sending chunks<ul>
+<li>“optimistically unchoke” this peer</li>
+<li>newly chosen peer may join top 4</li>
+</ul>
+</li>
+</ul>
+<p>Higher upload rate: find better trading partners, get file faster!</p>
+<hr>
+<h2 id="Socket-Programming-套接字编程"><a href="#Socket-Programming-套接字编程" class="headerlink" title="Socket Programming 套接字编程"></a>Socket Programming 套接字编程</h2><p>Two socket types for two transport services</p>
+<ul>
+<li><strong>UDP</strong>: unreliable datagram</li>
+<li><strong>TCP</strong>: reliable, byte stream-oriented</li>
+</ul>
+<p>Application Example:</p>
+<ol>
+<li>client reads a line of characters (data) from its keyboard and sends data to server</li>
+<li>server receives the data and converts characters to uppercase</li>
+<li>server sends modified data to client</li>
+<li>client receives modified data and displays line on its screen</li>
+</ol>
+<h3 id="Socket-programming-with-UDP"><a href="#Socket-programming-with-UDP" class="headerlink" title="Socket programming with UDP"></a>Socket programming with UDP</h3><p>UDP: no “connection” between client &amp; server</p>
+<ul>
+<li>No handshaking before sending data</li>
+<li>Sender explicitly attaches IP destination address and port # to each packet</li>
+<li>Receiver extracts sender IP address and port # from received packet</li>
+</ul>
+<p>UDP: transmitted data may be lost or recieved out-of-order<br>Application viewpoint</p>
+<ul>
+<li>UDP provides unreliable transfer of groups of bytes (“datagrams”) between client and server</li>
+</ul>
+<p>详细见ppt</p>
+<hr>
+<h1 id="Lab"><a href="#Lab" class="headerlink" title="Lab"></a>Lab</h1><ul>
+<li>File Operation<ul>
+<li>Text file – Write / Read</li>
+<li>Binary file – Write /Read</li>
+</ul>
+</li>
+<li>Networking Programming Using Socket <ul>
+<li>UDP Server and Client</li>
+<li>TCP Server and Client</li>
+</ul>
+</li>
+</ul>
+<h2 id="Open"><a href="#Open" class="headerlink" title="Open"></a>Open</h2><p><code>open</code> method is exploit to operate files:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f = open(file=&#x27;filename.xxx&#x27;, mode=&#x27;r&#x27;)</span><br></pre></td></tr></table></figure>
+<h2 id="File-open-modes"><a href="#File-open-modes" class="headerlink" title="File open modes"></a>File open modes</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">‘r’       open for reading (default)</span><br><span class="line">‘w’       open for writing, truncating the file first</span><br><span class="line">‘x’       create a new file and open it for writing</span><br><span class="line">‘a’       open for writing, appending to the end of the file if it exists</span><br><span class="line">‘b’       binary mode, used for media files</span><br><span class="line">&#x27;t&#x27;       text mode (default)</span><br><span class="line">&#x27;+&#x27;       open a disk file for updating (reading and writing)</span><br><span class="line">&#x27;U&#x27;       universal newline mode (deprecated)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Write"><a href="#Write" class="headerlink" title="Write"></a>Write</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f.write(Str)  # Write a str to a file</span><br><span class="line">f.writelines(StrList)  # Write a list of str to a file</span><br></pre></td></tr></table></figure>
+
+<h2 id="Read"><a href="#Read" class="headerlink" title="Read"></a>Read</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f.read(n) # read n chars(including \n), n=-1 means read all</span><br><span class="line">f.readline() # read one line (including \n)</span><br><span class="line">f.readlines() # return a list of all lines</span><br></pre></td></tr></table></figure>
+
+<h2 id="Text-file-appending"><a href="#Text-file-appending" class="headerlink" title="Text file appending"></a>Text file appending</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = open(&#x27;/Users/fei/lesson1.txt&#x27;, &#x27;a&#x27;)  # open the file</span><br><span class="line">f.write(&#x27;Bye.\n&#x27;)  # add text into the file</span><br><span class="line">f.close()  # close the file</span><br></pre></td></tr></table></figure>
+
+<h2 id="Binary-file-read"><a href="#Binary-file-read" class="headerlink" title="Binary file read"></a>Binary file read</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f.read(n) # read n bytes(including \n), n=-1 means read all </span><br><span class="line">f.readline() # read one line (including \n)</span><br><span class="line">f.readlines() # return a list of all lines</span><br></pre></td></tr></table></figure>
+
+<h2 id="Binary-file-write"><a href="#Binary-file-write" class="headerlink" title="Binary file write"></a>Binary file write</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f.write(bytes) # Write some bytes to a file</span><br></pre></td></tr></table></figure>
+<p>Binary file operation is very powerful, but we don’t go deep today.</p>
+<h2 id="Socket-programming"><a href="#Socket-programming" class="headerlink" title="Socket programming"></a>Socket programming</h2><h3 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># Server side</span><br><span class="line">from socket import *</span><br><span class="line"></span><br><span class="line">server_port = 12000</span><br><span class="line">server_socket = socket(AF_INET, SOCK_DGRAM)</span><br><span class="line">server_socket.bind((&#x27;&#x27;, server_port))</span><br><span class="line"></span><br><span class="line">print(&#x27;The server is ready to receive&#x27;)</span><br><span class="line"></span><br><span class="line">while True:</span><br><span class="line">    message, client_address = server_socket.recvfrom(20480)</span><br><span class="line">    modifiedMessage = message.decode().upper()</span><br><span class="line">    server_socket.sendto(modifiedMessage.encode(), client_address)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># Client side</span><br><span class="line">from socket import *</span><br><span class="line"></span><br><span class="line">server_name = &#x27;127.0.0.1&#x27;  # 127.0.0.1 is your local IP address</span><br><span class="line"># Others should not use this IP. You need to use ipconfig(win)</span><br><span class="line"># or ifconfig(linux, macos) to get you IP address in the network</span><br><span class="line"></span><br><span class="line">server_port = 12000</span><br><span class="line">clientSocket = socket(AF_INET, SOCK_DGRAM)</span><br><span class="line"></span><br><span class="line">message = input(&#x27;Input lowercase sentence:&#x27;)</span><br><span class="line">clientSocket.sendto(message.encode(), (server_name, server_port))</span><br><span class="line">modifiedMessage, serverAddress = clientSocket.recvfrom(20480)</span><br><span class="line">print(modifiedMessage.decode())</span><br><span class="line">clientSocket.close()</span><br></pre></td></tr></table></figure>
+
+<h3 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># Server side</span><br><span class="line">from socket import *</span><br><span class="line">server_port = 12000</span><br><span class="line">server_socket = socket(AF_INET, SOCK_STREAM)</span><br><span class="line">server_socket.bind((&#x27;&#x27;, server_port))</span><br><span class="line">server_socket.listen(1)</span><br><span class="line">print(&#x27;The server is ready to receive&#x27;)</span><br><span class="line"></span><br><span class="line">while True:</span><br><span class="line">    connectionSocket, addr = server_socket.accept()</span><br><span class="line">    sentence = connectionSocket.recv(20480).decode()</span><br><span class="line">    capitalizedSentence = sentence.upper()</span><br><span class="line">    connectionSocket.send(capitalizedSentence.encode())</span><br><span class="line"></span><br><span class="line">connectionSocket.close()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># Client Side</span><br><span class="line">from socket import *</span><br><span class="line">serverName = &#x27;127.0.0.1&#x27;</span><br><span class="line">serverPort = 12000</span><br><span class="line">clientSocket = socket(AF_INET, SOCK_STREAM)</span><br><span class="line">clientSocket.connect((serverName,serverPort))</span><br><span class="line">sentence = input(&#x27;Input lowercase sentence:&#x27;)</span><br><span class="line">clientSocket.send(sentence.encode())</span><br><span class="line">modifiedSentence = clientSocket.recv(20480)</span><br><span class="line">print(&#x27;From Server:&#x27;, modifiedSentence.decode())</span><br><span class="line">clientSocket.close()</span><br></pre></td></tr></table></figure>
+
+<p>Practice部分有空再学</p>
+<hr>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol>
+<li>XJTLU slides (Week3)</li>
+</ol>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Preview CAN201 W3</p><p><a href="http://chenzhengde.github.io/2021/09/03/Preview-CAN201-W3/">http://chenzhengde.github.io/2021/09/03/Preview-CAN201-W3/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Felix Chen</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-09-03</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-09-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a><a class="icons" rel="noopener" target="_blank" title="Share Alike" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="icon fab fa-creative-commons-sa"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/XJTLU/">XJTLU</a><a class="link-muted mr-2" rel="tag" href="/tags/CAN201/">CAN201</a><a class="link-muted mr-2" rel="tag" href="/tags/Lecture/">Lecture</a><a class="link-muted mr-2" rel="tag" href="/tags/Lab/">Lab</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=6113d16f12036d00122e6422&amp;product=inline-share-buttons" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/08/29/Preview-CPT205-W2/"><span class="level-item">Preview CPT205 W2</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'http://chenzhengde.github.io/2021/09/03/Preview-CAN201-W3/';
+            this.page.identifier = '2021/09/03/Preview-CAN201-W3/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'my-hexo-website' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed0e.jpg" alt="Felix Chen"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Felix Chen</p><p class="is-size-6 is-block">shit happens</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>XJTLU, Suzhow</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">15</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">8</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">15</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/chenzhengde" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/iam_felixchen/"><i class="fab fa-instagram"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Wechat" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed18.jpg"><i class="fab fa-weixin"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Linkedin" href="https://www.linkedin.com/in/正德-陈-b92b351a6/"><i class="fab fa-linkedin"></i></a></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.learningmall.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">learning_mall</span></span><span class="level-right"><span class="level-item tag">www.learningmall.cn</span></span></a></li><li><a class="level is-mobile" href="https://www.csdn.net/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">CSDN</span></span><span class="level-right"><span class="level-item tag">www.csdn.net</span></span></a></li><li><a class="level is-mobile" href="https://leetcode.com/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Leetcode</span></span><span class="level-right"><span class="level-item tag">leetcode.com</span></span></a></li><li><a class="level is-mobile" href="https://www.bilibili.con/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">bilibili</span></span><span class="level-right"><span class="level-item tag">www.bilibili.con</span></span></a></li><li><a class="level is-mobile" href="http://1iin.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">1iin&#039;s blog</span></span><span class="level-right"><span class="level-item tag">1iin.cn</span></span></a></li><li><a class="level is-mobile" href="https://3sanmusen.top/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">三木森的小屋</span></span><span class="level-right"><span class="level-item tag">3sanmusen.top</span></span></a></li><li><a class="level is-mobile" href="https://segmentfault.com/u/1iin" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">1iin</span></span><span class="level-right"><span class="level-item tag">segmentfault.com</span></span></a></li><li><a class="level is-mobile" href="https://segmentfault.com/u/chenyingxi" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">cyx</span></span><span class="level-right"><span class="level-item tag">segmentfault.com</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/SURF-note/"><span class="level-start"><span class="level-item">SURF note</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/"><span class="level-start"><span class="level-item">XJTLU note</span></span><span class="level-end"><span class="level-item tag">9</span></span></a><ul><li><a class="level is-mobile" href="/categories/XJTLU-note/CAN201/"><span class="level-start"><span class="level-item">CAN201</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/CPT203/"><span class="level-start"><span class="level-item">CPT203</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/CPT205/"><span class="level-start"><span class="level-item">CPT205</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/INT201/"><span class="level-start"><span class="level-item">INT201</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/blog-note/"><span class="level-start"><span class="level-item">blog note</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/problem-solving/"><span class="level-start"><span class="level-item">problem solving</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Lecture"><span class="level-left"><span class="level-item">1</span><span class="level-item">Lecture</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#DNS"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">DNS</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#services-structure"><span class="level-left"><span class="level-item">1.1.1</span><span class="level-item">services, structure</span></span></a></li><li><a class="level is-mobile" href="#a-distributed-hierarchical-database"><span class="level-left"><span class="level-item">1.1.2</span><span class="level-item">a distributed, hierarchical database</span></span></a></li><li><a class="level is-mobile" href="#root-name-servers"><span class="level-left"><span class="level-item">1.1.3</span><span class="level-item">root name servers</span></span></a></li><li><a class="level is-mobile" href="#TLD-authoritative-servers"><span class="level-left"><span class="level-item">1.1.4</span><span class="level-item">TLD, authoritative servers</span></span></a></li><li><a class="level is-mobile" href="#Local-DNS-name-server"><span class="level-left"><span class="level-item">1.1.5</span><span class="level-item">Local DNS name server</span></span></a></li><li><a class="level is-mobile" href="#DNS-name-resolution-example"><span class="level-left"><span class="level-item">1.1.6</span><span class="level-item">DNS name resolution example</span></span></a></li><li><a class="level is-mobile" href="#caching-updating-records"><span class="level-left"><span class="level-item">1.1.7</span><span class="level-item">caching, updating records</span></span></a></li><li><a class="level is-mobile" href="#DNS-records"><span class="level-left"><span class="level-item">1.1.8</span><span class="level-item">DNS records</span></span></a></li><li><a class="level is-mobile" href="#Loop-up-a-domain-name"><span class="level-left"><span class="level-item">1.1.9</span><span class="level-item">Loop up a domain name</span></span></a></li><li><a class="level is-mobile" href="#DNS-protocol-message"><span class="level-left"><span class="level-item">1.1.10</span><span class="level-item">DNS protocol, message</span></span></a></li><li><a class="level is-mobile" href="#Inserting-records-into-DNS"><span class="level-left"><span class="level-item">1.1.11</span><span class="level-item">Inserting records into DNS</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Pure-P2P-architecture"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">Pure P2P architecture</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#File-distribution-client-server-vs-P2P"><span class="level-left"><span class="level-item">1.2.1</span><span class="level-item">File distribution: client-server vs P2P</span></span></a></li><li><a class="level is-mobile" href="#File-distribution-time-client-server"><span class="level-left"><span class="level-item">1.2.2</span><span class="level-item">File distribution time: client-server</span></span></a></li><li><a class="level is-mobile" href="#File-distribution-time-P2P"><span class="level-left"><span class="level-item">1.2.3</span><span class="level-item">File distribution time: P2P</span></span></a></li><li><a class="level is-mobile" href="#P2P-file-distribution-BitTorrent-比特流"><span class="level-left"><span class="level-item">1.2.4</span><span class="level-item">P2P file distribution: BitTorrent 比特流</span></span></a></li><li><a class="level is-mobile" href="#BitTorrent-requesting-sending-file-chunks"><span class="level-left"><span class="level-item">1.2.5</span><span class="level-item">BitTorrent: requesting, sending file chunks</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Socket-Programming-套接字编程"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">Socket Programming 套接字编程</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Socket-programming-with-UDP"><span class="level-left"><span class="level-item">1.3.1</span><span class="level-item">Socket programming with UDP</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="#Lab"><span class="level-left"><span class="level-item">2</span><span class="level-item">Lab</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Open"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">Open</span></span></a></li><li><a class="level is-mobile" href="#File-open-modes"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">File open modes</span></span></a></li><li><a class="level is-mobile" href="#Write"><span class="level-left"><span class="level-item">2.3</span><span class="level-item">Write</span></span></a></li><li><a class="level is-mobile" href="#Read"><span class="level-left"><span class="level-item">2.4</span><span class="level-item">Read</span></span></a></li><li><a class="level is-mobile" href="#Text-file-appending"><span class="level-left"><span class="level-item">2.5</span><span class="level-item">Text file appending</span></span></a></li><li><a class="level is-mobile" href="#Binary-file-read"><span class="level-left"><span class="level-item">2.6</span><span class="level-item">Binary file read</span></span></a></li><li><a class="level is-mobile" href="#Binary-file-write"><span class="level-left"><span class="level-item">2.7</span><span class="level-item">Binary file write</span></span></a></li><li><a class="level is-mobile" href="#Socket-programming"><span class="level-left"><span class="level-item">2.8</span><span class="level-item">Socket programming</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#UDP"><span class="level-left"><span class="level-item">2.8.1</span><span class="level-item">UDP</span></span></a></li><li><a class="level is-mobile" href="#TCP"><span class="level-left"><span class="level-item">2.8.2</span><span class="level-item">TCP</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="#Reference"><span class="level-left"><span class="level-item">3</span><span class="level-item">Reference</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-03T11:40:54.000Z">2021-09-03</time></p><p class="title"><a href="/2021/09/03/Preview-CAN201-W3/">Preview CAN201 W3</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CAN201/">CAN201</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-29T09:34:13.000Z">2021-08-29</time></p><p class="title"><a href="/2021/08/29/Preview-CPT205-W2/">Preview CPT205 W2</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CPT205/">CPT205</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-26T14:00:50.000Z">2021-08-26</time></p><p class="title"><a href="/2021/08/26/Preview-INT201-W2/">Preview INT201 W2</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/INT201/">INT201</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-23T15:01:41.000Z">2021-08-23</time></p><p class="title"><a href="/2021/08/23/Preview-CPT203-W2/">Preview CPT203 W2</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CPT203/">CPT203</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-19T14:10:12.000Z">2021-08-19</time></p><p class="title"><a href="/2021/08/19/Preview-CAN201-W2/">Preview CAN201 W2</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CAN201/">CAN201</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CAN201/"><span class="tag">CAN201</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT203/"><span class="tag">CPT203</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT205/"><span class="tag">CPT205</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/INT201/"><span class="tag">INT201</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lab/"><span class="tag">Lab</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lecture/"><span class="tag">Lecture</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Markdown/"><span class="tag">Markdown</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tutorial/"><span class="tag">Tutorial</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/XJTLU/"><span class="tag">XJTLU</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dart/"><span class="tag">dart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/flutter/"><span class="tag">flutter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/icarus/"><span class="tag">icarus</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/yilia/"><span class="tag">yilia</span><span class="tag">2</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a><p class="is-size-7"><span>&copy; 2021 Felix Chen</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Github" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/iam_felixchen/"><i class="fab fa-instagram"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Wechat" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed18.jpg"><i class="fab fa-weixin"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
