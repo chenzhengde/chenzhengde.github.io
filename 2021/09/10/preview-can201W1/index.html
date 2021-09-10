@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>CAN201 W1 - divide÷</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="iam_felix"><meta name="msapplication-TileImage" content="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed05.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="iam_felix"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="This is the note of CAN201(introduction to networking). The lecture of W1 is mainly discussing about Internet.  What’s the Internet? Network edge and core Network performance Protocol layers and servi"><meta property="og:type" content="blog"><meta property="og:title" content="CAN201 W1"><meta property="og:url" content="http://chenzhengde.github.io/2021/09/10/preview-can201W1/"><meta property="og:site_name" content="divide÷"><meta property="og:description" content="This is the note of CAN201(introduction to networking). The lecture of W1 is mainly discussing about Internet.  What’s the Internet? Network edge and core Network performance Protocol layers and servi"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://pic.imgdb.cn/item/6114d52b5132923bf8ae2756.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6114d7135132923bf8b1f6b5.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6114f14a5132923bf8e12c7d.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6114f2415132923bf8e2f0da.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6114f38c5132923bf8e5531d.png"><meta property="og:image" content="https://pic.imgdb.cn/item/61150b925132923bf8111e88.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6115224c5132923bf83f9568.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6115ea555132923bf86e736c.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6115eb705132923bf8704ba8.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6116040d5132923bf89c26df.png"><meta property="og:image" content="https://pic.imgdb.cn/item/611614085132923bf8bf578a.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6116147a5132923bf8c05421.png"><meta property="og:image" content="https://pic.imgdb.cn/item/611617d25132923bf8c7f7e4.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6116189e5132923bf8c9ee30.png"><meta property="og:image" content="https://pic.imgdb.cn/item/611635675132923bf803c24e.png"><meta property="og:image" content="https://pic.imgdb.cn/item/611638dd5132923bf80a1d97.png"><meta property="og:image" content="https://pic.imgdb.cn/item/61163dd65132923bf812f2ee.png"><meta property="og:image" content="https://pic.imgdb.cn/item/61163dd75132923bf812f2f6.png"><meta property="og:image" content="https://pic.imgdb.cn/item/61163e7e5132923bf8141c78.png"><meta property="article:published_time" content="2021-09-10T09:39:04.000Z"><meta property="article:modified_time" content="2021-09-10T09:39:47.597Z"><meta property="article:author" content="Felix Chen"><meta property="article:tag" content="XJTLU"><meta property="article:tag" content="CAN201"><meta property="article:tag" content="Lecture"><meta property="article:tag" content="Lab"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://pic.imgdb.cn/item/6114d52b5132923bf8ae2756.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://chenzhengde.github.io/2021/09/10/preview-can201W1/"},"headline":"CAN201 W1","image":["https://pic.imgdb.cn/item/6114d52b5132923bf8ae2756.png","https://pic.imgdb.cn/item/6114d7135132923bf8b1f6b5.png","https://pic.imgdb.cn/item/6114f14a5132923bf8e12c7d.png","https://pic.imgdb.cn/item/6114f2415132923bf8e2f0da.png","https://pic.imgdb.cn/item/6114f38c5132923bf8e5531d.png","https://pic.imgdb.cn/item/61150b925132923bf8111e88.png","https://pic.imgdb.cn/item/6115224c5132923bf83f9568.png","https://pic.imgdb.cn/item/6115ea555132923bf86e736c.png","https://pic.imgdb.cn/item/6115eb705132923bf8704ba8.png","https://pic.imgdb.cn/item/6116040d5132923bf89c26df.png","https://pic.imgdb.cn/item/611614085132923bf8bf578a.png","https://pic.imgdb.cn/item/6116147a5132923bf8c05421.png","https://pic.imgdb.cn/item/611617d25132923bf8c7f7e4.png","https://pic.imgdb.cn/item/6116189e5132923bf8c9ee30.png","https://pic.imgdb.cn/item/611635675132923bf803c24e.png","https://pic.imgdb.cn/item/611638dd5132923bf80a1d97.png","https://pic.imgdb.cn/item/61163dd65132923bf812f2ee.png","https://pic.imgdb.cn/item/61163dd75132923bf812f2f6.png","https://pic.imgdb.cn/item/61163e7e5132923bf8141c78.png"],"datePublished":"2021-09-10T09:39:04.000Z","dateModified":"2021-09-10T09:39:47.597Z","author":{"@type":"Person","name":"Felix Chen"},"publisher":{"@type":"Organization","name":"divide÷","logo":{"@type":"ImageObject","url":"https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png"}},"description":"This is the note of CAN201(introduction to networking). The lecture of W1 is mainly discussing about Internet.  What’s the Internet? Network edge and core Network performance Protocol layers and servi"}</script><link rel="canonical" href="http://chenzhengde.github.io/2021/09/10/preview-can201W1/"><link rel="icon" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed05.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-90LF5XQCXG" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-90LF5XQCXG');</script><!--!--><!--!--><!--!--><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-09-10T09:39:04.000Z" title="2021/9/10 下午5:39:04">2021-09-10</time>发表</span><span class="level-item"><time dateTime="2021-09-10T09:39:47.597Z" title="2021/9/10 下午5:39:47">2021-09-10</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/XJTLU-note/">XJTLU note</a><span> / </span><a class="link-muted" href="/categories/XJTLU-note/CAN201/">CAN201</a></span><span class="level-item">17 分钟读完 (大约2526个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">CAN201 W1</h1><div class="content"><p>This is the note of CAN201(introduction to networking).</p>
+<p>The lecture of W1 is mainly discussing about <code>Internet</code>.</p>
+<ol>
+<li>What’s the Internet?</li>
+<li>Network edge and core</li>
+<li>Network performance</li>
+<li>Protocol layers and service models</li>
+<li>Network security</li>
+</ol>
+<p>这星期主要是对这学期所要学习的内容大致的介绍，由预习笔记改编完成。<br>The lab of this week is about <code>Python I - IDE and Interpreter</code>.</p>
+<span id="more"></span>
+<hr>
+<h1 id="Lecture"><a href="#Lecture" class="headerlink" title="Lecture"></a>Lecture</h1><h2 id="What’s-the-Internet"><a href="#What’s-the-Internet" class="headerlink" title="What’s the Internet?"></a>What’s the Internet?</h2><p>Many forms: application, hardware, ongoing…</p>
+<hr>
+<h3 id="How-does-the-Internet-work"><a href="#How-does-the-Internet-work" class="headerlink" title="How does the Internet work?"></a>How does the Internet work?</h3><p>People access Internet with Wi-Fi, 4G and so on.<br>Medium: optical fiber光纤, metal, radio…<br>Methods: </p>
+<ul>
+<li>Packet switches 分组交换 </li>
+<li>Protocols协议: TCP/IP, HTTP, 802.11</li>
+</ul>
+<p>Framework: </p>
+<ul>
+<li>Layered(from global to local): ISO/OSI - 7, IP stack - 5<br><img src="https://pic.imgdb.cn/item/6114d52b5132923bf8ae2756.png" alt="internet的部件"></li>
+</ul>
+<hr>
+<h3 id="Protocols协议"><a href="#Protocols协议" class="headerlink" title="Protocols协议"></a>Protocols协议</h3><p>Protocols define format, order of messages sent and received among network entities, and actions taken on message transmission, receipt.<br>协议定义格式，在网络实体之间发送和接收消息的顺序，以及在消息传输和接收时所采取的动作。<br>Network protocols:</p>
+<ul>
+<li>Machines rather than humans</li>
+<li>All communication activity in Internet governed by protocols. 所有互联网上的活动都收到协议的控制。<br><img src="https://pic.imgdb.cn/item/6114d7135132923bf8b1f6b5.png" alt="计算机网络协议"></li>
+</ul>
+<hr>
+<h3 id="How-to-build-the-Internet-world"><a href="#How-to-build-the-Internet-world" class="headerlink" title="How to build the Internet world?"></a>How to build the Internet world?</h3><h4 id="Infrastructure-基础设施"><a href="#Infrastructure-基础设施" class="headerlink" title="Infrastructure 基础设施"></a>Infrastructure 基础设施</h4><ul>
+<li>Communication Channel 沟通渠道</li>
+<li>Provided by ISP 由ISP提供</li>
+</ul>
+<h4 id="Computing-Service"><a href="#Computing-Service" class="headerlink" title="Computing Service"></a>Computing Service</h4><ul>
+<li>Servers or Cloud</li>
+<li>Provided by institutions or Cloud Service Provider 由机构或云服务提供商提供</li>
+</ul>
+<h4 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h4><ul>
+<li>A variety of applications with nice GUI 应用程序</li>
+<li>Provided by many companies and developers 公司和开发者</li>
+</ul>
+<hr>
+<h3 id="Standards"><a href="#Standards" class="headerlink" title="Standards"></a>Standards</h3><p>IETF (Internet Engineering Task Force)<br><a target="_blank" rel="noopener" href="https://www.ietf.org/">https://www.ietf.org/</a><br>This’s their website.</p>
+<hr>
+<h2 id="Network-edge-and-core"><a href="#Network-edge-and-core" class="headerlink" title="Network edge and core"></a>Network edge and core</h2><p>Network edge = Host: 主机</p>
+<ul>
+<li>Clients: PCs, Mobile phones, Smart </li>
+<li>Servers: normally hosted in data centers</li>
+</ul>
+<p>Physical media to access networks:</p>
+<ul>
+<li>Wired or wireless communication links</li>
+</ul>
+<p>Network core:</p>
+<ul>
+<li>Interconnected routers 互联路由器</li>
+<li>Network of networks</li>
+</ul>
+<hr>
+<h3 id="Access-networks-and-physical-media"><a href="#Access-networks-and-physical-media" class="headerlink" title="Access networks and physical media"></a>Access networks and physical media</h3><p>How to connect end systems to edge router? 如何连接终端系统到边缘路由器</p>
+<ul>
+<li>Residential access nets 住宅</li>
+<li>Institutional access networks 机构</li>
+<li>Mobile access networks 移动设备</li>
+</ul>
+<p>Keep in mind:</p>
+<ul>
+<li>Bandwidth (bits per second) of access network? 网络的访问带宽</li>
+<li>Shared or dedicated? 共享还是专用</li>
+</ul>
+<hr>
+<h3 id="Dial-up-Internet-access"><a href="#Dial-up-Internet-access" class="headerlink" title="Dial-up Internet access"></a>Dial-up Internet access</h3><p>Dial-up Internet access is a form of Internet access that uses the facilities of the public switched telephone network (PSTN) to establish a connection to an Internet service provider (ISP) by dialing a telephone number on a conventional telephone line. Dial-up connections use modems to decode audio signals into data to send to a router or computer, and to encode signals from the latter two devices to send to another modem.<br>拨号互联网接入是利用公共电话交换网(PSTN)的设施，通过在传统电话线上拨打电话号码，与互联网服务提供商(ISP)建立连接的互联网接入形式。拨号连接使用调制解调器将音频信号解码成数据发送到路由器或计算机，并将后两个设备发出的信号编码发送到另一个调制解调器。<br>带宽: 56 Kbps</p>
+<hr>
+<h3 id="Digital-subscriber-line"><a href="#Digital-subscriber-line" class="headerlink" title="Digital subscriber line"></a>Digital subscriber line</h3><p>aka DSL 数字用户线<br>Telephone line based:</p>
+<ul>
+<li>to central office DSL Access Multiplexer aka DSLAM</li>
+<li>data over DSL phone line goes to internet</li>
+<li>voice over DLS phone line goes to telephone net</li>
+</ul>
+<p>带宽:</p>
+<ul>
+<li>Upstream transmission rate &lt; 2.5 Mbps (typically &lt; 1Mbps) 上行传输速率</li>
+<li>Downstream transmission rate &lt; 24 Mbps (typically &lt; 10Mbps) 下行传输速率</li>
+<li>ADSL = Asymmetric Digital Subscriber Line 非对称数字用户线路</li>
+</ul>
+<hr>
+<h3 id="Access-network-cable-network-TV-net-based"><a href="#Access-network-cable-network-TV-net-based" class="headerlink" title="Access network: cable network (TV net based)"></a>Access network: cable network (TV net based)</h3><p>接入网:有线网络(基于电视网络)<br>key technology: Frequency division multiplexing (FDM) 频分复用</p>
+<ul>
+<li>Different channels transmitted in different frequency bands 不同的信道在不同的频段传输</li>
+</ul>
+<p>HFC: hybrid fiber coax 混合光纤同轴电缆</p>
+<ul>
+<li>Asymmetric: 30Mbps downstream transmission rate, 2 Mbps upstream transmission rate. 非对称:下行速率为30Mbps，上行速率为2mbps。<br><img src="https://pic.imgdb.cn/item/6114f14a5132923bf8e12c7d.png" alt="混合光纤同轴接入网"></li>
+</ul>
+<hr>
+<h3 id="Access-network-fiber-to-the-home"><a href="#Access-network-fiber-to-the-home" class="headerlink" title="Access network: fiber to the home"></a>Access network: fiber to the home</h3><p>光纤到家<br><img src="https://pic.imgdb.cn/item/6114f2415132923bf8e2f0da.png" alt="fiber to the home"></p>
+<hr>
+<h3 id="Access-network-home-network"><a href="#Access-network-home-network" class="headerlink" title="Access network: home network"></a>Access network: home network</h3><p><img src="https://pic.imgdb.cn/item/6114f38c5132923bf8e5531d.png" alt="home network"></p>
+<hr>
+<h3 id="Enterprise-access-networks-Ethernet"><a href="#Enterprise-access-networks-Ethernet" class="headerlink" title="Enterprise access networks (Ethernet)"></a>Enterprise access networks (Ethernet)</h3><p>以太网（企业用）<br>Typically used in companies, universities, etc.<br>10 Mbps, 100Mbps, 1Gbps, 10Gbps transmission rates.<br>Today, end systems typically connect into Ethernet switch. 终端系统通常连接到以太网交换机。</p>
+<hr>
+<h3 id="Wireless-access-networks"><a href="#Wireless-access-networks" class="headerlink" title="Wireless access networks"></a>Wireless access networks</h3><p>Shared wireless access network connects end system to router ,via base station, aka “access point”. 共享无线接入网将终端系统连接到路由器，通过基站，也就是“接入点”。<br><img src="https://pic.imgdb.cn/item/61150b925132923bf8111e88.png" alt="wireless access networks"></p>
+<hr>
+<h3 id="Physical-media"><a href="#Physical-media" class="headerlink" title="Physical media"></a>Physical media</h3><h4 id="twisted-pair"><a href="#twisted-pair" class="headerlink" title="twisted pair"></a>twisted pair</h4><p>two insulated copper wires 双绝缘铜线</p>
+<ul>
+<li>category 5:100 Mbps, 1 Gbps Ethernet</li>
+<li>category 6:10 Gbps</li>
+</ul>
+<h4 id="coaxial-cable"><a href="#coaxial-cable" class="headerlink" title="coaxial cable"></a>coaxial cable</h4><p>two concentric copper conductors 两根同心铜导线</p>
+<ul>
+<li>bidirectional 双向</li>
+<li>broadband: multiple channels on cable 宽带</li>
+</ul>
+<h4 id="fiber-optic-cable"><a href="#fiber-optic-cable" class="headerlink" title="fiber optic cable"></a>fiber optic cable</h4><p>glass fiber carrying light pulses, each pulse a bit 玻璃纤维携带光脉冲，每个脉冲一点</p>
+<ul>
+<li>high-speed operation: high-speed point-to-point transmission 点对点高速传输</li>
+<li>low error rate: repeaters spaced for apart, immune to eletromagnetic noise 中继器间隔，不受电磁噪声影响</li>
+</ul>
+<h4 id="radio"><a href="#radio" class="headerlink" title="radio"></a>radio</h4><p>Signal carried inelectromagnetic spectrum 电磁波谱中携带的信号</p>
+<ol>
+<li>No physical “wire”</li>
+<li>bidirectional 双向<br>Propagation environment effects: 传播环境影响</li>
+</ol>
+<ul>
+<li>Reflection</li>
+<li>Obstruction by objects 物体的阻碍</li>
+<li>Interference! 干扰</li>
+</ul>
+<hr>
+<p>Radio link types:</p>
+<ul>
+<li><p>Wireless LAN (e.g., WiFi)</p>
+<ul>
+<li>54 Mbps – 9.6Gbps</li>
+</ul>
+</li>
+<li><p>Wide-area (e.g., cellular)</p>
+<ul>
+<li>4G cellular: ~ 100 Mbps</li>
+<li>5G cellular: ~ 1Gbps </li>
+</ul>
+</li>
+<li><p>Satellite</p>
+<ul>
+<li>Kbps to 45Mbps channel (or multiple smaller channels)</li>
+<li>Starlink ~ 1440Mbps</li>
+<li>270 msec end-end delay</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="Network-Core"><a href="#Network-Core" class="headerlink" title="Network Core"></a>Network Core</h3><ol>
+<li>Mesh of interconnected routers. 互连路由器的网状结构</li>
+<li>Packet-switching: 分组交换<ul>
+<li>Hosts break application-layer messages into small packets. 主机将应用层消息分解成小数据包</li>
+<li>Packages are forwarded from one router to the next, across links on path from source to destination. 包从一个路由器转发到下一个路由器，在从源到目的地的路径上跨越链接</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>Two key network-core functions</p>
+<ol>
+<li>Routing: determines source- destination route taken by packets (routing algorithms) 路由:确定数据包采取的源-目的路由。</li>
+<li>Forwarding: move packets from router’s input to appropriate router output. 转发:将数据包从路由器的输入端移动到相应的路由器输出端。<br><img src="https://pic.imgdb.cn/item/6115224c5132923bf83f9568.png" alt="two ways"></li>
+</ol>
+<hr>
+<h3 id="Packet-Switching"><a href="#Packet-Switching" class="headerlink" title="Packet Switching"></a>Packet Switching</h3><h4 id="store-and-forward"><a href="#store-and-forward" class="headerlink" title="store-and-forward"></a>store-and-forward</h4><p><img src="https://pic.imgdb.cn/item/6115ea555132923bf86e736c.png" alt="store-and-forward"></p>
+<h4 id="queueing-delay-loss"><a href="#queueing-delay-loss" class="headerlink" title="queueing delay, loss"></a>queueing delay, loss</h4><p>if arrival rate (in bits) to link exceeds transmission rate of link for a period of time: 如果一段时间内到达链路的速率超过了链路的传输速率</p>
+<ul>
+<li>packets will queue, wait to be transmmitted on link 报文将排队，等待链路传输</li>
+<li>packets can be dropped (lost) if memory (buffer) fills up 如果内存(缓冲区)被填满，包会被丢失<br><img src="https://pic.imgdb.cn/item/6115eb705132923bf8704ba8.png" alt="queueing delay, loss"></li>
+</ul>
+<hr>
+<h3 id="Circuit-switching"><a href="#Circuit-switching" class="headerlink" title="Circuit switching"></a>Circuit switching</h3><ul>
+<li><p>dedicated resources专用资源: no sharing</p>
+<ul>
+<li>circuit-like (guaranteed) performance 电路性能</li>
+</ul>
+</li>
+<li><p>Circuit segment is idle if not used by call (no sharing) 如果没有调用，电路段空闲</p>
+</li>
+<li><p>Commonly used in traditional telephone networks</p>
+</li>
+</ul>
+<h4 id="FDM-amp-TDM"><a href="#FDM-amp-TDM" class="headerlink" title="FDM &amp; TDM"></a>FDM &amp; TDM</h4><p><img src="https://pic.imgdb.cn/item/6116040d5132923bf89c26df.png" alt="FDM &amp; TDM"></p>
+<hr>
+<h3 id="Packet-VS-Circuit"><a href="#Packet-VS-Circuit" class="headerlink" title="Packet VS Circuit"></a>Packet VS Circuit</h3><p>Packet switching allows more users to use network! 分组交换允许更多的用户使用网络。<br><em><strong>Is packet switching a “winner?”</strong></em></p>
+<ul>
+<li><p>PS advantages:</p>
+<ul>
+<li>resource sharing</li>
+<li>simpler, no call setup</li>
+</ul>
+</li>
+<li><p>PS drawbacks:</p>
+<ul>
+<li>excessive congestion possible: delay and loss<ul>
+<li>protocols needed for reliable data transfer, congestion control </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>How to provide circuit-like behavior PS?</p>
+<ul>
+<li>Bandwidth guarantees</li>
+<li>New methods should be developed</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="Internet-Network-of-networks"><a href="#Internet-Network-of-networks" class="headerlink" title="Internet: Network of networks"></a>Internet: Network of networks</h3><ul>
+<li><p>End systems connect to Internet via <em>access ISPs</em> (Internet Service Providers) 终端系统通过接入isp(互联网服务提供商)连接到互联网</p>
+<ul>
+<li>residential, company and university ISPs</li>
+</ul>
+</li>
+<li><p>Access ISPs in turn must be interconnected. 接入isp也必须相互连接</p>
+<ul>
+<li>so that any two hosts can send packets to each other</li>
+</ul>
+</li>
+<li><p>Resulting network of networks is very complex</p>
+<ul>
+<li>evolution was driven by <em>economics</em> and <em>national policies</em></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>Q: Given millions of access ISPs, how to connect them to together?<br>Option 1: connect each access ISP to every other access ISP<br>A: connecting each access ISP to each other directly doesn’t scale: O(N2) connections. 将每个访问ISP直接连接到彼此并不具有伸缩性:O(N2)连接。</p>
+<p>Option 2: connect each access ISP to one global transit ISP<br><img src="https://pic.imgdb.cn/item/611614085132923bf8bf578a.png" alt="Option 2"><br><img src="https://pic.imgdb.cn/item/6116147a5132923bf8c05421.png"></p>
+<hr>
+<h2 id="Network-performance"><a href="#Network-performance" class="headerlink" title="Network performance"></a>Network performance</h2><p>Package Loss, Delay and Bandwidth</p>
+<h3 id="How-do-loss-and-delay-occur"><a href="#How-do-loss-and-delay-occur" class="headerlink" title="How do loss and delay occur?"></a>How do loss and delay occur?</h3><p><img src="https://pic.imgdb.cn/item/611617d25132923bf8c7f7e4.png" alt="Packages queue in router buffers"></p>
+<hr>
+<h3 id="Four-sources-of-packet-delay"><a href="#Four-sources-of-packet-delay" class="headerlink" title="Four sources of packet delay"></a>Four sources of packet delay</h3><p><img src="https://pic.imgdb.cn/item/6116189e5132923bf8c9ee30.png" alt="four sources"></p>
+<ul>
+<li><p>dproc: nodal processing 节点处理</p>
+<ul>
+<li>check bit errors 检查位错</li>
+<li>determine output link 确定输出环节</li>
+<li>typically &lt; msec</li>
+</ul>
+</li>
+<li><p>dqueue: queueing delay 队列延迟</p>
+<ul>
+<li>time waiting at output link for transmission 输出链路等待传输的时间</li>
+<li>depends on congestion level of router 取决于路由器的拥塞水平</li>
+</ul>
+</li>
+<li><p>dtrans: transmission delay</p>
+<ul>
+<li>L: packet length (bits)</li>
+<li>R: link bandwidth (bps)</li>
+<li>dtrans = L/R</li>
+</ul>
+</li>
+<li><p>dprop: propagation delay:</p>
+<ul>
+<li>d: length of physical link</li>
+<li>s: propagation speed (~2.9x10^8 m/sec)</li>
+<li>dprop = d/s</li>
+</ul>
+</li>
+</ul>
+<p>dtrans and dprop very different.</p>
+<hr>
+<h3 id="Queueing-delay"><a href="#Queueing-delay" class="headerlink" title="Queueing delay"></a>Queueing delay</h3><p><img src="https://pic.imgdb.cn/item/611635675132923bf803c24e.png" alt="queueing delay standard"></p>
+<hr>
+<h3 id="Packet-Loss丢包"><a href="#Packet-Loss丢包" class="headerlink" title="Packet Loss丢包"></a>Packet Loss丢包</h3><ul>
+<li>Queue (aka buffer) preceding link in buffer has finite capacity 队列前的链接在缓冲区有有限的容量</li>
+<li>Packet arriving to full queue dropped (aka lost) 到达队列满的数据包被丢弃</li>
+<li>Lost packet may be retransmitted by previous node, by source end system, or not at all 丢失的数据包可以由前一个节点、源端系统重传，或者根本不重传</li>
+</ul>
+<hr>
+<h3 id="Throughput吞吐量"><a href="#Throughput吞吐量" class="headerlink" title="Throughput吞吐量"></a>Throughput吞吐量</h3><p>Definition: rate (bits/time unit) at which bits transferred between sender/receiver 在发送方/接收方之间传输比特的速率<br>Two kinds of throughput:</p>
+<ul>
+<li>instantaneous瞬时: rate at given point in time 给定时间点的速率</li>
+<li>average平均: rate over longer period of time 较长时期内的比率</li>
+</ul>
+<p>服务器传送bits到管道里，管道带着fluid以Rsbits/sec速度运行，穿过buffer之后以Rcbits/sec速度运行，最后到达用户处<br><img src="https://pic.imgdb.cn/item/611638dd5132923bf80a1d97.png" alt="Throughput"></p>
+<hr>
+<h4 id="Internet-Scenario"><a href="#Internet-Scenario" class="headerlink" title="Internet Scenario"></a>Internet Scenario</h4><p>Per-connection end-end throught: min{Rc,Rs,R/10}<br>In practice: Rc or Rs is often bottleneck.</p>
+<hr>
+<h2 id="Protocol-layers-and-service-models"><a href="#Protocol-layers-and-service-models" class="headerlink" title="Protocol layers and service models"></a>Protocol layers and service models</h2><h3 id="Internet-protocol-stack"><a href="#Internet-protocol-stack" class="headerlink" title="Internet protocol stack"></a>Internet protocol stack</h3><p><img src="https://pic.imgdb.cn/item/61163dd65132923bf812f2ee.png" alt="Internet protocol stack"></p>
+<h3 id="ISO-OSI-reference-model"><a href="#ISO-OSI-reference-model" class="headerlink" title="ISO/OSI reference model"></a>ISO/OSI reference model</h3><p><img src="https://pic.imgdb.cn/item/61163dd75132923bf812f2f6.png" alt="ISO/OSI reference model"></p>
+<h3 id="Encapsulation封装"><a href="#Encapsulation封装" class="headerlink" title="Encapsulation封装"></a>Encapsulation封装</h3><p><img src="https://pic.imgdb.cn/item/61163e7e5132923bf8141c78.png" alt="Encapsulation"><br>Why layering? 为什么要分层</p>
+<ol>
+<li>divide complex systems to simple components 把复杂的系统分割成简单的部分</li>
+<li>easy to maintenance 易于维护</li>
+<li>flexible for updating 可以灵活的升级</li>
+</ol>
+<hr>
+<h2 id="Network-security"><a href="#Network-security" class="headerlink" title="Network security"></a>Network security</h2><p>Q: Field of network security</p>
+<ol>
+<li>how bad guys can attack computer networks</li>
+<li>how we can defend networks against attacks</li>
+<li>how to design architectures that are immune to attacks</li>
+</ol>
+<p>Q: Internet not originally designed with (much) security in mind</p>
+<ol>
+<li><strong>Original vision</strong>: “a group of mutually trusting users attached to a transparent network”</li>
+<li>Internet protocol designers playing “catch-up”</li>
+<li>Security considerations in all layers</li>
+</ol>
+<h3 id="Types"><a href="#Types" class="headerlink" title="Types"></a>Types</h3><ul>
+<li>Malware恶意软件: virus, worm, spyware 病毒、蠕虫、间谍软件</li>
+<li>DDoS: Distributed denial of service attack 分布式拒绝服务攻击</li>
+<li>Packet “sniffing” 包嗅探</li>
+</ul>
+<hr>
+<h1 id="Lab"><a href="#Lab" class="headerlink" title="Lab"></a>Lab</h1><p>Task:</p>
+<ol>
+<li>Install Python and PyCharm</li>
+<li>Build a virtual Python runtime environment using Virtualenv</li>
+<li>Write a hello world code in a python script file (.py file) in PyCharm </li>
+<li>Study variables and print in Python – number / string / list / dict</li>
+<li>Study conditionals in Python</li>
+<li>Study loops – for and while</li>
+</ol>
+<p>这就没必要写了，INT104都学过了。就是打出一个”Hello World”就没有了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def print_hi(name):</span><br><span class="line">    print(f&#x27;Hi, &#123;name&#125;&#x27;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    print_hi(&#x27;Pycharm&#x27;)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
+<li>XJTLU MC PowerPoint slides (CAN201 Week1 Lecture1 &amp; Lab1)</li>
+<li>计算机网络 自顶向下方法.原书第6版</li>
+</ol>
+</div><div class="article-licensing box"><div class="licensing-title"><p>CAN201 W1</p><p><a href="http://chenzhengde.github.io/2021/09/10/preview-can201W1/">http://chenzhengde.github.io/2021/09/10/preview-can201W1/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Felix Chen</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-09-10</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-09-10</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a><a class="icons" rel="noopener" target="_blank" title="Share Alike" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="icon fab fa-creative-commons-sa"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/XJTLU/">XJTLU</a><a class="link-muted mr-2" rel="tag" href="/tags/CAN201/">CAN201</a><a class="link-muted mr-2" rel="tag" href="/tags/Lecture/">Lecture</a><a class="link-muted mr-2" rel="tag" href="/tags/Lab/">Lab</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=6113d16f12036d00122e6422&amp;product=inline-share-buttons" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/09/08/Preview-CPT205-W1/"><span class="level-item">CPT205 W1</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'http://chenzhengde.github.io/2021/09/10/preview-can201W1/';
+            this.page.identifier = '2021/09/10/preview-can201W1/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'my-hexo-website' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed0e.jpg" alt="Felix Chen"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Felix Chen</p><p class="is-size-6 is-block">shit happens</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>XJTLU, Suzhow</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">17</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">8</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">15</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/chenzhengde" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/iam_felixchen/"><i class="fab fa-instagram"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Wechat" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed18.jpg"><i class="fab fa-weixin"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Linkedin" href="https://www.linkedin.com/in/正德-陈-b92b351a6/"><i class="fab fa-linkedin"></i></a></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.learningmall.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">learning_mall</span></span><span class="level-right"><span class="level-item tag">www.learningmall.cn</span></span></a></li><li><a class="level is-mobile" href="https://www.csdn.net/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">CSDN</span></span><span class="level-right"><span class="level-item tag">www.csdn.net</span></span></a></li><li><a class="level is-mobile" href="https://leetcode.com/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Leetcode</span></span><span class="level-right"><span class="level-item tag">leetcode.com</span></span></a></li><li><a class="level is-mobile" href="https://www.bilibili.con/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">bilibili</span></span><span class="level-right"><span class="level-item tag">www.bilibili.con</span></span></a></li><li><a class="level is-mobile" href="http://1iin.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">1iin&#039;s blog</span></span><span class="level-right"><span class="level-item tag">1iin.cn</span></span></a></li><li><a class="level is-mobile" href="https://3sanmusen.top/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">三木森的小屋</span></span><span class="level-right"><span class="level-item tag">3sanmusen.top</span></span></a></li><li><a class="level is-mobile" href="https://segmentfault.com/u/1iin" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">1iin</span></span><span class="level-right"><span class="level-item tag">segmentfault.com</span></span></a></li><li><a class="level is-mobile" href="https://segmentfault.com/u/chenyingxi" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">cyx</span></span><span class="level-right"><span class="level-item tag">segmentfault.com</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/SURF-note/"><span class="level-start"><span class="level-item">SURF note</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/"><span class="level-start"><span class="level-item">XJTLU note</span></span><span class="level-end"><span class="level-item tag">11</span></span></a><ul><li><a class="level is-mobile" href="/categories/XJTLU-note/CAN201/"><span class="level-start"><span class="level-item">CAN201</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/CPT203/"><span class="level-start"><span class="level-item">CPT203</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/CPT205/"><span class="level-start"><span class="level-item">CPT205</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/INT201/"><span class="level-start"><span class="level-item">INT201</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/blog-note/"><span class="level-start"><span class="level-item">blog note</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/problem-solving/"><span class="level-start"><span class="level-item">problem solving</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Lecture"><span class="level-left"><span class="level-item">1</span><span class="level-item">Lecture</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#What’s-the-Internet"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">What’s the Internet?</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#How-does-the-Internet-work"><span class="level-left"><span class="level-item">1.1.1</span><span class="level-item">How does the Internet work?</span></span></a></li><li><a class="level is-mobile" href="#Protocols协议"><span class="level-left"><span class="level-item">1.1.2</span><span class="level-item">Protocols协议</span></span></a></li><li><a class="level is-mobile" href="#How-to-build-the-Internet-world"><span class="level-left"><span class="level-item">1.1.3</span><span class="level-item">How to build the Internet world?</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Infrastructure-基础设施"><span class="level-left"><span class="level-item">1.1.3.1</span><span class="level-item">Infrastructure 基础设施</span></span></a></li><li><a class="level is-mobile" href="#Computing-Service"><span class="level-left"><span class="level-item">1.1.3.2</span><span class="level-item">Computing Service</span></span></a></li><li><a class="level is-mobile" href="#Applications"><span class="level-left"><span class="level-item">1.1.3.3</span><span class="level-item">Applications</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Standards"><span class="level-left"><span class="level-item">1.1.4</span><span class="level-item">Standards</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Network-edge-and-core"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">Network edge and core</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Access-networks-and-physical-media"><span class="level-left"><span class="level-item">1.2.1</span><span class="level-item">Access networks and physical media</span></span></a></li><li><a class="level is-mobile" href="#Dial-up-Internet-access"><span class="level-left"><span class="level-item">1.2.2</span><span class="level-item">Dial-up Internet access</span></span></a></li><li><a class="level is-mobile" href="#Digital-subscriber-line"><span class="level-left"><span class="level-item">1.2.3</span><span class="level-item">Digital subscriber line</span></span></a></li><li><a class="level is-mobile" href="#Access-network-cable-network-TV-net-based"><span class="level-left"><span class="level-item">1.2.4</span><span class="level-item">Access network: cable network (TV net based)</span></span></a></li><li><a class="level is-mobile" href="#Access-network-fiber-to-the-home"><span class="level-left"><span class="level-item">1.2.5</span><span class="level-item">Access network: fiber to the home</span></span></a></li><li><a class="level is-mobile" href="#Access-network-home-network"><span class="level-left"><span class="level-item">1.2.6</span><span class="level-item">Access network: home network</span></span></a></li><li><a class="level is-mobile" href="#Enterprise-access-networks-Ethernet"><span class="level-left"><span class="level-item">1.2.7</span><span class="level-item">Enterprise access networks (Ethernet)</span></span></a></li><li><a class="level is-mobile" href="#Wireless-access-networks"><span class="level-left"><span class="level-item">1.2.8</span><span class="level-item">Wireless access networks</span></span></a></li><li><a class="level is-mobile" href="#Physical-media"><span class="level-left"><span class="level-item">1.2.9</span><span class="level-item">Physical media</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#twisted-pair"><span class="level-left"><span class="level-item">1.2.9.1</span><span class="level-item">twisted pair</span></span></a></li><li><a class="level is-mobile" href="#coaxial-cable"><span class="level-left"><span class="level-item">1.2.9.2</span><span class="level-item">coaxial cable</span></span></a></li><li><a class="level is-mobile" href="#fiber-optic-cable"><span class="level-left"><span class="level-item">1.2.9.3</span><span class="level-item">fiber optic cable</span></span></a></li><li><a class="level is-mobile" href="#radio"><span class="level-left"><span class="level-item">1.2.9.4</span><span class="level-item">radio</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Network-Core"><span class="level-left"><span class="level-item">1.2.10</span><span class="level-item">Network Core</span></span></a></li><li><a class="level is-mobile" href="#Packet-Switching"><span class="level-left"><span class="level-item">1.2.11</span><span class="level-item">Packet Switching</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#store-and-forward"><span class="level-left"><span class="level-item">1.2.11.1</span><span class="level-item">store-and-forward</span></span></a></li><li><a class="level is-mobile" href="#queueing-delay-loss"><span class="level-left"><span class="level-item">1.2.11.2</span><span class="level-item">queueing delay, loss</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Circuit-switching"><span class="level-left"><span class="level-item">1.2.12</span><span class="level-item">Circuit switching</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#FDM-amp-TDM"><span class="level-left"><span class="level-item">1.2.12.1</span><span class="level-item">FDM &amp; TDM</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Packet-VS-Circuit"><span class="level-left"><span class="level-item">1.2.13</span><span class="level-item">Packet VS Circuit</span></span></a></li><li><a class="level is-mobile" href="#Internet-Network-of-networks"><span class="level-left"><span class="level-item">1.2.14</span><span class="level-item">Internet: Network of networks</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Network-performance"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">Network performance</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#How-do-loss-and-delay-occur"><span class="level-left"><span class="level-item">1.3.1</span><span class="level-item">How do loss and delay occur?</span></span></a></li><li><a class="level is-mobile" href="#Four-sources-of-packet-delay"><span class="level-left"><span class="level-item">1.3.2</span><span class="level-item">Four sources of packet delay</span></span></a></li><li><a class="level is-mobile" href="#Queueing-delay"><span class="level-left"><span class="level-item">1.3.3</span><span class="level-item">Queueing delay</span></span></a></li><li><a class="level is-mobile" href="#Packet-Loss丢包"><span class="level-left"><span class="level-item">1.3.4</span><span class="level-item">Packet Loss丢包</span></span></a></li><li><a class="level is-mobile" href="#Throughput吞吐量"><span class="level-left"><span class="level-item">1.3.5</span><span class="level-item">Throughput吞吐量</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Internet-Scenario"><span class="level-left"><span class="level-item">1.3.5.1</span><span class="level-item">Internet Scenario</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="#Protocol-layers-and-service-models"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">Protocol layers and service models</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Internet-protocol-stack"><span class="level-left"><span class="level-item">1.4.1</span><span class="level-item">Internet protocol stack</span></span></a></li><li><a class="level is-mobile" href="#ISO-OSI-reference-model"><span class="level-left"><span class="level-item">1.4.2</span><span class="level-item">ISO/OSI reference model</span></span></a></li><li><a class="level is-mobile" href="#Encapsulation封装"><span class="level-left"><span class="level-item">1.4.3</span><span class="level-item">Encapsulation封装</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Network-security"><span class="level-left"><span class="level-item">1.5</span><span class="level-item">Network security</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Types"><span class="level-left"><span class="level-item">1.5.1</span><span class="level-item">Types</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="#Lab"><span class="level-left"><span class="level-item">2</span><span class="level-item">Lab</span></span></a></li><li><a class="level is-mobile" href="#References"><span class="level-left"><span class="level-item">3</span><span class="level-item">References</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-10T09:39:04.000Z">2021-09-10</time></p><p class="title"><a href="/2021/09/10/preview-can201W1/">CAN201 W1</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CAN201/">CAN201</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-08T10:50:47.000Z">2021-09-08</time></p><p class="title"><a href="/2021/09/08/Preview-CPT205-W1/">CPT205 W1</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CPT205/">CPT205</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-07T07:42:56.000Z">2021-09-07</time></p><p class="title"><a href="/2021/09/07/Preview-CPT203-W1/">CPT203 W1</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CPT203/">CPT203</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-07T05:27:48.000Z">2021-09-07</time></p><p class="title"><a href="/2021/09/07/Preview-INT201-W1/">INT201 W1</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/INT201/">INT201</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-06T08:43:32.000Z">2021-09-06</time></p><p class="title"><a href="/2021/09/06/Preview-CPT205-W3/">Preview CPT205 W3</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CPT205/">CPT205</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CAN201/"><span class="tag">CAN201</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT203/"><span class="tag">CPT203</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT205/"><span class="tag">CPT205</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/INT201/"><span class="tag">INT201</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lab/"><span class="tag">Lab</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lecture/"><span class="tag">Lecture</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Markdown/"><span class="tag">Markdown</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tutorial/"><span class="tag">Tutorial</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/XJTLU/"><span class="tag">XJTLU</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dart/"><span class="tag">dart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/flutter/"><span class="tag">flutter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/icarus/"><span class="tag">icarus</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/yilia/"><span class="tag">yilia</span><span class="tag">2</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a><p class="is-size-7"><span>&copy; 2021 Felix Chen</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Github" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/iam_felixchen/"><i class="fab fa-instagram"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Wechat" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed18.jpg"><i class="fab fa-weixin"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
