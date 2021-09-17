@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>CAN201 W2 - divide÷</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="iam_felix"><meta name="msapplication-TileImage" content="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed05.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="iam_felix"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="This is the note of CAN201(introduction to networking). This lecture is mainly discussing about Application Layer. 应用程序层  Principle of network application Web application Email  The lab of this week i"><meta property="og:type" content="blog"><meta property="og:title" content="CAN201 W2"><meta property="og:url" content="http://chenzhengde.github.io/2021/09/17/Preview-CAN201-W2/"><meta property="og:site_name" content="divide÷"><meta property="og:description" content="This is the note of CAN201(introduction to networking). This lecture is mainly discussing about Application Layer. 应用程序层  Principle of network application Web application Email  The lab of this week i"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://pic.imgdb.cn/item/611b86bd4907e2d39c0668a9.png"><meta property="og:image" content="https://pic.imgdb.cn/item/611caaf04907e2d39ccdb55d.png"><meta property="og:image" content="https://pic.imgdb.cn/item/611cc8534907e2d39c56fcd8.png"><meta property="og:image" content="https://pic.imgdb.cn/item/611dfabc4907e2d39c6e73ac.png"><meta property="og:image" content="https://pic.imgdb.cn/item/611e1dac4907e2d39cd99291.png"><meta property="og:image" content="https://pic.imgdb.cn/item/611e33084907e2d39c12517b.png"><meta property="og:image" content="https://pic.imgdb.cn/item/611e33084907e2d39c125188.png"><meta property="og:image" content="https://pic.imgdb.cn/item/611e4ebd4907e2d39c49a989.png"><meta property="article:published_time" content="2021-09-17T13:54:12.000Z"><meta property="article:modified_time" content="2021-09-17T13:54:54.511Z"><meta property="article:author" content="Felix Chen"><meta property="article:tag" content="XJTLU"><meta property="article:tag" content="CAN201"><meta property="article:tag" content="Lecture"><meta property="article:tag" content="Lab"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://pic.imgdb.cn/item/611b86bd4907e2d39c0668a9.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://chenzhengde.github.io/2021/09/17/Preview-CAN201-W2/"},"headline":"CAN201 W2","image":["https://pic.imgdb.cn/item/611b86bd4907e2d39c0668a9.png","https://pic.imgdb.cn/item/611caaf04907e2d39ccdb55d.png","https://pic.imgdb.cn/item/611cc8534907e2d39c56fcd8.png","https://pic.imgdb.cn/item/611dfabc4907e2d39c6e73ac.png","https://pic.imgdb.cn/item/611e1dac4907e2d39cd99291.png","https://pic.imgdb.cn/item/611e33084907e2d39c12517b.png","https://pic.imgdb.cn/item/611e33084907e2d39c125188.png","https://pic.imgdb.cn/item/611e4ebd4907e2d39c49a989.png"],"datePublished":"2021-09-17T13:54:12.000Z","dateModified":"2021-09-17T13:54:54.511Z","author":{"@type":"Person","name":"Felix Chen"},"publisher":{"@type":"Organization","name":"divide÷","logo":{"@type":"ImageObject","url":"https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png"}},"description":"This is the note of CAN201(introduction to networking). This lecture is mainly discussing about Application Layer. 应用程序层  Principle of network application Web application Email  The lab of this week i"}</script><link rel="canonical" href="http://chenzhengde.github.io/2021/09/17/Preview-CAN201-W2/"><link rel="icon" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed05.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-90LF5XQCXG" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-90LF5XQCXG');</script><!--!--><!--!--><!--!--><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-09-17T13:54:12.000Z" title="2021/9/17 下午9:54:12">2021-09-17</time>发表</span><span class="level-item"><time dateTime="2021-09-17T13:54:54.511Z" title="2021/9/17 下午9:54:54">2021-09-17</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/XJTLU-note/">XJTLU note</a><span> / </span><a class="link-muted" href="/categories/XJTLU-note/CAN201/">CAN201</a></span><span class="level-item">16 分钟读完 (大约2378个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">CAN201 W2</h1><div class="content"><p>This is the note of CAN201(introduction to networking).</p>
+<p>This lecture is mainly discussing about <code>Application Layer</code>. 应用程序层</p>
+<ol>
+<li>Principle of network application</li>
+<li>Web application</li>
+<li>Email</li>
+</ol>
+<p>The lab of this week is about <code>Introduction of Python</code>.</p>
+<span id="more"></span>
+<h1 id="Lecture"><a href="#Lecture" class="headerlink" title="Lecture"></a>Lecture</h1><h2 id="Rich-network-applications"><a href="#Rich-network-applications" class="headerlink" title="Rich network applications"></a>Rich network applications</h2><ul>
+<li>Communication: Email, IM, SNS</li>
+<li>Web: countless</li>
+<li>Internet games: countless</li>
+<li>Video based: TikTok</li>
+<li>VoIP / Meeting: Zoom</li>
+<li>P2P file sharing: BitTorrent, Thunder…</li>
+</ul>
+<hr>
+<h2 id="Architectures-for-applications"><a href="#Architectures-for-applications" class="headerlink" title="Architectures for applications"></a>Architectures for applications</h2><ul>
+<li>Client-server</li>
+<li>peer to peer</li>
+</ul>
+<hr>
+<h3 id="Client-server-architecture"><a href="#Client-server-architecture" class="headerlink" title="Client-server architecture"></a>Client-server architecture</h3><ul>
+<li>Server<ul>
+<li>Always-on host 不间断的主机</li>
+<li>Permanent IP address 永久ip地址</li>
+<li>High performance 高性能 / Distributed computing </li>
+</ul>
+</li>
+<li>Clients<ul>
+<li>Link to the server for service 连接服务器进行服务</li>
+<li>May be intermittently connect to the internet 可能是间歇性连接到互联网</li>
+<li>Dynamic IP address 动态ip地址</li>
+<li>Do not communicate directly with each other</li>
+</ul>
+</li>
+</ul>
+<h3 id="P2P-architecture"><a href="#P2P-architecture" class="headerlink" title="P2P architecture"></a>P2P architecture</h3><ul>
+<li>No always-on server is needed</li>
+<li>Arbitrary end systems directly exchange data</li>
+<li>Peers request service from other peers, provide service in return to other peers<ul>
+<li>Self scalability </li>
+</ul>
+</li>
+<li>new peers bring new service capacity, as well as new service demands</li>
+<li>Peers are intermittently connected</li>
+<li>Dynamic IP addresses</li>
+</ul>
+<hr>
+<h2 id="How-to-communicate-over-the-network"><a href="#How-to-communicate-over-the-network" class="headerlink" title="How to communicate over the network?"></a>How to communicate over the network?</h2><p>Host –&gt; Sockets 插座 –&gt; Network<br>A program with: <strong>identifier protocol</strong>.</p>
+<h3 id="Host-Program"><a href="#Host-Program" class="headerlink" title="Host - Program"></a>Host - Program</h3><ul>
+<li>process: a program running within a host</li>
+<li>processes in different / same hosts:<ul>
+<li>socket can be used to exchange messages</li>
+</ul>
+</li>
+<li>Processes in the same host:<ul>
+<li>Inter-process communication defined by OS</li>
+</ul>
+</li>
+<li>CS architecture:<ul>
+<li>Client process: initiates communication</li>
+<li>Server process: waits to be contacted</li>
+</ul>
+</li>
+<li>P2P architecture: <ul>
+<li>client process / server process on the same host</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Addressing-processes"><a href="#Addressing-processes" class="headerlink" title="Addressing processes"></a>Addressing processes</h2><ul>
+<li>Host device has <em>unique</em> 32-bit IPv4 and/or 128-bit IPv6</li>
+<li>Process network identifier:<ul>
+<li>IPv4:port 192.168.1.100:80</li>
+<li>[IPv6]:port [240e:3a1:4cb1:69d0:f40c:4269:74a2:7ea3]:80</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="App-layer-protocol-defines"><a href="#App-layer-protocol-defines" class="headerlink" title="App-layer protocol defines"></a>App-layer protocol defines</h2><ul>
+<li>Types of messages exchanged<ul>
+<li>request, response</li>
+</ul>
+</li>
+<li>Message syntax<ul>
+<li>what fields in messages &amp; how fields are delineated</li>
+</ul>
+</li>
+<li>Message semantics:<ul>
+<li>meaning of information in fields</li>
+</ul>
+</li>
+<li>Message timing: when and how</li>
+</ul>
+<p><strong>Open protocols</strong>: 开放协议</p>
+<ul>
+<li>Defined in RFCs</li>
+<li>Allows for interoperability </li>
+<li>e.g., HTTP, SMTP, FTP </li>
+</ul>
+<p><strong>Closed protocols</strong>: 关闭协议</p>
+<ul>
+<li>e.g., Skype, Games, you own protocols…</li>
+</ul>
+<hr>
+<h2 id="Transport-service-requirements"><a href="#Transport-service-requirements" class="headerlink" title="Transport service requirements"></a>Transport service requirements</h2><p>There’re 4 requirements in transport service:</p>
+<ol>
+<li>data integrity</li>
+<li>throughput</li>
+<li>timing</li>
+<li>security<br><img src="https://pic.imgdb.cn/item/611b86bd4907e2d39c0668a9.png" alt="Transport service requirements"></li>
+</ol>
+<hr>
+<h2 id="Internet-transport-protocols-services"><a href="#Internet-transport-protocols-services" class="headerlink" title="Internet transport protocols services"></a>Internet transport protocols services</h2><ul>
+<li>TCP 传输控制协议</li>
+<li>UDP 用户数据报协议</li>
+</ul>
+<hr>
+<h3 id="TCP-service"><a href="#TCP-service" class="headerlink" title="TCP service"></a>TCP service</h3><ul>
+<li><strong>Reliable transport</strong> between sending and receiving process 发送和接收过程之间的可靠传输</li>
+<li><strong>Flow control</strong> 流量控制: sender won’t overwhelm receiver 发送方不会淹没接收方</li>
+<li><strong>Congestion control</strong> 拥塞控制: throttle sender when network overloaded 当网络过载时限制发送者</li>
+<li><strong>Does not offer</strong> 不提供: timing, minimum throughput guarantee, security 记时，最低吞吐量保证，安全性</li>
+<li><strong>Connection-oriented</strong> 面向连接: setup required between client and server processes 需要在客户端和服务器进程之间进行设置</li>
+</ul>
+<hr>
+<h2 id="Internet-transport-protocols-services-1"><a href="#Internet-transport-protocols-services-1" class="headerlink" title="Internet transport protocols services"></a>Internet transport protocols services</h2><p>The problems with UDP service:</p>
+<ul>
+<li><strong>unreliable data transfer</strong> between sending and recieving process</li>
+<li>Does not offer: reliability, flow control, congestion control, timing, throughput guarantee, security, or connection setup. 可靠性,流量控制,拥塞控制,时间,吞吐量保证,安全性或连接设置</li>
+</ul>
+<hr>
+<h2 id="Securing-TCP"><a href="#Securing-TCP" class="headerlink" title="Securing TCP"></a>Securing TCP</h2><p>Secure Sockets Layer - SSL</p>
+<ul>
+<li>TCP &amp; UDP<ul>
+<li>No encryption 无加密</li>
+<li>Cleartext psws 明文程序状态字 –&gt; Internet</li>
+</ul>
+</li>
+<li>SSL<ul>
+<li>Provides encrypted TCP connection 提供加密TCP连接</li>
+<li>Data integrity 数据完整性</li>
+<li>End-point authentication 端点认证</li>
+</ul>
+</li>
+<li>SSL is at app layer<ul>
+<li>Apps use SSL libraries, that “talk” to TCP</li>
+</ul>
+</li>
+<li>SSL socket API<ul>
+<li>Cleartext psw 明文程序状态字 –&gt; encrypted psw –&gt; Internet</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Web-application"><a href="#Web-application" class="headerlink" title="Web application"></a>Web application</h1><h2 id="Web-HTTP-and-WWW"><a href="#Web-HTTP-and-WWW" class="headerlink" title="Web, HTTP and WWW"></a>Web, HTTP and WWW</h2><ul>
+<li>World Wide Web: WWW</li>
+<li>HTTP: Hypertext Transfer Protocol</li>
+<li>Web page consists of base HTML-file which includes several referenced objects, addressable by a URL</li>
+</ul>
+<hr>
+<h2 id="HTTP-overview"><a href="#HTTP-overview" class="headerlink" title="HTTP overview"></a>HTTP overview</h2><p>HTTP: hypertext transfer protocol 超文本传输协议</p>
+<ul>
+<li>Application layer protocol </li>
+<li>Client/server model<ul>
+<li>Client: browser that requests, receives, (using HTTP protocol) and show Web objects (Render)</li>
+<li>Server: Web server sends (using HTTP protocol) objects in response to requests</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="Uses-TCP"><a href="#Uses-TCP" class="headerlink" title="Uses TCP:"></a>Uses TCP:</h3><ol>
+<li>Client initiates TCP connection (creates socket) to server, port 80 客户端发起TCP连接到服务器，端口80</li>
+<li>Server accepts TCP connection from client 服务器接受来自客户端的TCP连接</li>
+<li>HTTP messages (application-layer protocol messages) exchanged between browser (HTTP client) and Web server (HTTP server) 在浏览器和Web服务器之间交换HTTP消息</li>
+<li>TCP connection closed TCP连接关闭</li>
+</ol>
+<p>HTTP is “stateless”: server maintains no information about past client requests. HTTP是“无状态的”:服务器不维护关于过去客户端请求的信息。</p>
+<p>Protocols that maintain “state” are complex!</p>
+<ul>
+<li>past history (state) must be maintained.</li>
+<li>if server/client crashed, their view of “state” may be inconsistent, must be reconciled. 如果服务器/客户端崩溃，他们的“状态”视图可能不一致，必须协调</li>
+</ul>
+<hr>
+<h4 id="Non-persistent-HTTP-非持久性HTTP"><a href="#Non-persistent-HTTP-非持久性HTTP" class="headerlink" title="Non-persistent HTTP 非持久性HTTP"></a>Non-persistent HTTP 非持久性HTTP</h4><ul>
+<li>At most one object sent over TCP connection 最多一个对象通过TCP连接发送</li>
+<li>Downloading multiple objects required multiple connections 下载多个对象需要多个连接<h4 id="Persistent-HTTP-持久HTTP"><a href="#Persistent-HTTP-持久HTTP" class="headerlink" title="Persistent HTTP 持久HTTP"></a>Persistent HTTP 持久HTTP</h4></li>
+<li>Multiple objects can be sent over single TCP connection between client, server 客户端和服务器之间可以通过单个TCP连接发送多个对象</li>
+</ul>
+<hr>
+<h3 id="Non-response-time"><a href="#Non-response-time" class="headerlink" title="Non-response time"></a>Non-response time</h3><p><img src="https://pic.imgdb.cn/item/611caaf04907e2d39ccdb55d.png" alt="Non-response time"></p>
+<hr>
+<h3 id="Persistent-HTTP"><a href="#Persistent-HTTP" class="headerlink" title="Persistent HTTP"></a>Persistent HTTP</h3><h4 id="Non-persistent-HTTP-issues"><a href="#Non-persistent-HTTP-issues" class="headerlink" title="Non-persistent HTTP issues"></a>Non-persistent HTTP issues</h4><ul>
+<li> Requires 2 RTTs per object 每个对象需要2个rtt</li>
+<li> OS overhead for each TCP connection 每个TCP连接的操作系统开销</li>
+<li> Browsers often open parallel TCP connections to fetch referenced objects 浏览器经常打开并行TCP连接来获取引用的对象<h4 id="Persistent-HTTP-issues"><a href="#Persistent-HTTP-issues" class="headerlink" title="Persistent HTTP issues"></a>Persistent HTTP issues</h4></li>
+<li> Server leaves connection open after sending response 服务器在发送响应后保持连接打开</li>
+<li> Subsequent HTTP messages between same client/server sent over open connection 在同一个客户端/服务器之间通过开放连接发送的后续HTTP消息</li>
+<li> Client sends requests as soon as it encounters a referenced object 客户端一遇到引用对象就发送请求</li>
+<li> As little as one RTT for all the referenced objects 对于所有引用的对象，只有一个RTT</li>
+</ul>
+<p><strong>Persistent HTTP is not perfect</strong></p>
+<hr>
+<h3 id="HTTP-request-message"><a href="#HTTP-request-message" class="headerlink" title="HTTP request message"></a>HTTP request message</h3><ul>
+<li>Two types of HTTP messages: request, response </li>
+<li>HTTP 1.x request message:<ul>
+<li>ASCII (human-readable format)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="general-format"><a href="#general-format" class="headerlink" title="general format"></a>general format</h4><p><img src="https://pic.imgdb.cn/item/611cc8534907e2d39c56fcd8.png" alt="HTTP request message: general format"></p>
+<hr>
+<h3 id="HTTP-1-1-method"><a href="#HTTP-1-1-method" class="headerlink" title="HTTP 1.1 method"></a>HTTP 1.1 method</h3><p>What do we need from a web protocol?<br>Get, Create, Modify, Delete —- resource / data / information</p>
+<hr>
+<h3 id="HTTP-1-0-1-1-Additional-methods"><a href="#HTTP-1-0-1-1-Additional-methods" class="headerlink" title="HTTP 1.0 1.1 Additional methods"></a>HTTP 1.0 1.1 Additional methods</h3><p>Get, Post, Put, Delete, Patch —- Safe Methods<br>Head, Trace, Options, Connect —- Idempotent Methods 幂等方法</p>
+<hr>
+<h3 id="HTTP-response-status-codes"><a href="#HTTP-response-status-codes" class="headerlink" title="HTTP response status codes"></a>HTTP response status codes</h3><ul>
+<li>Status code appears in 1st line in server-to-client response message.</li>
+<li>Some sample codes:<ul>
+<li>200 OK</li>
+<li>301 Move Permanently</li>
+<li>400 Bad Request</li>
+<li>404 Not Found</li>
+<li>505 HTTP Version Not Supported</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="User-server-state-cookies"><a href="#User-server-state-cookies" class="headerlink" title="User-server state: cookies"></a>User-server state: cookies</h2><ul>
+<li>many web sites use cookie</li>
+<li>four components:<ul>
+<li>cookie header line of HTTP response message HTTP响应消息的cookie报头行</li>
+<li>cookie header line in next HTTP request message 下一个HTTP请求消息中的cookie头行</li>
+<li>cookie file kept on user’s host, managed by user’s browser cookie文件保存在用户的主机上，由用户的浏览器管理</li>
+<li>back-end database at web site 网站的后端数据库<br>Example:<br>Bob always access Internet from PC and visits Taobao site for first time. When initial HTTP requests arrives at site, site creates: unique ID –&gt; cookie, entry in backend database for ID.<br><img src="https://pic.imgdb.cn/item/611dfabc4907e2d39c6e73ac.png" alt="cookie"></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="cookies"><a href="#cookies" class="headerlink" title="cookies"></a>cookies</h3><p>What cookies can be used for: cookies可以用来做什么</p>
+<ul>
+<li>authorization 授权</li>
+<li>shopping carts 购物车</li>
+<li>recommendations 建议</li>
+<li>user session state 用户会话状态<br>How to keep “state”:</li>
+<li>Protocol endpoints: maintain state at sender/receiver over multiple transactions 协议端点:在多个事务中维护发送方/接收方的状态</li>
+<li>Cookies: http messages http消息<br>Cookies and privacy: cookies permit sites to learn a lot about you; remember to clean your cookies. Cookies允许网站了解更多关于你的信息。</li>
+</ul>
+<hr>
+<h2 id="Web-Caches-web缓存-Proxy-server代理服务器"><a href="#Web-Caches-web缓存-Proxy-server代理服务器" class="headerlink" title="Web Caches web缓存(Proxy server代理服务器)"></a>Web Caches web缓存(Proxy server代理服务器)</h2><p>Goal: satisfy client request without involving origin server 满足客户端请求而不涉及原始服务器</p>
+<ul>
+<li>User sets browser: Web accesses via cache 用户设置浏览器:通过缓存访问Web</li>
+<li>Browser sends all HTTP requests to cache 浏览器将所有HTTP请求发送到缓存<ul>
+<li>object in cache: cache returns object 缓存返回对象</li>
+<li>else cache requests object from origin server, then returns object to client 从源服务器缓存请求对象，然后返回对象给客户端<br><img src="https://pic.imgdb.cn/item/611e1dac4907e2d39cd99291.png" alt="Web caches"></li>
+</ul>
+</li>
+<li>Cache acts as both client and server 缓存既是客户端也是服务器端<ul>
+<li>server for original requesting client 服务器为原始请求客户端</li>
+<li>client to origin server 客户端到源服务器</li>
+</ul>
+</li>
+<li>Typically cache is installed by ISP (university, company, residential ISP) 缓存通常由ISP安装<br>Why web caching?</li>
+<li>reduce response time for client request 减少客户的要求的反应时间</li>
+<li>reduce traffic on an institution’s access link 减少机构访问链接的流量</li>
+<li>internet dense with caches: enable “poor” content provides to effectively deliver content (so too does P2P file sharing) 使“糟糕的”内容提供商能够有效地传递内容</li>
+</ul>
+<hr>
+<h3 id="cache-example"><a href="#cache-example" class="headerlink" title="cache example"></a>cache example</h3><p>Assumptions:</p>
+<ul>
+<li> avg object size: 100K bits</li>
+<li> avg request rate from browsers to origin servers: 15/sec</li>
+<li> avg data rate to browsers: 1.50 Mbps</li>
+<li> RTT from institutional router to any origin server: 2 sec</li>
+<li> access link rate: 1.54 Mbps<br>Consequences:</li>
+<li> LAN utilization: 0.15%</li>
+<li> access link utilization = 99%</li>
+<li> total delay = Internet delay + access delay + LAN delay = 2 sec + minutes + usecs<br><img src="https://pic.imgdb.cn/item/611e33084907e2d39c12517b.png"><br><img src="https://pic.imgdb.cn/item/611e33084907e2d39c125188.png"></li>
+</ul>
+<hr>
+<h3 id="conditional-GET"><a href="#conditional-GET" class="headerlink" title="conditional GET"></a>conditional GET</h3><ul>
+<li><strong>Goal</strong>: don’t send object if cache has up-to-date cached version<ul>
+<li>no object transmission delay</li>
+<li>lower link utilization</li>
+</ul>
+</li>
+<li><em>cache</em>: specify date of cahced copy in HTTP request<ul>
+<li>If-modified-since: <data></li>
+</ul>
+</li>
+<li><em>server</em> response contains no object if cached copy is up-to-date:<ul>
+<li>HTTP/1.0 304 Not Modified<br><img src="https://pic.imgdb.cn/item/611e4ebd4907e2d39c49a989.png" alt="conditional GET"></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h2><p>How Email Works:</p>
+<ol>
+<li>A user (Alice) sends an email message and connects to an SMTP (Simple Mail Transfer Protocol) server as configured in her email client or Mail User Agent (MUA). 用户发送电子邮件消息并连接SMTP服务器配置在她的电子邮件客户端或邮件用户代理。</li>
+<li>On the SMTP server, a Mail Transfer Agent (MTA) looks at the recipient address and looks up the domain part of the address to determine its destination. 在SMTP服务器上，邮件传输代理查看收件人地址并查找地址的域部分以确定其目的地。</li>
+<li>After querying a Domain Name System (DNS) server for the name of the Mail eXchanger (MX) for the recipient’s domain name… 在DNS服务器上查询收件人域名的Mail exchange名称后</li>
+<li>…the SMTP server will send the message to that server via the SMTP protocol. SMTP服务器将通过SMTP协议将消息发送到该服务器。</li>
+<li>The receiving server will store the message and make it available to the recipient (Bob), who can access it via web, POP, or IMAP. 接收服务器将存储消息并使其对接收方可用，接收方可以通过web、POP或IMAP访问该消息。</li>
+</ol>
+<hr>
+<h3 id="Email-Protocols"><a href="#Email-Protocols" class="headerlink" title="Email Protocols"></a>Email Protocols</h3><p>Delivery:</p>
+<ul>
+<li>SMTP: simple mail transfer protocol[RFC2821, Apr. 2001]<br>Receive:</li>
+<li>POP3 - Post Office Protocol - Version 3[RFC1939, May 1996]</li>
+<li>IMAP - Internet Message Access Protocol[RFC3501, Mar. 2003] </li>
+<li>Exchange ActiveSync – Microsoft’s protocol[from 2002]</li>
+</ul>
+<hr>
+<h1 id="Lab"><a href="#Lab" class="headerlink" title="Lab"></a>Lab</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line">input_str = input(f&#x27;input: &#x27;)</span><br><span class="line">numbers = re.findall(r&quot;\d+\.?\d*&quot;, input_str)</span><br><span class="line">number_list = []</span><br><span class="line">location_list = []</span><br><span class="line">for number in numbers:</span><br><span class="line">    if &#x27;.&#x27; in number:</span><br><span class="line">        number_list.append(float(number))</span><br><span class="line">    else:</span><br><span class="line">        number_list.append(int(number))</span><br><span class="line">number_list.sort()</span><br><span class="line">print(number_list)</span><br><span class="line">for number in number_list:</span><br><span class="line">    location_list.append([input_str.index(str(number)), len(str(number))])</span><br><span class="line">print(location_list)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
+<li>XJTLU MC PowerPoint slides (CAN201 Week2 Lecture2 &amp; Lab2)</li>
+<li>计算机网络 自顶向下方法.原书第6版</li>
+</ol>
+</div><div class="article-licensing box"><div class="licensing-title"><p>CAN201 W2</p><p><a href="http://chenzhengde.github.io/2021/09/17/Preview-CAN201-W2/">http://chenzhengde.github.io/2021/09/17/Preview-CAN201-W2/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Felix Chen</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-09-17</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-09-17</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a><a class="icons" rel="noopener" target="_blank" title="Share Alike" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="icon fab fa-creative-commons-sa"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/XJTLU/">XJTLU</a><a class="link-muted mr-2" rel="tag" href="/tags/CAN201/">CAN201</a><a class="link-muted mr-2" rel="tag" href="/tags/Lecture/">Lecture</a><a class="link-muted mr-2" rel="tag" href="/tags/Lab/">Lab</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=6113d16f12036d00122e6422&amp;product=inline-share-buttons" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/09/12/Python%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8/"><span class="level-item">Python爬虫入门</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'http://chenzhengde.github.io/2021/09/17/Preview-CAN201-W2/';
+            this.page.identifier = '2021/09/17/Preview-CAN201-W2/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'my-hexo-website' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed0e.jpg" alt="Felix Chen"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Felix Chen</p><p class="is-size-6 is-block">shit happens</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>XJTLU, Suzhow</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">18</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">8</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">17</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/chenzhengde" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/iam_felixchen/"><i class="fab fa-instagram"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Wechat" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed18.jpg"><i class="fab fa-weixin"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Linkedin" href="https://www.linkedin.com/in/正德-陈-b92b351a6/"><i class="fab fa-linkedin"></i></a></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.learningmall.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">learning_mall</span></span><span class="level-right"><span class="level-item tag">www.learningmall.cn</span></span></a></li><li><a class="level is-mobile" href="https://www.csdn.net/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">CSDN</span></span><span class="level-right"><span class="level-item tag">www.csdn.net</span></span></a></li><li><a class="level is-mobile" href="https://leetcode.com/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Leetcode</span></span><span class="level-right"><span class="level-item tag">leetcode.com</span></span></a></li><li><a class="level is-mobile" href="https://www.bilibili.con/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">bilibili</span></span><span class="level-right"><span class="level-item tag">www.bilibili.con</span></span></a></li><li><a class="level is-mobile" href="http://1iin.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">1iin&#039;s blog</span></span><span class="level-right"><span class="level-item tag">1iin.cn</span></span></a></li><li><a class="level is-mobile" href="https://3sanmusen.top/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">三木森的小屋</span></span><span class="level-right"><span class="level-item tag">3sanmusen.top</span></span></a></li><li><a class="level is-mobile" href="https://segmentfault.com/u/1iin" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">1iin</span></span><span class="level-right"><span class="level-item tag">segmentfault.com</span></span></a></li><li><a class="level is-mobile" href="https://segmentfault.com/u/chenyingxi" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">cyx</span></span><span class="level-right"><span class="level-item tag">segmentfault.com</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/SURF-note/"><span class="level-start"><span class="level-item">SURF note</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/"><span class="level-start"><span class="level-item">XJTLU note</span></span><span class="level-end"><span class="level-item tag">11</span></span></a><ul><li><a class="level is-mobile" href="/categories/XJTLU-note/CAN201/"><span class="level-start"><span class="level-item">CAN201</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/CPT203/"><span class="level-start"><span class="level-item">CPT203</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/CPT205/"><span class="level-start"><span class="level-item">CPT205</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/INT201/"><span class="level-start"><span class="level-item">INT201</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/blog-note/"><span class="level-start"><span class="level-item">blog note</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/problem-solving/"><span class="level-start"><span class="level-item">problem solving</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Lecture"><span class="level-left"><span class="level-item">1</span><span class="level-item">Lecture</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Rich-network-applications"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">Rich network applications</span></span></a></li><li><a class="level is-mobile" href="#Architectures-for-applications"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">Architectures for applications</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Client-server-architecture"><span class="level-left"><span class="level-item">1.2.1</span><span class="level-item">Client-server architecture</span></span></a></li><li><a class="level is-mobile" href="#P2P-architecture"><span class="level-left"><span class="level-item">1.2.2</span><span class="level-item">P2P architecture</span></span></a></li></ul></li><li><a class="level is-mobile" href="#How-to-communicate-over-the-network"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">How to communicate over the network?</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Host-Program"><span class="level-left"><span class="level-item">1.3.1</span><span class="level-item">Host - Program</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Addressing-processes"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">Addressing processes</span></span></a></li><li><a class="level is-mobile" href="#App-layer-protocol-defines"><span class="level-left"><span class="level-item">1.5</span><span class="level-item">App-layer protocol defines</span></span></a></li><li><a class="level is-mobile" href="#Transport-service-requirements"><span class="level-left"><span class="level-item">1.6</span><span class="level-item">Transport service requirements</span></span></a></li><li><a class="level is-mobile" href="#Internet-transport-protocols-services"><span class="level-left"><span class="level-item">1.7</span><span class="level-item">Internet transport protocols services</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#TCP-service"><span class="level-left"><span class="level-item">1.7.1</span><span class="level-item">TCP service</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Internet-transport-protocols-services-1"><span class="level-left"><span class="level-item">1.8</span><span class="level-item">Internet transport protocols services</span></span></a></li><li><a class="level is-mobile" href="#Securing-TCP"><span class="level-left"><span class="level-item">1.9</span><span class="level-item">Securing TCP</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Web-application"><span class="level-left"><span class="level-item">2</span><span class="level-item">Web application</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Web-HTTP-and-WWW"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">Web, HTTP and WWW</span></span></a></li><li><a class="level is-mobile" href="#HTTP-overview"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">HTTP overview</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Uses-TCP"><span class="level-left"><span class="level-item">2.2.1</span><span class="level-item">Uses TCP:</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Non-persistent-HTTP-非持久性HTTP"><span class="level-left"><span class="level-item">2.2.1.1</span><span class="level-item">Non-persistent HTTP 非持久性HTTP</span></span></a></li><li><a class="level is-mobile" href="#Persistent-HTTP-持久HTTP"><span class="level-left"><span class="level-item">2.2.1.2</span><span class="level-item">Persistent HTTP 持久HTTP</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Non-response-time"><span class="level-left"><span class="level-item">2.2.2</span><span class="level-item">Non-response time</span></span></a></li><li><a class="level is-mobile" href="#Persistent-HTTP"><span class="level-left"><span class="level-item">2.2.3</span><span class="level-item">Persistent HTTP</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Non-persistent-HTTP-issues"><span class="level-left"><span class="level-item">2.2.3.1</span><span class="level-item">Non-persistent HTTP issues</span></span></a></li><li><a class="level is-mobile" href="#Persistent-HTTP-issues"><span class="level-left"><span class="level-item">2.2.3.2</span><span class="level-item">Persistent HTTP issues</span></span></a></li></ul></li><li><a class="level is-mobile" href="#HTTP-request-message"><span class="level-left"><span class="level-item">2.2.4</span><span class="level-item">HTTP request message</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#general-format"><span class="level-left"><span class="level-item">2.2.4.1</span><span class="level-item">general format</span></span></a></li></ul></li><li><a class="level is-mobile" href="#HTTP-1-1-method"><span class="level-left"><span class="level-item">2.2.5</span><span class="level-item">HTTP 1.1 method</span></span></a></li><li><a class="level is-mobile" href="#HTTP-1-0-1-1-Additional-methods"><span class="level-left"><span class="level-item">2.2.6</span><span class="level-item">HTTP 1.0 1.1 Additional methods</span></span></a></li><li><a class="level is-mobile" href="#HTTP-response-status-codes"><span class="level-left"><span class="level-item">2.2.7</span><span class="level-item">HTTP response status codes</span></span></a></li></ul></li><li><a class="level is-mobile" href="#User-server-state-cookies"><span class="level-left"><span class="level-item">2.3</span><span class="level-item">User-server state: cookies</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#cookies"><span class="level-left"><span class="level-item">2.3.1</span><span class="level-item">cookies</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Web-Caches-web缓存-Proxy-server代理服务器"><span class="level-left"><span class="level-item">2.4</span><span class="level-item">Web Caches web缓存(Proxy server代理服务器)</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#cache-example"><span class="level-left"><span class="level-item">2.4.1</span><span class="level-item">cache example</span></span></a></li><li><a class="level is-mobile" href="#conditional-GET"><span class="level-left"><span class="level-item">2.4.2</span><span class="level-item">conditional GET</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Email"><span class="level-left"><span class="level-item">2.5</span><span class="level-item">Email</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Email-Protocols"><span class="level-left"><span class="level-item">2.5.1</span><span class="level-item">Email Protocols</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="#Lab"><span class="level-left"><span class="level-item">3</span><span class="level-item">Lab</span></span></a></li><li><a class="level is-mobile" href="#References"><span class="level-left"><span class="level-item">4</span><span class="level-item">References</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-17T13:54:12.000Z">2021-09-17</time></p><p class="title"><a href="/2021/09/17/Preview-CAN201-W2/">CAN201 W2</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CAN201/">CAN201</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-12T13:41:14.000Z">2021-09-12</time></p><p class="title"><a href="/2021/09/12/Python%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8/">Python爬虫入门</a></p><p class="categories"><a href="/categories/problem-solving/">problem solving</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-10T09:39:04.000Z">2021-09-10</time></p><p class="title"><a href="/2021/09/10/preview-can201W1/">CAN201 W1</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CAN201/">CAN201</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-08T10:50:47.000Z">2021-09-08</time></p><p class="title"><a href="/2021/09/08/Preview-CPT205-W1/">CPT205 W1</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CPT205/">CPT205</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-07T07:42:56.000Z">2021-09-07</time></p><p class="title"><a href="/2021/09/07/Preview-CPT203-W1/">CPT203 W1</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CPT203/">CPT203</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CAN201/"><span class="tag">CAN201</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT203/"><span class="tag">CPT203</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT205/"><span class="tag">CPT205</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/INT201/"><span class="tag">INT201</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lab/"><span class="tag">Lab</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lecture/"><span class="tag">Lecture</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Markdown/"><span class="tag">Markdown</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tutorial/"><span class="tag">Tutorial</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/XJTLU/"><span class="tag">XJTLU</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dart/"><span class="tag">dart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/flutter/"><span class="tag">flutter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/icarus/"><span class="tag">icarus</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/yilia/"><span class="tag">yilia</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%88%AC%E8%99%AB/"><span class="tag">爬虫</span><span class="tag">1</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a><p class="is-size-7"><span>&copy; 2021 Felix Chen</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Github" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/iam_felixchen/"><i class="fab fa-instagram"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Wechat" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed18.jpg"><i class="fab fa-weixin"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
