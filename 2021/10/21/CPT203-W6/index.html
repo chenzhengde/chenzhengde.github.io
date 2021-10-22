@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>CPT203 W6 - divide÷</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="iam_felix"><meta name="msapplication-TileImage" content="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed05.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="iam_felix"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="This’s the note of System Modeling.  Context models  Interaction models  Structural models  Behavioral models  Model-driven engineering  这周各种东西要记的也太多了吧。。。"><meta property="og:type" content="blog"><meta property="og:title" content="CPT203 W6"><meta property="og:url" content="http://chenzhengde.github.io/2021/10/21/CPT203-W6/"><meta property="og:site_name" content="divide÷"><meta property="og:description" content="This’s the note of System Modeling.  Context models  Interaction models  Structural models  Behavioral models  Model-driven engineering  这周各种东西要记的也太多了吧。。。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://pic.imgdb.cn/item/61717e842ab3f51d91fc45aa.png"><meta property="og:image" content="https://pic.imgdb.cn/item/617251b92ab3f51d919fd46a.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6172552e2ab3f51d91a3b5f9.png"><meta property="og:image" content="https://pic.imgdb.cn/item/61725fde2ab3f51d91ada6f3.png"><meta property="og:image" content="https://pic.imgdb.cn/item/617260722ab3f51d91ae14d7.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6172638d2ab3f51d91b0f735.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6172703a2ab3f51d91bcd385.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6172ae102ab3f51d91f239f6.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6172ae642ab3f51d91f29a21.png"><meta property="article:published_time" content="2021-10-21T14:00:31.000Z"><meta property="article:modified_time" content="2021-10-22T13:18:06.148Z"><meta property="article:author" content="Felix Chen"><meta property="article:tag" content="XJTLU"><meta property="article:tag" content="Lecture"><meta property="article:tag" content="CPT203"><meta property="article:tag" content="Tutorial"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://pic.imgdb.cn/item/61717e842ab3f51d91fc45aa.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://chenzhengde.github.io/2021/10/21/CPT203-W6/"},"headline":"CPT203 W6","image":["https://pic.imgdb.cn/item/61717e842ab3f51d91fc45aa.png","https://pic.imgdb.cn/item/617251b92ab3f51d919fd46a.png","https://pic.imgdb.cn/item/6172552e2ab3f51d91a3b5f9.png","https://pic.imgdb.cn/item/61725fde2ab3f51d91ada6f3.png","https://pic.imgdb.cn/item/617260722ab3f51d91ae14d7.png","https://pic.imgdb.cn/item/6172638d2ab3f51d91b0f735.png","https://pic.imgdb.cn/item/6172703a2ab3f51d91bcd385.png","https://pic.imgdb.cn/item/6172ae102ab3f51d91f239f6.png","https://pic.imgdb.cn/item/6172ae642ab3f51d91f29a21.png"],"datePublished":"2021-10-21T14:00:31.000Z","dateModified":"2021-10-22T13:18:06.148Z","author":{"@type":"Person","name":"Felix Chen"},"publisher":{"@type":"Organization","name":"divide÷","logo":{"@type":"ImageObject","url":"https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png"}},"description":"This’s the note of System Modeling.  Context models  Interaction models  Structural models  Behavioral models  Model-driven engineering  这周各种东西要记的也太多了吧。。。"}</script><link rel="canonical" href="http://chenzhengde.github.io/2021/10/21/CPT203-W6/"><link rel="icon" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed05.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-90LF5XQCXG" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-90LF5XQCXG');</script><!--!--><!--!--><!--!--><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-10-21T14:00:31.000Z" title="2021/10/21 下午10:00:31">2021-10-21</time>发表</span><span class="level-item"><time dateTime="2021-10-22T13:18:06.148Z" title="2021/10/22 下午9:18:06">2021-10-22</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/XJTLU-note/">XJTLU note</a><span> / </span><a class="link-muted" href="/categories/XJTLU-note/CPT203/">CPT203</a></span><span class="level-item">34 分钟读完 (大约5162个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">CPT203 W6</h1><div class="content"><p>This’s the note of <code>System Modeling</code>.</p>
+<ul>
+<li>Context models </li>
+<li>Interaction models </li>
+<li>Structural models </li>
+<li>Behavioral models </li>
+<li>Model-driven engineering</li>
+</ul>
+<p>这周各种东西要记的也太多了吧。。。</p>
+<span id="more"></span>
+<hr>
+<h1 id="Lecture"><a href="#Lecture" class="headerlink" title="Lecture"></a>Lecture</h1><h2 id="Basic-Terms"><a href="#Basic-Terms" class="headerlink" title="Basic Terms"></a>Basic Terms</h2><p><strong>Software Process</strong></p>
+<ul>
+<li>Requirements Engineering 需求工程</li>
+<li>System Modelling 系统建模</li>
+<li>System Architecture 系统架构</li>
+<li>System Design 系统设计</li>
+</ul>
+<p><strong>为什么modeling很重要？</strong><br>建模通过将复杂系统抽象为适当的细节级别来简化复杂系统<br>垃圾的software development失败大多可以归结于:</p>
+<ol>
+<li>Poorly understood requirements 知之甚少的需求</li>
+<li>Problems often discovered late in the development 问题往往在开发的后期发现</li>
+<li>Complexity lead to performance issues 复杂性会导致性能问题</li>
+</ol>
+<hr>
+<h2 id="System-modeling"><a href="#System-modeling" class="headerlink" title="System modeling"></a>System modeling</h2><ul>
+<li>System modeling is the process of developing abstract models of a system, with each model presenting a different view or perspective of that system. 系统建模是开发系统抽象模型的过程，每个模型呈现系统的不同视图或透视图。</li>
+<li>System modeling has now come to mean representing a system using some kind of graphical notation, which is now almost always based on notations in the Unified Modeling Language (UML). 系统建模现在已经意味着使用某种图形符号来表示系统，现在几乎总是基于统一建模语言(UML)中的符号。</li>
+<li>System modelling helps the analyst to understand the functionality of the system and models are used to communicate with customers. 系统建模帮助分析人员了解系统的功能，并使用模型与客户进行沟通。</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/61717e842ab3f51d91fc45aa.png" alt="Sample model"></p>
+<hr>
+<h2 id="Existing-and-planned-system-models"><a href="#Existing-and-planned-system-models" class="headerlink" title="Existing and planned system models"></a>Existing and planned system models</h2><ul>
+<li>Models of the existing system are used during requirements engineering. They help clarify what the existing system does and can be used as a basis for discussing its strengths and weaknesses. These then lead to requirements for the new system. 在需求工程中使用现有系统的模型。它们有助于澄清现有系统的功能，并可作为讨论其优缺点的基础。这就导致了对新系统的需求。</li>
+<li>Models of the new system are used during requirements engineering to help explain the proposed requirements to other system stakeholders. Engineers use these models to discuss design proposals and to document the system for implementation. 在需求工程期间使用新系统的模型，以帮助向其他系统涉众解释建议的需求。工程师使用这些模型来讨论设计建议，并记录系统的实施。</li>
+<li>In a model-driven engineering process, it is possible to generate a complete or partial system implementation from the system model. 在模型驱动的工程过程中，可以从系统模型生成完整或部分的系统实现。</li>
+</ul>
+<hr>
+<h2 id="System-perspective-系统的视角"><a href="#System-perspective-系统的视角" class="headerlink" title="System perspective 系统的视角"></a>System perspective 系统的视角</h2><ul>
+<li><strong>An external perspective</strong>, where you model the context or environment of the system. 外部透视图，在其中建模系统的上下文或环境。</li>
+<li><strong>An interaction perspective</strong>, where you model the interactions between a system and its environment, or between the components of a system. 一个交互的视角，在那里你建模一个系统和它的环境之间的交互，或者一个系统的组件之间的交互。</li>
+<li><strong>A structural perspective</strong>, where you model the organization of a system or the structure of the data that is processed by the system. 结构视角，在其中对系统的组织或系统处理的数据结构进行建模。</li>
+<li><strong>A behavioral perspective</strong>, where you model the dynamic behavior of the system and how it responds to events. 行为视角，你可以建模系统的动态行为以及它如何响应事件。</li>
+</ul>
+<hr>
+<h2 id="UML-diagram-types"><a href="#UML-diagram-types" class="headerlink" title="UML diagram types"></a>UML diagram types</h2><ul>
+<li><strong>Activity diagrams</strong>, which show the activities involved in a process or in data processing.</li>
+<li><strong>Use case diagrams</strong>, which show the interactions between a system and its environment.</li>
+<li><strong>Sequence diagrams</strong>, which show interactions between actors and the system and between system components.</li>
+<li><strong>Class diagrams</strong>, which show the object classes in the system and the associations between these classes.</li>
+<li><strong>State machine diagrams</strong>, which show how the system reacts to internal and external events.</li>
+</ul>
+<p>PS: 在用例图中，我们总是会选择的最简单的事件进行记录(as simply as possible)。而且在用例图中，事件并不是以flow的形式存在的(或是说存在flow的内容都被use case省略到一个事件里的？)。但是在activity diagram中，事件就是会有flow的形式存在。</p>
+<hr>
+<h2 id="Use-of-graphical-models"><a href="#Use-of-graphical-models" class="headerlink" title="Use of graphical models"></a>Use of graphical models</h2><ul>
+<li>As a means of facilitating discussion about an existing or proposed system 作为<strong>促进对现有或拟议系统的讨论的一种手段</strong><ul>
+<li>Incomplete and incorrect models are OK as their role is to support discussion. <strong>不完整和不正确的模型是可以的</strong>，因为它们的作用是支持讨论。</li>
+</ul>
+</li>
+<li>As a way of documenting an existing system 作为一种<strong>记录现有系统的方法</strong><ul>
+<li>Models should be an accurate representation of the system but need not be complete. <strong>模型应该是系统的准确表现，但不必是完整的</strong>。</li>
+</ul>
+</li>
+<li>As a detailed system description that can be used to generate a system implementation 作为一个详细的系统描述，可以用来<strong>生成一个系统实现</strong><ul>
+<li>Models have to be both correct and complete. 模型必须<strong>正确和完整</strong>。</li>
+</ul>
+</li>
+</ul>
+<p>PS: 这里需要注意，模型的正确与否和是否完整并没有一个固定的要求，不同的情况对模型的要求是不一样的。有的时候不完整或者不正确的模型就可以开始讨论了，有时候需要完全正确和完整。</p>
+<hr>
+<h2 id="The-context-of-the-MHC-PMS"><a href="#The-context-of-the-MHC-PMS" class="headerlink" title="The context of the MHC-PMS"></a>The context of the MHC-PMS</h2><p><img src="https://pic.imgdb.cn/item/617251b92ab3f51d919fd46a.png"></p>
+<hr>
+<h2 id="Context-models"><a href="#Context-models" class="headerlink" title="Context models"></a>Context models</h2><ul>
+<li>Context models simply show the other systems in the environment, not how the system being developed is used in that environment. 上下文模型只是显示环境中的其他系统，而不是正在开发的系统如何在该环境中使用。</li>
+<li>Used along with other models, such as business process models. 与其他模型一起使用，如业务流程模型。</li>
+<li>UML activity diagrams may be used to define business process models. UML活动图可以用来定义业务流程模型。</li>
+</ul>
+<hr>
+<h2 id="Process-model-of-involuntary-detention"><a href="#Process-model-of-involuntary-detention" class="headerlink" title="Process model of involuntary detention"></a>Process model of involuntary detention</h2><p><img src="https://pic.imgdb.cn/item/6172552e2ab3f51d91a3b5f9.png" alt="非自愿拘留的过程模型 example"></p>
+<hr>
+<h2 id="Interaction-models-互动模型"><a href="#Interaction-models-互动模型" class="headerlink" title="Interaction models 互动模型"></a>Interaction models 互动模型</h2><ul>
+<li>Modeling user interaction is important as it helps to identify user requirements. 用户交互建模非常重要，因为它有助于识别用户需求。</li>
+<li>Modeling system-to-system interaction highlights the <strong>communication problems</strong> that may arise. 系统到系统交互建模强调了可能出现的通信问题。</li>
+<li>Modeling component interaction helps us understand if a proposed system structure is likely to deliver the required system performance and dependability. 建模组件交互帮助我们理解所提议的系统结构是否可能交付所需的系统性能和可靠性。</li>
+<li>Use case diagrams and sequence diagrams may be used for interaction modeling. 用例图和序列图可以用于交互建模。</li>
+</ul>
+<hr>
+<h2 id="Use-case-diagram"><a href="#Use-case-diagram" class="headerlink" title="Use case diagram"></a>Use case diagram</h2><ul>
+<li>Use cases are developed originally to support requirements elicitation and now incorporated into the UML. 用例最初是为了支持需求引出而开发的，现在被合并到UML中。</li>
+<li><strong>Each use case represents a discrete task that involves external interaction with a system.</strong> <em>每个用例代表一个离散的任务</em>，它涉及到与系统的外部交互。</li>
+<li>Actors in a use case may be people or other systems. 用例中的参与者可能是人或其他系统。</li>
+<li>Represented diagramatically to provide an overview of the use case and in a more detailed textual form. 以图表形式表示，以更详细的文本形式提供用例的概述。</li>
+</ul>
+<hr>
+<p><strong>Transfer-data use case</strong><br><em>A use case in the MHC-PMS</em><br><img src="https://pic.imgdb.cn/item/61725fde2ab3f51d91ada6f3.png"><br>“传输数据”用例的表格式描述 Tabular description of the ‘Transfer data’ use-case<br><img src="https://pic.imgdb.cn/item/617260722ab3f51d91ae14d7.png"><br>Use cases in the MHC-PMS involving the role ‘Medical Receptionist’<br><img src="https://pic.imgdb.cn/item/6172638d2ab3f51d91b0f735.png"></p>
+<hr>
+<h2 id="Sequence-diagrams"><a href="#Sequence-diagrams" class="headerlink" title="Sequence diagrams"></a>Sequence diagrams</h2><ul>
+<li>Sequence diagrams are part of the UML and are used to <strong>model the interactions between the actors and the objects within a system</strong>. 序列图是UML的一部分，用于对系统中参与者和对象之间的交互进行建模。</li>
+<li>A sequence diagram shows the sequence of interactions that take place during a particular use case or use case instance. 序列图显示了在特定用例或用例实例中发生的交互序列。</li>
+<li>The objects and actors involved are listed along the top of the diagram, with a dotted line drawn vertically from these. 所涉及的对象和参与者在图表的顶部列出，并在垂直方向上画一条虚线。</li>
+<li>Interactions between objects are indicated by annotated arrows. 对象之间的交互通过标注的箭头表示。</li>
+</ul>
+<p><strong>Sequence diagram for View patient information</strong><br><img src="https://pic.imgdb.cn/item/6172703a2ab3f51d91bcd385.png"></p>
+<hr>
+<h2 id="Structural-models-结构模型"><a href="#Structural-models-结构模型" class="headerlink" title="Structural models 结构模型"></a>Structural models 结构模型</h2><ul>
+<li>Structural models of software display the organization of a system in terms of the components that make up that system and their relationships. 软件的结构模型根据组成系统的组件及其关系来显示系统的组织。</li>
+<li>Structural models may be static models, which show the structure of the system design, or dynamic models, which show the organization of the system when it is executing. 结构模型可以是静态模型，它显示系统设计的结构，也可以是动态模型，它显示系统执行时的组织。</li>
+<li>You create structural models of a system when you are discussing and designing the system architecture. 在讨论和设计系统架构时创建系统的结构模型。</li>
+</ul>
+<hr>
+<h2 id="Class-diagrams"><a href="#Class-diagrams" class="headerlink" title="Class diagrams"></a>Class diagrams</h2><ul>
+<li>Class diagrams are used when developing an object- oriented system model to show the classes in a system and the associations between these classes. 在开发面向对象的系统模型时使用类图来显示系统中的类以及这些类之间的关联。</li>
+<li>An object class can be thought of as a general definition of one kind of system object. 一个对象类可以被认为是一种系统对象的一般定义。</li>
+<li>An association is a link between classes that indicates that there is some relationship between these classes. 关联是类之间的链接，表明这些类之间存在某种关系。</li>
+<li>When you are developing models during the early stages of the software engineering process, objects represent something in the real world, such as a patient, a prescription, doctor, etc. 当你在软件工程过程的早期阶段开发模型时，对象代表了现实世界中的某些东西，如病人、处方、医生等。</li>
+</ul>
+<p>这就是类图的作用，具体细节自行查询并学习（课件上有一些介绍），在大二的CPT105中学过如何绘制Java的UML类图。</p>
+<hr>
+<h2 id="Behavioral-models-行为模型"><a href="#Behavioral-models-行为模型" class="headerlink" title="Behavioral models 行为模型"></a>Behavioral models 行为模型</h2><ul>
+<li>Behavioral models are models of the dynamic behavior of a system as it is executing. They show what happens or what is supposed to happen when a system responds to a stimulus from its environment. 行为模型是系统在执行过程中动态行为的模型。它们显示了当系统对环境的刺激作出反应时发生了什么或应该发生什么。</li>
+<li>You can think of these stimuli as being of two types: 这些刺激分为两种<ul>
+<li><strong>Data</strong> Some data arrives that has to be processed by the system. 一些到达的数据必须被系统处理。</li>
+<li><strong>Events</strong> Some event happens that triggers system processing. Events may have associated data, although this is not always the case. 事件触发系统处理的事件。事件可能有相关的数据，尽管情况并非总是如此。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Data-driven-modeling-数据驱动模型"><a href="#Data-driven-modeling-数据驱动模型" class="headerlink" title="Data-driven modeling 数据驱动模型"></a>Data-driven modeling 数据驱动模型</h2><ul>
+<li>Many business systems are data-processing systems that are primarily driven by data. They are controlled by the data input to the system, with relatively little external event processing. 许多业务系统是主要由数据驱动的数据处理系统。它们由输入到系统的数据控制，外部事件处理相对较少。</li>
+<li>Data-driven models show the sequence of actions involved in processing input data and generating an associated output. 数据驱动模型显示了处理输入数据和生成相关输出所涉及的操作序列。</li>
+<li>They are particularly useful during the analysis of requirements as they can be used to show end-to-end processing in a system. 它们在需求分析期间特别有用，因为它们可以用来显示系统中的端到端处理。</li>
+<li>Activity diagram and sequence diagram are used in data-driven modeling. 数据驱动建模使用活动图和序列图。</li>
+</ul>
+<hr>
+<h2 id="Event-driven-modeling-事件驱动模型"><a href="#Event-driven-modeling-事件驱动模型" class="headerlink" title="Event-driven modeling 事件驱动模型"></a>Event-driven modeling 事件驱动模型</h2><ul>
+<li>Real-time systems are often event-driven, with minimal data processing. For example, a landline phone switching system responds to events such as ‘receiver off hook’ by generating a dial tone. 实时系统通常是事件驱动的，数据处理很少。例如，固定电话交换系统通过产生拨号音来响应“接收机挂断”等事件。</li>
+<li>Event-driven modeling shows how a system responds to external and internal events. 事件驱动模型演示了一个系统如何响应内部和外部的事件。</li>
+<li>It is based on the assumption that a system has a finite number of states and that events (stimuli) may cause a transition from one state to another. 系统基于这样的推测：系统有有限数量的状态，并且事件(刺激)可能导致从一种状态到另一种状态的转换。</li>
+</ul>
+<hr>
+<h2 id="State-machine-diagram-状态机图"><a href="#State-machine-diagram-状态机图" class="headerlink" title="State machine diagram 状态机图"></a>State machine diagram 状态机图</h2><ul>
+<li>These model the behaviour of the system in response to external and internal events. 这些模型模拟系统在响应外部和内部事件时的行为。</li>
+<li>They show the system’s responses to stimuli so are often used for modelling real-time systems. 它们显示系统对刺激的反应，因此经常用于建模实时系统。</li>
+<li>State machine models show system states as nodes and events as arcs between these nodes. When an event occurs, the system moves from one state to another. 状态机模型将系统状态显示为节点，事件显示为节点之间的弧线。当事件发生时，系统从一种状态转移到另一种状态。</li>
+<li>Statecharts are an integral part of the UML and are used to represent state machine models. 状态图是UML不可分割的一部分，用于表示状态机模型。</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/6172ae102ab3f51d91f239f6.png" alt="State diagram of a microwave oven"><br>然后需要有说明状态的表格<br><img src="https://pic.imgdb.cn/item/6172ae642ab3f51d91f29a21.png"></p>
+<hr>
+<h2 id="Model-driven-engineering"><a href="#Model-driven-engineering" class="headerlink" title="Model-driven engineering"></a>Model-driven engineering</h2><ul>
+<li>Model-driven engineering (MDE) is an approach to software development where models rather than programs are the principal outputs of the development process. 模型驱动工程(MDE)是一种软件开发方法，在这种方法中，<strong>模型</strong>而不是程序<strong>是开发过程的主要输出</strong>。</li>
+<li>The programs that execute on a hardware/software platform are then generated automatically from the models. <strong>在硬件/软件平台上执行的程序会从模型中自动生成</strong>。</li>
+<li>Proponents of MDE argue that this raises the level of abstraction in software engineering so that engineers no longer have to be concerned with programming language details or the specifics of execution platforms. MDE的支持者认为这<strong>提高了软件工程的抽象层次</strong>，这样工程师就不必再关注编程语言的细节或者执行平台的细节。</li>
+</ul>
+<hr>
+<h2 id="Usage-of-model-driven-engineering"><a href="#Usage-of-model-driven-engineering" class="headerlink" title="Usage of model-driven engineering"></a>Usage of model-driven engineering</h2><ul>
+<li>Model-driven engineering is still at an early stage of development, and it is unclear whether or not it will have a significant effect on software engineering practice. 模型驱动工程仍处于开发的早期阶段，它是否会对软件工程实践产生重大影响还不清楚。</li>
+<li>Pros 优点<ul>
+<li>Allows systems to be considered at higher levels of abstraction 允许在更高的抽象级别考虑系统</li>
+<li>Generating code automatically means that it is cheaper to adapt systems to new platforms. 自动生成代码意味着系统适应新平台的成本更低。</li>
+</ul>
+</li>
+<li>Cons 缺点<ul>
+<li>Models for abstraction and not necessarily right for implementation. 模型用于抽象，但不一定适用于实现。</li>
+<li>Savings from generating code may be outweighed by the costs of developing translators for new platforms. 为新平台开发翻译程序的成本可能超过了生成代码所节省的成本。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Types-of-model"><a href="#Types-of-model" class="headerlink" title="Types of model"></a>Types of model</h2><ul>
+<li>A computation independent model (CIM) 一个独立计算的模型<ul>
+<li>These model the important domain abstractions used in a system. CIMs are sometimes called domain models. 这些模型为系统中使用的重要领域抽象建模。cim有时被称为域模型。</li>
+</ul>
+</li>
+<li>A platform independent model (PIM) 平台无关模型<ul>
+<li>These model the operation of the system without reference to its implementation. The PIM is usually described using UML models that show the static system structure and how it responds to external and internal events. 这些模型模拟系统的运行，而不参考系统的实现。通常使用UML模型来描述PIM, UML模型显示静态系统结构以及它如何响应外部和内部事件。</li>
+</ul>
+</li>
+<li>Platform specific models (PSM) 平台特定型号<ul>
+<li>These are transformations of the platform-independent model with a separate PSM for each application platform. In principle, there may be layers of PSM, with each layer adding some platform-specific detail. 这些是平台独立模型的转换，每个应用平台都有一个独立的PSM。原则上，可以有多个PSM层，每一层都添加一些特定于平台的细节。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Agile-methods-and-MDA"><a href="#Agile-methods-and-MDA" class="headerlink" title="Agile methods and MDA"></a>Agile methods and MDA</h2><ul>
+<li>The developers of MDA claim that it is intended to support an iterative approach to development and so can be used within agile methods. MDA的开发人员声称，MDA旨在支持迭代开发方法，因此可以在敏捷方法中使用。</li>
+<li>The notion of extensive up-front modeling contradicts the fundamental ideas in the agile manifesto and I suspect that few agile developers feel comfortable with model- driven engineering. 广泛的预先建模的概念与敏捷宣言中的基本思想相矛盾，我怀疑很少有敏捷开发人员能够适应模型驱动的工程。</li>
+<li>If transformations can be completely automated and a complete program generated from a PIM, then, in principle, MDA could be used in an agile development process as no separate coding would be required. <strong>如果转换可以完全自动化，并且可以从PIM生成一个完整的程序，那么原则上，MDA可以在敏捷开发过程中使用，因为不需要单独的编码。</strong></li>
+</ul>
+<hr>
+<h2 id="Executable-UML"><a href="#Executable-UML" class="headerlink" title="Executable UML"></a>Executable UML</h2><ul>
+<li>The fundamental notion behind model-driven engineering is that completetly automated transformation of models to code should be possible. 模型驱动工程背后的基本概念是，完全自动化的模型到代码的转换应该是可能的。</li>
+<li>This is possible using a subset of UML2, called Executable UML or xUML. 使用UML2的子集，称为可执行UML或xUML，这是可能的。</li>
+</ul>
+<hr>
+<h2 id="Features-of-executable-UML"><a href="#Features-of-executable-UML" class="headerlink" title="Features of executable UML"></a>Features of executable UML</h2><ul>
+<li>To create an executable subset of UML, the number of model types has therefore been dramatically reduced to these 3 key types: 为了创建一个UML的可执行子集，模型类型的数量已经戏剧性地减少到以下3种关键类型<ul>
+<li>Domain models that identify the principal concerns in a system. They are defined using UML class diagrams and include objects, attributes and associations. 识别系统中主要关注点的领域模型。它们是使用UML类图定义的，包括对象、属性和关联。</li>
+<li>Class models in which classes are defined, along with their attributes and operations. 定义类及其属性和操作的类模型。</li>
+<li>State models in which a state diagram is associated with each class and is used to describe the life cycle of the class. 状态模型，其中状态图与每个类相关联，用于描述类的生命周期。</li>
+</ul>
+</li>
+<li>The dynamic behavior of the system may be specified declaratively using the object constraint language (OCL), or may be expressed using UML’s action language. 系统的动态行为可以使用对象约束语言(OCL)声明地指定，也可以使用UML的动作语言表达。</li>
+</ul>
+<hr>
+<h2 id="Key-points"><a href="#Key-points" class="headerlink" title="Key points"></a>Key points</h2><ul>
+<li>A model is an abstract view of a system that ignores system details. Complementary system models can be developed to show the system’s context, interactions, structure and behavior. 模型是忽略系统细节的系统抽象视图。可以开发互补系统模型来显示系统的上下文、交互、结构和行为。</li>
+<li>Context models show how a system that is being modeled is positioned in an environment with other systems and processes. 上下文模型显示了一个被建模的系统如何与其他系统和流程一起定位在环境中。</li>
+<li>Use case diagrams and sequence diagrams are used to describe the interactions between users and systems in the system being designed. Use cases describe interactions between a system and external actors; sequence diagrams add more information to these by showing interactions between system objects. 用例图和序列图用于描述被设计的系统中用户和系统之间的交互。用例描述系统和外部参与者之间的交互;序列图通过显示系统对象之间的交互，为它们添加了更多的信息。</li>
+<li>Structural models show the organization and architecture of a system. Class diagrams are used to define the static structure of classes in a system and their associations. 结构模型显示系统的组织和架构。类图用于定义系统中类的静态结构及其关联。</li>
+<li>Behavioral models are used to describe the dynamic behavior of an executing system. This behavior can be modeled from the perspective of the data processed by the system, or by the events that stimulate responses from a system. 行为模型用于描述执行系统的动态行为。可以从系统处理的数据的角度，或者从刺激系统响应的事件的角度，对这种行为进行建模。</li>
+<li>Activity diagrams may be used to model the processing of data, where each activity represents one process step. 活动图可以用来建模数据的处理，其中每个活动代表一个过程步骤。</li>
+<li>State diagrams are used to model a system’s behavior in response to internal or external events. 状态图用于对系统响应内部或外部事件的行为进行建模。</li>
+<li>Model-driven engineering is an approach to software development in which a system is represented as a set of models that can be automatically transformed to executable code. 模型驱动工程是一种软件开发方法，在这种方法中，系统被表示为一组可以自动转换为可执行代码的模型。</li>
+</ul>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
+<li>XJTLU slides CPT203 Week6</li>
+</ol>
+<hr>
+<p><strong>期中加油</strong></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>CPT203 W6</p><p><a href="http://chenzhengde.github.io/2021/10/21/CPT203-W6/">http://chenzhengde.github.io/2021/10/21/CPT203-W6/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Felix Chen</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-10-21</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-10-22</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a><a class="icons" rel="noopener" target="_blank" title="Share Alike" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="icon fab fa-creative-commons-sa"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/XJTLU/">XJTLU</a><a class="link-muted mr-2" rel="tag" href="/tags/Lecture/">Lecture</a><a class="link-muted mr-2" rel="tag" href="/tags/CPT203/">CPT203</a><a class="link-muted mr-2" rel="tag" href="/tags/Tutorial/">Tutorial</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=6113d16f12036d00122e6422&amp;product=inline-share-buttons" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/10/18/INT201-W5/"><span class="level-item">INT201 W5</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'http://chenzhengde.github.io/2021/10/21/CPT203-W6/';
+            this.page.identifier = '2021/10/21/CPT203-W6/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'my-hexo-website' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed0e.jpg" alt="Felix Chen"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Felix Chen</p><p class="is-size-6 is-block">shit happens</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>XJTLU, Suzhow</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">28</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">8</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">17</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/chenzhengde" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/iam_felixchen/"><i class="fab fa-instagram"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Wechat" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed18.jpg"><i class="fab fa-weixin"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Linkedin" href="https://www.linkedin.com/in/正德-陈-b92b351a6/"><i class="fab fa-linkedin"></i></a></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.learningmall.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">LMO</span></span><span class="level-right"><span class="level-item tag">www.learningmall.cn</span></span></a></li><li><a class="level is-mobile" href="https://www.csdn.net/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">CSDN</span></span><span class="level-right"><span class="level-item tag">www.csdn.net</span></span></a></li><li><a class="level is-mobile" href="https://leetcode.com" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Leetcode</span></span><span class="level-right"><span class="level-item tag">leetcode.com</span></span></a></li><li><a class="level is-mobile" href="http://1iin.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">1iin&#039;s blog</span></span><span class="level-right"><span class="level-item tag">1iin.cn</span></span></a></li><li><a class="level is-mobile" href="https://3sanmusen.top/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">三木森的小屋</span></span><span class="level-right"><span class="level-item tag">3sanmusen.top</span></span></a></li><li><a class="level is-mobile" href="https://segmentfault.com/u/1iin" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">1iin</span></span><span class="level-right"><span class="level-item tag">segmentfault.com</span></span></a></li><li><a class="level is-mobile" href="https://segmentfault.com/u/chenyingxi" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">cyx</span></span><span class="level-right"><span class="level-item tag">segmentfault.com</span></span></a></li><li><a class="level is-mobile" href="https://shaysha-pra.github.io/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">俊樹の勉強ブログ</span></span><span class="level-right"><span class="level-item tag">shaysha-pra.github.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/SURF-note/"><span class="level-start"><span class="level-item">SURF note</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/"><span class="level-start"><span class="level-item">XJTLU note</span></span><span class="level-end"><span class="level-item tag">21</span></span></a><ul><li><a class="level is-mobile" href="/categories/XJTLU-note/CAN201/"><span class="level-start"><span class="level-item">CAN201</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/CPT203/"><span class="level-start"><span class="level-item">CPT203</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/CPT205/"><span class="level-start"><span class="level-item">CPT205</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/INT201/"><span class="level-start"><span class="level-item">INT201</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/blog-note/"><span class="level-start"><span class="level-item">blog note</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/problem-solving/"><span class="level-start"><span class="level-item">problem solving</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Lecture"><span class="level-left"><span class="level-item">1</span><span class="level-item">Lecture</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Basic-Terms"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">Basic Terms</span></span></a></li><li><a class="level is-mobile" href="#System-modeling"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">System modeling</span></span></a></li><li><a class="level is-mobile" href="#Existing-and-planned-system-models"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">Existing and planned system models</span></span></a></li><li><a class="level is-mobile" href="#System-perspective-系统的视角"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">System perspective 系统的视角</span></span></a></li><li><a class="level is-mobile" href="#UML-diagram-types"><span class="level-left"><span class="level-item">1.5</span><span class="level-item">UML diagram types</span></span></a></li><li><a class="level is-mobile" href="#Use-of-graphical-models"><span class="level-left"><span class="level-item">1.6</span><span class="level-item">Use of graphical models</span></span></a></li><li><a class="level is-mobile" href="#The-context-of-the-MHC-PMS"><span class="level-left"><span class="level-item">1.7</span><span class="level-item">The context of the MHC-PMS</span></span></a></li><li><a class="level is-mobile" href="#Context-models"><span class="level-left"><span class="level-item">1.8</span><span class="level-item">Context models</span></span></a></li><li><a class="level is-mobile" href="#Process-model-of-involuntary-detention"><span class="level-left"><span class="level-item">1.9</span><span class="level-item">Process model of involuntary detention</span></span></a></li><li><a class="level is-mobile" href="#Interaction-models-互动模型"><span class="level-left"><span class="level-item">1.10</span><span class="level-item">Interaction models 互动模型</span></span></a></li><li><a class="level is-mobile" href="#Use-case-diagram"><span class="level-left"><span class="level-item">1.11</span><span class="level-item">Use case diagram</span></span></a></li><li><a class="level is-mobile" href="#Sequence-diagrams"><span class="level-left"><span class="level-item">1.12</span><span class="level-item">Sequence diagrams</span></span></a></li><li><a class="level is-mobile" href="#Structural-models-结构模型"><span class="level-left"><span class="level-item">1.13</span><span class="level-item">Structural models 结构模型</span></span></a></li><li><a class="level is-mobile" href="#Class-diagrams"><span class="level-left"><span class="level-item">1.14</span><span class="level-item">Class diagrams</span></span></a></li><li><a class="level is-mobile" href="#Behavioral-models-行为模型"><span class="level-left"><span class="level-item">1.15</span><span class="level-item">Behavioral models 行为模型</span></span></a></li><li><a class="level is-mobile" href="#Data-driven-modeling-数据驱动模型"><span class="level-left"><span class="level-item">1.16</span><span class="level-item">Data-driven modeling 数据驱动模型</span></span></a></li><li><a class="level is-mobile" href="#Event-driven-modeling-事件驱动模型"><span class="level-left"><span class="level-item">1.17</span><span class="level-item">Event-driven modeling 事件驱动模型</span></span></a></li><li><a class="level is-mobile" href="#State-machine-diagram-状态机图"><span class="level-left"><span class="level-item">1.18</span><span class="level-item">State machine diagram 状态机图</span></span></a></li><li><a class="level is-mobile" href="#Model-driven-engineering"><span class="level-left"><span class="level-item">1.19</span><span class="level-item">Model-driven engineering</span></span></a></li><li><a class="level is-mobile" href="#Usage-of-model-driven-engineering"><span class="level-left"><span class="level-item">1.20</span><span class="level-item">Usage of model-driven engineering</span></span></a></li><li><a class="level is-mobile" href="#Types-of-model"><span class="level-left"><span class="level-item">1.21</span><span class="level-item">Types of model</span></span></a></li><li><a class="level is-mobile" href="#Agile-methods-and-MDA"><span class="level-left"><span class="level-item">1.22</span><span class="level-item">Agile methods and MDA</span></span></a></li><li><a class="level is-mobile" href="#Executable-UML"><span class="level-left"><span class="level-item">1.23</span><span class="level-item">Executable UML</span></span></a></li><li><a class="level is-mobile" href="#Features-of-executable-UML"><span class="level-left"><span class="level-item">1.24</span><span class="level-item">Features of executable UML</span></span></a></li><li><a class="level is-mobile" href="#Key-points"><span class="level-left"><span class="level-item">1.25</span><span class="level-item">Key points</span></span></a></li></ul></li><li><a class="level is-mobile" href="#References"><span class="level-left"><span class="level-item">2</span><span class="level-item">References</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-21T14:00:31.000Z">2021-10-21</time></p><p class="title"><a href="/2021/10/21/CPT203-W6/">CPT203 W6</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CPT203/">CPT203</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-18T13:03:03.000Z">2021-10-18</time></p><p class="title"><a href="/2021/10/18/INT201-W5/">INT201 W5</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/INT201/">INT201</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-16T04:59:44.000Z">2021-10-16</time></p><p class="title"><a href="/2021/10/16/CAN201-W5/">CAN201 W5</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CAN201/">CAN201</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-14T11:49:26.000Z">2021-10-14</time></p><p class="title"><a href="/2021/10/14/CPT203-W5/">CPT203 W5</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CPT203/">CPT203</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-12T01:31:16.000Z">2021-10-12</time></p><p class="title"><a href="/2021/10/12/CPT205-W5/">CPT205 W5</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CPT205/">CPT205</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CAN201/"><span class="tag">CAN201</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT203/"><span class="tag">CPT203</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT205/"><span class="tag">CPT205</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/INT201/"><span class="tag">INT201</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lab/"><span class="tag">Lab</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lecture/"><span class="tag">Lecture</span><span class="tag">21</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Markdown/"><span class="tag">Markdown</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tutorial/"><span class="tag">Tutorial</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/XJTLU/"><span class="tag">XJTLU</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dart/"><span class="tag">dart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/flutter/"><span class="tag">flutter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/icarus/"><span class="tag">icarus</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/yilia/"><span class="tag">yilia</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%88%AC%E8%99%AB/"><span class="tag">爬虫</span><span class="tag">1</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a><p class="is-size-7"><span>&copy; 2021 Felix Chen</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Github" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/iam_felixchen/"><i class="fab fa-instagram"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Wechat" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed18.jpg"><i class="fab fa-weixin"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
