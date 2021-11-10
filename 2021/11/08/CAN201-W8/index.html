@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>CAN201 W8 - divide÷</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="iam_felix"><meta name="msapplication-TileImage" content="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed05.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="iam_felix"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Terms of packet in different layers   Application layer: message Transport layer: segment Network layer: datagram Link layer: frame  TCP three-way handshake  A -&amp;gt; B: SYN (seq &amp;#x3D; x, ack &amp;#x3D; 0, L &amp;#x3D; 0) B"><meta property="og:type" content="blog"><meta property="og:title" content="CAN201 W8"><meta property="og:url" content="http://chenzhengde.github.io/2021/11/08/CAN201-W8/"><meta property="og:site_name" content="divide÷"><meta property="og:description" content="Terms of packet in different layers   Application layer: message Transport layer: segment Network layer: datagram Link layer: frame  TCP three-way handshake  A -&amp;gt; B: SYN (seq &amp;#x3D; x, ack &amp;#x3D; 0, L &amp;#x3D; 0) B"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://pic.imgdb.cn/item/6189b5392ab3f51d918988ef.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6189b75f2ab3f51d918dc11c.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6189b94e2ab3f51d9191d6f2.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6189bcb22ab3f51d91990ce3.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6189be132ab3f51d919baec4.png"><meta property="og:image" content="https://pic.imgdb.cn/item/6189c09d2ab3f51d91a18672.png"><meta property="og:image" content="https://pic.imgdb.cn/item/618a37ab2ab3f51d9166879c.png"><meta property="og:image" content="https://pic.imgdb.cn/item/618a3cb82ab3f51d916d3f41.png"><meta property="og:image" content="https://pic.imgdb.cn/item/618a3d9d2ab3f51d916e92e7.png"><meta property="og:image" content="https://pic.imgdb.cn/item/618a8c752ab3f51d91953d1c.png"><meta property="og:image" content="https://pic.imgdb.cn/item/618a8fc92ab3f51d9196af42.png"><meta property="article:published_time" content="2021-11-08T15:01:27.000Z"><meta property="article:modified_time" content="2021-11-10T05:27:39.308Z"><meta property="article:author" content="Felix Chen"><meta property="article:tag" content="XJTLU"><meta property="article:tag" content="CAN201"><meta property="article:tag" content="Lecture"><meta property="article:tag" content="Lab"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://pic.imgdb.cn/item/6189b5392ab3f51d918988ef.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://chenzhengde.github.io/2021/11/08/CAN201-W8/"},"headline":"CAN201 W8","image":["https://pic.imgdb.cn/item/6189b5392ab3f51d918988ef.png","https://pic.imgdb.cn/item/6189b75f2ab3f51d918dc11c.png","https://pic.imgdb.cn/item/6189b94e2ab3f51d9191d6f2.png","https://pic.imgdb.cn/item/6189bcb22ab3f51d91990ce3.png","https://pic.imgdb.cn/item/6189be132ab3f51d919baec4.png","https://pic.imgdb.cn/item/6189c09d2ab3f51d91a18672.png","https://pic.imgdb.cn/item/618a37ab2ab3f51d9166879c.png","https://pic.imgdb.cn/item/618a3cb82ab3f51d916d3f41.png","https://pic.imgdb.cn/item/618a3d9d2ab3f51d916e92e7.png","https://pic.imgdb.cn/item/618a8c752ab3f51d91953d1c.png","https://pic.imgdb.cn/item/618a8fc92ab3f51d9196af42.png"],"datePublished":"2021-11-08T15:01:27.000Z","dateModified":"2021-11-10T05:27:39.308Z","author":{"@type":"Person","name":"Felix Chen"},"publisher":{"@type":"Organization","name":"divide÷","logo":{"@type":"ImageObject","url":"https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png"}},"description":"Terms of packet in different layers   Application layer: message Transport layer: segment Network layer: datagram Link layer: frame  TCP three-way handshake  A -&gt; B: SYN (seq &#x3D; x, ack &#x3D; 0, L &#x3D; 0) B"}</script><link rel="canonical" href="http://chenzhengde.github.io/2021/11/08/CAN201-W8/"><link rel="icon" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed05.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-90LF5XQCXG" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-90LF5XQCXG');</script><!--!--><!--!--><!--!--><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-08T15:01:27.000Z" title="2021/11/8 下午11:01:27">2021-11-08</time>发表</span><span class="level-item"><time dateTime="2021-11-10T05:27:39.308Z" title="2021/11/10 下午1:27:39">2021-11-10</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/XJTLU-note/">XJTLU note</a><span> / </span><a class="link-muted" href="/categories/XJTLU-note/CAN201/">CAN201</a></span><span class="level-item">14 分钟读完 (大约2071个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">CAN201 W8</h1><div class="content"><p>Terms of packet in different layers </p>
+<ul>
+<li>Application layer: message</li>
+<li>Transport layer: segment</li>
+<li>Network layer: datagram</li>
+<li>Link layer: frame</li>
+</ul>
+<p>TCP three-way handshake</p>
+<ul>
+<li>A -&gt; B: SYN (seq = x, ack = 0, L = 0)</li>
+<li>B -&gt; A: SYN ACK (seq = y, ack = x+1, L = 0)</li>
+<li>A-&gt;B: ACK (seq=x+1,ack=y+1,L=0)</li>
+</ul>
+<p>Flow Control vs. Congestion Control </p>
+<ul>
+<li>Host vs. Router</li>
+</ul>
+<p>这周还是继续IP的学习</p>
+<span id="more"></span>
+<hr>
+<h1 id="Lecture"><a href="#Lecture" class="headerlink" title="Lecture"></a>Lecture</h1><h2 id="IP编址：引论"><a href="#IP编址：引论" class="headerlink" title="IP编址：引论"></a>IP编址：引论</h2><ul>
+<li>IP地址：32位标示，对主机或者路由器接口编址</li>
+<li>接口：主机/路由器和物理链路的连接处<ul>
+<li>路由器通常拥有多个接口</li>
+<li>主机也可能有多个接口</li>
+<li>IP地址和每一个接口关联</li>
+</ul>
+</li>
+<li><strong>一个IP地址和一个接口相关联</strong></li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/6189b5392ab3f51d918988ef.png"><br>路由器一般有两个到两个以上的IP地址。</p>
+<p>这些接口是如何连接的？</p>
+<ul>
+<li>有线以太网链接到以太网网络交换机连接</li>
+<li>无线WI-FI接口被WI-FI基站连接<h2 id="子网-subnet"><a href="#子网-subnet" class="headerlink" title="子网 subnet"></a>子网 subnet</h2></li>
+<li>IP地址：<ul>
+<li>子网部分 subnet part - high order bits</li>
+<li>主机部分 host part - low order bits</li>
+<li><strong>在同一子网的IP地址拥有相同的prefix</strong></li>
+</ul>
+</li>
+<li>什么是子网<ul>
+<li>一个子网内的节点（主机或者路由器）他们的IP地址高位部分相同，这些节点构成的网络这一部分叫做子网</li>
+<li><strong>无需路由器介入，子网内的各主机可以在物理上相互直接到达</strong></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/6189b75f2ab3f51d918dc11c.png"><br>将每一个接口从主机或者路由器上分开，构成了一个个网络孤岛，每一个网络孤岛都是一个subnet。</p>
+<h2 id="IP地址分类"><a href="#IP地址分类" class="headerlink" title="IP地址分类"></a>IP地址分类</h2><ul>
+<li>Class A: 126 networks, 16 million hosts 开头0</li>
+<li>Class B: 16382 networks, 64K hosts 开头10</li>
+<li>Class C: 2 million networks, 254 hosts 开头110</li>
+<li>Class D: multicast 开头1110</li>
+<li>Class E: reserved for future</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/6189b94e2ab3f51d9191d6f2.png"></p>
+<h2 id="IP地址-CIDR"><a href="#IP地址-CIDR" class="headerlink" title="IP地址: CIDR"></a>IP地址: CIDR</h2><p><strong>CIDR: Classless Inter Domain Routing</strong> 无类域间路由（按需分配）</p>
+<ul>
+<li>Subnet portion of address of arbitrary length 子网部分可以在任意区域</li>
+<li>Address format: <code>a.b.c.d/x</code>, where x is # bits in subnet portion of address 其中x是地址中子网号的长度<br><img src="https://pic.imgdb.cn/item/6189bcb22ab3f51d91990ce3.png"><br>子网掩码也是32位，假如是网络号部分那就是全是1，假如是主机号部分就都写0，再用点十计算。<br><img src="https://pic.imgdb.cn/item/6189be132ab3f51d919baec4.png"></li>
+</ul>
+<h2 id="如何获得IP地址"><a href="#如何获得IP地址" class="headerlink" title="如何获得IP地址"></a>如何获得IP地址</h2><p>Q:主机如何获得IP地址?</p>
+<ul>
+<li>系统管理员将地址配置到一个文件中：<ul>
+<li>wintel: control - panel -&gt; network -&gt; configuration -&gt; tcp/ip -&gt; properties</li>
+<li>UNIX: /etc/rc.config</li>
+</ul>
+</li>
+<li>DHCP: Dynamic Host Configuration Protocol:从服务器中动态获得一个IP地址<ul>
+<li>“plug and play”</li>
+</ul>
+</li>
+</ul>
+<p>DHCP: Dynamic Host Configuration Protocol<br>Goal: allow host to dynamically obtain its IP address from network server when it joins network</p>
+<ul>
+<li>Can renew its lease on address in use</li>
+<li>Allows reuse of addresses (only hold address while connected/“on”) </li>
+<li>Support for mobile users who want to join network (more shortly)</li>
+</ul>
+<p>DHCP overview:</p>
+<ul>
+<li>host broadcasts “DHCP discover” msg [optional]</li>
+<li>DHCP server responds with “DHCP offer” msg [optional] </li>
+<li>host requests IP address: “DHCP request” msg</li>
+<li>DHCP server sends address: “DHCP ack” msg</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/6189c09d2ab3f51d91a18672.png" alt="DHCP client-server scenario"><br>DHCP can return more than just allocated IP address on subnet:</p>
+<ul>
+<li>Address of first-hop router for client 客户端第一跳路由器地址</li>
+<li>Name and IP address of DNS sever DNS服务器的名称和IP地址</li>
+<li>Network mask (indicating network versus host portion of address) 网络掩码(表示地址的网络与主机部分)</li>
+</ul>
+<p>DHCP: example 看ppt上有图</p>
+<hr>
+<h2 id="路由聚集（route-aggregation）"><a href="#路由聚集（route-aggregation）" class="headerlink" title="路由聚集（route aggregation）"></a>路由聚集（route aggregation）</h2><p>层次编址允许路由信息的有效广播：<br><img src="https://pic.imgdb.cn/item/618a37ab2ab3f51d9166879c.png"><br>找到几个IP地址的相同前缀聚合<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/gui951753/article/details/79420870?ops_request_misc=&request_id=&biz_id=102&utm_term=%E8%B7%AF%E7%94%B1%E8%81%9A%E5%90%88&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-79420870.nonecase&spm=1018.2226.3001.4187">详解超网技术（路由聚合技术）</a><br><img src="https://pic.imgdb.cn/item/618a3cb82ab3f51d916d3f41.png"><br>聚集可以提高寻找表项的速度，减少表项的数量。</p>
+<hr>
+<h2 id="NAT-network-address-translation"><a href="#NAT-network-address-translation" class="headerlink" title="NAT: network address translation"></a>NAT: network address translation</h2><p><img src="https://pic.imgdb.cn/item/618a3d9d2ab3f51d916e92e7.png"><br><strong>网络地址转换</strong><br>所有离开本地网络的数据报具有一个相同的源地址NAT IP address: 138.76.29.7，但是具有不同的端口号。本网发送的数据报源地址是10.0.0.0/24，到达本网节点的目标地址为10.0.0.0/24。<br>动机：本地网络只有一个有效IP地址：</p>
+<ul>
+<li>不需要从ISP分配一块地址，可用一个IP地址用于所有的（局域网）设备 – 省钱</li>
+<li>可以在局域网改变设备的地址情况下而无需通知外界</li>
+<li>可以改变ISP（地址变化）而不需要改变内部的设备地址</li>
+<li>局域网内部设备没有明确的地址，对外是不可见的 – 安全</li>
+</ul>
+<p>16 bit端口字段：</p>
+<ul>
+<li>6万多个同时连接，一个局域网</li>
+</ul>
+<p>对NAT是有争议的</p>
+<ul>
+<li>路由器只应该对第三层做信息处理，而这里对端口号（4层）做了处理</li>
+<li>违背了end-end原则<ul>
+<li>端到端原则：复杂性放到网络边缘<ul>
+<li>无需借助中转和变换，就可以直接传送到目标主机</li>
+</ul>
+</li>
+<li>NAT可能要被一些应用设计者考虑（P2P）</li>
+<li>外网的机器无法连接到内网的机器上</li>
+</ul>
+</li>
+<li>地址短缺问题可以被IPv6解决</li>
+<li>NAT穿越：如果客户端需要连接在NAT后面的服务器，如何操作</li>
+</ul>
+<hr>
+<h2 id="IPv6"><a href="#IPv6" class="headerlink" title="IPv6"></a>IPv6</h2><p>初始动机：32bit的地址空间将会很快用完</p>
+<ul>
+<li>头部格式改变帮助加速处理和转发<ul>
+<li>TTL-1</li>
+<li>头部checksum</li>
+<li>分片</li>
+</ul>
+</li>
+<li>头部格式改变帮助QoS</li>
+</ul>
+<p>IPv6数据报格式：</p>
+<ul>
+<li>固定的40字节头部</li>
+<li>数据报传输过程中，不允许分片</li>
+</ul>
+<p>Priority: 标示数据报的优先级<br>Flow label: 标示数据报在一个“flow”<br>Next header: 标示上层协议<br><img src="https://pic.imgdb.cn/item/618a8c752ab3f51d91953d1c.png"></p>
+<h3 id="和IPv4的其他变化"><a href="#和IPv4的其他变化" class="headerlink" title="和IPv4的其他变化"></a>和IPv4的其他变化</h3><ul>
+<li>Checksum: 被移除掉，降低在每一段中的处理速度</li>
+<li>Options: 允许，但是在头部之外，被”Next Header”字段标示</li>
+<li>ICMPv6: ICMP的新版本<ul>
+<li>附加了报文类型</li>
+<li>多播组管理功能</li>
+</ul>
+</li>
+</ul>
+<h2 id="Transition-from-IPv4-to-IPv6"><a href="#Transition-from-IPv4-to-IPv6" class="headerlink" title="Transition from IPv4 to IPv6"></a>Transition from IPv4 to IPv6</h2><ul>
+<li>Not all routers can be upgraded simultaneously<ul>
+<li>No “flag days”</li>
+<li>How will network operate with mixed IPv4 and IPv6 routers?</li>
+</ul>
+</li>
+<li>Tunneling: IPv6 datagram carried as payload in IPv4 datagram among IPv4 routers<br><img src="https://pic.imgdb.cn/item/618a8fc92ab3f51d9196af42.png"></li>
+</ul>
+<hr>
+<h2 id="Generalized-Forward-and-SDN"><a href="#Generalized-Forward-and-SDN" class="headerlink" title="Generalized Forward and SDN"></a>Generalized Forward and SDN</h2><h3 id="路由的概念"><a href="#路由的概念" class="headerlink" title="路由的概念"></a>路由的概念</h3><ul>
+<li>路由：按照某种指标（传输延迟，所经过的站点数目等）找到一条从源节点到目标节点的较好路径<ul>
+<li>较好路径：按照某种指标较小的路径</li>
+<li>指标：站数，延迟，费用，队列长度等，或者是一些单纯指标的加权平均</li>
+<li>采用什么样的指标，标示网络使用者希望网络在什么方面表现突出，什么指标网络使用者较为重视</li>
+</ul>
+</li>
+<li>路由器-路由器之间的最优路径 = 主机队之间的最优路径<ul>
+<li>路由器连接子网，到路由器之间的跳数就一跳，必须要走</li>
+<li>路由器到下一跳路由器（节点到节点）之间的最优路径找到了</li>
+<li>也就找到了从源子网向目标子网所有主机对之前的最优路径</li>
+<li>大大降低了路由计算的规模</li>
+<li>在路由计算中按照子网到子网的路径计算为目标，而不是主机到主机</li>
+</ul>
+</li>
+<li>路由选择算法（routing algorithm）：网络层软件的一部分，完成路由功能</li>
+</ul>
+<hr>
+<h3 id="路由原则"><a href="#路由原则" class="headerlink" title="路由原则"></a>路由原则</h3><p>路由选择算法的原则：</p>
+<ul>
+<li>稳定性 stability: 产生的路由不应该摇摆</li>
+<li>公平性 fairness: 对每一个站点都公平</li>
+<li>最优性 optimality: 某一个指标的最优，时间上，费用上，等指标，或综合指标：实际上，获得最优的结果代价较高，可能是次优的</li>
+</ul>
+<h3 id="迪杰斯特拉算法"><a href="#迪杰斯特拉算法" class="headerlink" title="迪杰斯特拉算法"></a>迪杰斯特拉算法</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_47733361/article/details/109124294?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163651618516780366535904%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163651618516780366535904&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-109124294.first_rank_v2_pc_rank_v29&utm_term=%E8%BF%AA%E6%9D%B0%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95&spm=1018.2226.3001.4187">迪杰斯特拉算法详解+模版+例题</a></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>CAN201 W8</p><p><a href="http://chenzhengde.github.io/2021/11/08/CAN201-W8/">http://chenzhengde.github.io/2021/11/08/CAN201-W8/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Felix Chen</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-11-08</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-11-10</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a><a class="icons" rel="noopener" target="_blank" title="Share Alike" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="icon fab fa-creative-commons-sa"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/XJTLU/">XJTLU</a><a class="link-muted mr-2" rel="tag" href="/tags/CAN201/">CAN201</a><a class="link-muted mr-2" rel="tag" href="/tags/Lecture/">Lecture</a><a class="link-muted mr-2" rel="tag" href="/tags/Lab/">Lab</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=6113d16f12036d00122e6422&amp;product=inline-share-buttons" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/11/07/CAN201-W6/"><span class="level-item">CAN201 W6</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'http://chenzhengde.github.io/2021/11/08/CAN201-W8/';
+            this.page.identifier = '2021/11/08/CAN201-W8/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'my-hexo-website' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed0e.jpg" alt="Felix Chen"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Felix Chen</p><p class="is-size-6 is-block">shit happens</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>XJTLU, Suzhow</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">31</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">18</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/chenzhengde" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/iam_felixchen/"><i class="fab fa-instagram"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Wechat" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed18.jpg"><i class="fab fa-weixin"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Linkedin" href="https://www.linkedin.com/in/正德-陈-b92b351a6/"><i class="fab fa-linkedin"></i></a></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.learningmall.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">LMO</span></span><span class="level-right"><span class="level-item tag">www.learningmall.cn</span></span></a></li><li><a class="level is-mobile" href="https://www.csdn.net/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">CSDN</span></span><span class="level-right"><span class="level-item tag">www.csdn.net</span></span></a></li><li><a class="level is-mobile" href="https://leetcode.com" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Leetcode</span></span><span class="level-right"><span class="level-item tag">leetcode.com</span></span></a></li><li><a class="level is-mobile" href="http://1iin.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">1iin&#039;s blog</span></span><span class="level-right"><span class="level-item tag">1iin.cn</span></span></a></li><li><a class="level is-mobile" href="https://3sanmusen.top/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">三木森的小屋</span></span><span class="level-right"><span class="level-item tag">3sanmusen.top</span></span></a></li><li><a class="level is-mobile" href="https://segmentfault.com/u/1iin" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">1iin</span></span><span class="level-right"><span class="level-item tag">segmentfault.com</span></span></a></li><li><a class="level is-mobile" href="https://segmentfault.com/u/chenyingxi" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">cyx</span></span><span class="level-right"><span class="level-item tag">segmentfault.com</span></span></a></li><li><a class="level is-mobile" href="https://shaysha-pra.github.io/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">俊樹の勉強ブログ</span></span><span class="level-right"><span class="level-item tag">shaysha-pra.github.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Mood-Essay/"><span class="level-start"><span class="level-item">Mood Essay</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/SURF-note/"><span class="level-start"><span class="level-item">SURF note</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/"><span class="level-start"><span class="level-item">XJTLU note</span></span><span class="level-end"><span class="level-item tag">23</span></span></a><ul><li><a class="level is-mobile" href="/categories/XJTLU-note/CAN201/"><span class="level-start"><span class="level-item">CAN201</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/CPT203/"><span class="level-start"><span class="level-item">CPT203</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/CPT205/"><span class="level-start"><span class="level-item">CPT205</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/INT201/"><span class="level-start"><span class="level-item">INT201</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/blog-note/"><span class="level-start"><span class="level-item">blog note</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/problem-solving/"><span class="level-start"><span class="level-item">problem solving</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Lecture"><span class="level-left"><span class="level-item">1</span><span class="level-item">Lecture</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#IP编址：引论"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">IP编址：引论</span></span></a></li><li><a class="level is-mobile" href="#子网-subnet"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">子网 subnet</span></span></a></li><li><a class="level is-mobile" href="#IP地址分类"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">IP地址分类</span></span></a></li><li><a class="level is-mobile" href="#IP地址-CIDR"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">IP地址: CIDR</span></span></a></li><li><a class="level is-mobile" href="#如何获得IP地址"><span class="level-left"><span class="level-item">1.5</span><span class="level-item">如何获得IP地址</span></span></a></li><li><a class="level is-mobile" href="#路由聚集（route-aggregation）"><span class="level-left"><span class="level-item">1.6</span><span class="level-item">路由聚集（route aggregation）</span></span></a></li><li><a class="level is-mobile" href="#NAT-network-address-translation"><span class="level-left"><span class="level-item">1.7</span><span class="level-item">NAT: network address translation</span></span></a></li><li><a class="level is-mobile" href="#IPv6"><span class="level-left"><span class="level-item">1.8</span><span class="level-item">IPv6</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#和IPv4的其他变化"><span class="level-left"><span class="level-item">1.8.1</span><span class="level-item">和IPv4的其他变化</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Transition-from-IPv4-to-IPv6"><span class="level-left"><span class="level-item">1.9</span><span class="level-item">Transition from IPv4 to IPv6</span></span></a></li><li><a class="level is-mobile" href="#Generalized-Forward-and-SDN"><span class="level-left"><span class="level-item">1.10</span><span class="level-item">Generalized Forward and SDN</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#路由的概念"><span class="level-left"><span class="level-item">1.10.1</span><span class="level-item">路由的概念</span></span></a></li><li><a class="level is-mobile" href="#路由原则"><span class="level-left"><span class="level-item">1.10.2</span><span class="level-item">路由原则</span></span></a></li><li><a class="level is-mobile" href="#迪杰斯特拉算法"><span class="level-left"><span class="level-item">1.10.3</span><span class="level-item">迪杰斯特拉算法</span></span></a></li></ul></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-08T15:01:27.000Z">2021-11-08</time></p><p class="title"><a href="/2021/11/08/CAN201-W8/">CAN201 W8</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CAN201/">CAN201</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-07T08:48:26.000Z">2021-11-07</time></p><p class="title"><a href="/2021/11/07/CAN201-W6/">CAN201 W6</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CAN201/">CAN201</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-25T14:18:59.000Z">2021-10-25</time></p><p class="title"><a href="/2021/10/25/%E6%B7%B1%E5%A4%9C%E9%9A%8F%E7%AC%94%EF%BD%9C%E7%9E%8E%E5%86%99%E7%82%B9%2010.25/">深夜随笔｜瞎写点 10.25</a></p><p class="categories"><a href="/categories/Mood-Essay/">Mood Essay</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-21T14:00:31.000Z">2021-10-21</time></p><p class="title"><a href="/2021/10/21/CPT203-W6/">CPT203 W6</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CPT203/">CPT203</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-18T13:03:03.000Z">2021-10-18</time></p><p class="title"><a href="/2021/10/18/INT201-W5/">INT201 W5</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/INT201/">INT201</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">十一月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CAN201/"><span class="tag">CAN201</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT203/"><span class="tag">CPT203</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT205/"><span class="tag">CPT205</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/INT201/"><span class="tag">INT201</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lab/"><span class="tag">Lab</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lecture/"><span class="tag">Lecture</span><span class="tag">23</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Markdown/"><span class="tag">Markdown</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mood-Essay/"><span class="tag">Mood Essay</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tutorial/"><span class="tag">Tutorial</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/XJTLU/"><span class="tag">XJTLU</span><span class="tag">24</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dart/"><span class="tag">dart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/flutter/"><span class="tag">flutter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/icarus/"><span class="tag">icarus</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/yilia/"><span class="tag">yilia</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%88%AC%E8%99%AB/"><span class="tag">爬虫</span><span class="tag">1</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a><p class="is-size-7"><span>&copy; 2021 Felix Chen</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Github" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/iam_felixchen/"><i class="fab fa-instagram"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Wechat" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed18.jpg"><i class="fab fa-weixin"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
