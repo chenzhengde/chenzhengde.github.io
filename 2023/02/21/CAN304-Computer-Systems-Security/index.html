@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>CAN304 Computer Systems Security - divide÷</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="iam_felix"><meta name="msapplication-TileImage" content="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed05.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="iam_felix"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Email: &amp;amp;#106;&amp;amp;#105;&amp;amp;#x65;&amp;amp;#x2e;&amp;amp;#x7a;&amp;amp;#104;&amp;amp;#x61;&amp;amp;#110;&amp;amp;#103;&amp;amp;#x30;&amp;amp;#x31;&amp;amp;#x40;&amp;amp;#x78;&amp;amp;#106;&amp;amp;#x74;&amp;amp;#x6c;&amp;amp;#x75;&amp;amp;#x2e;&amp;amp;#x65;&amp;amp;#100;&amp;amp;#x75;&amp;amp;#46;&amp;amp;#99;&amp;amp;#x6e;Office hours: 2:00-3:00PM, Tue &amp;amp; Wed EE522"><meta property="og:type" content="blog"><meta property="og:title" content="CAN304 Computer Systems Security"><meta property="og:url" content="http://chenzhengde.github.io/2023/02/21/CAN304-Computer-Systems-Security/"><meta property="og:site_name" content="divide÷"><meta property="og:description" content="Email: &amp;amp;#106;&amp;amp;#105;&amp;amp;#x65;&amp;amp;#x2e;&amp;amp;#x7a;&amp;amp;#104;&amp;amp;#x61;&amp;amp;#110;&amp;amp;#103;&amp;amp;#x30;&amp;amp;#x31;&amp;amp;#x40;&amp;amp;#x78;&amp;amp;#106;&amp;amp;#x74;&amp;amp;#x6c;&amp;amp;#x75;&amp;amp;#x2e;&amp;amp;#x65;&amp;amp;#100;&amp;amp;#x75;&amp;amp;#46;&amp;amp;#99;&amp;amp;#x6e;Office hours: 2:00-3:00PM, Tue &amp;amp; Wed EE522"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://chenzhengde.github.io/img/og_image.png"><meta property="article:published_time" content="2023-02-21T07:25:16.000Z"><meta property="article:modified_time" content="2023-02-22T10:09:24.505Z"><meta property="article:author" content="Felix Chen"><meta property="article:tag" content="XJTLU"><meta property="article:tag" content="Lecture"><meta property="article:tag" content="Lab"><meta property="article:tag" content="CAN304"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://chenzhengde.github.io/2023/02/21/CAN304-Computer-Systems-Security/"},"headline":"CAN304 Computer Systems Security","image":["http://chenzhengde.github.io/img/og_image.png"],"datePublished":"2023-02-21T07:25:16.000Z","dateModified":"2023-02-22T10:09:24.505Z","author":{"@type":"Person","name":"Felix Chen"},"publisher":{"@type":"Organization","name":"divide÷","logo":{"@type":"ImageObject","url":"https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png"}},"description":"Email: &amp;#106;&amp;#105;&amp;#x65;&amp;#x2e;&amp;#x7a;&amp;#104;&amp;#x61;&amp;#110;&amp;#103;&amp;#x30;&amp;#x31;&amp;#x40;&amp;#x78;&amp;#106;&amp;#x74;&amp;#x6c;&amp;#x75;&amp;#x2e;&amp;#x65;&amp;#100;&amp;#x75;&amp;#46;&amp;#99;&amp;#x6e;Office hours: 2:00-3:00PM, Tue &amp; Wed EE522"}</script><link rel="canonical" href="http://chenzhengde.github.io/2023/02/21/CAN304-Computer-Systems-Security/"><link rel="icon" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed05.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-90LF5XQCXG" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-90LF5XQCXG');</script><!--!--><!--!--><!--!--><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-02-21T07:25:16.000Z" title="2023/2/21 下午3:25:16">2023-02-21</time>发表</span><span class="level-item"><time dateTime="2023-02-22T10:09:24.505Z" title="2023/2/22 下午6:09:24">2023-02-22</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/XJTLU-note/">XJTLU note</a><span> / </span><a class="link-muted" href="/categories/XJTLU-note/CAN304/">CAN304</a></span><span class="level-item">15 分钟读完 (大约2183个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">CAN304 Computer Systems Security</h1><div class="content"><p>Email: <a href="mailto:&#106;&#105;&#x65;&#x2e;&#x7a;&#104;&#x61;&#110;&#103;&#x30;&#x31;&#x40;&#x78;&#106;&#x74;&#x6c;&#x75;&#x2e;&#x65;&#100;&#x75;&#46;&#99;&#x6e;">&#106;&#105;&#x65;&#x2e;&#x7a;&#104;&#x61;&#110;&#103;&#x30;&#x31;&#x40;&#x78;&#106;&#x74;&#x6c;&#x75;&#x2e;&#x65;&#100;&#x75;&#46;&#99;&#x6e;</a><br>Office hours: 2:00-3:00PM, Tue &amp; Wed EE522</p>
+<span id="more"></span>
+<hr>
+<h1 id="Lecture-1-Introduction"><a href="#Lecture-1-Introduction" class="headerlink" title="Lecture 1. Introduction"></a>Lecture 1. Introduction</h1><h2 id="Computer-security-concepts"><a href="#Computer-security-concepts" class="headerlink" title="Computer security concepts"></a>Computer security concepts</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><p>The protection afforded to an automated information system in order to attain the applicable objectives of preserving the <strong>integrity</strong>, <strong>availability</strong>, and <strong>confidentiality</strong> of <strong>information system resources</strong> (includes hardware, software, firmware, information/data, and telecommunications).<br>为实现<strong>信息系统资源</strong>的<strong>完整性</strong>、<strong>可用性</strong>和<strong>机密性</strong>(包括硬件、软件、固件、信息/数据和电信)的适用目标而对自动化信息系统提供的保护。</p>
+<h3 id="CIA-3-key-objectives"><a href="#CIA-3-key-objectives" class="headerlink" title="CIA (3 key objectives)"></a>CIA (3 key objectives)</h3><ul>
+<li>Confidentiality 保留对信息获取和披露的授权限制，包括保护个人隐私和专有信息的手段。</li>
+<li>Integrity 集成度 防止不适当的信息修改或破坏，包括确保信息的不可抵赖性和真实性。</li>
+<li>Availabilitiy 确实及时可靠的获取和使用信息</li>
+</ul>
+<p>Other objectives</p>
+<ul>
+<li><p>Authenticity</p>
+</li>
+<li><p>Accountability</p>
+<ul>
+<li>Ensuring actions of an entity to be traced uniquely to that entity.</li>
+<li>Support nonrepudiation, deterrence, intrusion detection and prevention, etc.<h3 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h3>Computer security deals with computer-related <strong>assets</strong> that are subject to a variety of threats and for which various measures are taken to protect those assets.<br>要保护什么？</li>
+</ul>
+</li>
+<li><p>System Resource</p>
+<ul>
+<li>Hardware</li>
+<li>Software</li>
+<li>Data</li>
+<li>Communication facilities and networks</li>
+</ul>
+</li>
+<li><p>Security Policy</p>
+<ul>
+<li>A set of rules and practices that specify or regulate how a system or organization provides security services to protect sensitive and critical system resources. 一组规则和实践，指定或规范系统或组织如何提供安全服务来保护敏感和关键的系统资源。</li>
+</ul>
+</li>
+<li><p>Vulnerability</p>
+<ul>
+<li>A flaw or weakness in a system’s design, implementation, or operation and management that could be exploited to violate the system’s security policy. 系统设计、实现或操作和管理中的缺陷或弱点，可以被利用来违反系统的安全策略。</li>
+</ul>
+</li>
+<li><p>Exploit</p>
+<ul>
+<li>An actual incident of taking advantage of a vulnerability. 利用漏洞的实际事件。</li>
+<li>Term also refers to the code or methodology used to take advantage of a vulnerability. 术语也指用于利用漏洞的代码或方法。</li>
+</ul>
+</li>
+<li><p>Threat</p>
+<ul>
+<li>A potential for violation of security, which exists when there is a circumstance, capability, action, or event, that could breach security and cause harm. 违反安全的潜在可能性，当存在可能违反安全并造成危害的环境、能力、动作或事件时，就存在这种可能性。</li>
+</ul>
+</li>
+<li><p>Vulnerability vs threat</p>
+<ul>
+<li>Vulnerabilities are not introduced to a system; rather they are there from the beginning.</li>
+<li>Threats are introduced to a system like a virus download or a social engineering attack.</li>
+<li>That is, a threat is a possible danger that might exploit a vulnerability.</li>
+</ul>
+</li>
+<li><p>Attack</p>
+<ul>
+<li>A threat that is carried out and, if successful, leads to an undersirable violation of security, or threat consequence</li>
+</ul>
+</li>
+<li><p>Attacker</p>
+<ul>
+<li>The agent carrying out the attack.</li>
+</ul>
+</li>
+<li><p>Types of attack:</p>
+<ul>
+<li>Active attack: An attempt to alter system resources or affect their operation. 试图改变系统资源或影响其运行。</li>
+<li>Passive attack: An attempt to learn or make use of information from the system that does not affect system resources. 试图从系统中学习或使用信息，但不影响系统资源。</li>
+<li>Inside attack: Initiated by an entity inside the security perimeter (an “insider”). The insider is authorized to access system resources but uses them in a way not approved by those who granted the authorization. 由安全边界内的实体发起(“内部人员”)。局内人被授权访问系统资源，但使用这些资源的方式没有被授予权限的人批准。</li>
+<li>Outside attack: Initiated from outside the perimeter, by an unauthorized or illegitimate user of the system (an “outsider”). 由系统的未经授权或非法用户(“局外人”)从外围发起。</li>
+</ul>
+</li>
+<li><p>Countermeasure 对策</p>
+<ul>
+<li>An action, device, procedure, or technique that reduces a threat, a vulnerability, or an attack by eliminating or preventing it, by minimizing the harm it can cause, or by discovering and reporting it so that corrective action can be taken. 一种动作、装置、程序或技术，通过消除或预防威胁、漏洞或攻击，将其可能造成的伤害降至最低，或通过发现并报告威胁、漏洞或攻击，从而采取纠正措施。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="More-on-threats-attacks-and-assets"><a href="#More-on-threats-attacks-and-assets" class="headerlink" title="More on threats, attacks, and assets"></a>More on threats, attacks, and assets</h2><h3 id="4-threat-consequences"><a href="#4-threat-consequences" class="headerlink" title="4 threat consequences"></a>4 threat consequences</h3><ul>
+<li>Unauthorized disclosure 未经授权的披露</li>
+<li>Deception 欺骗</li>
+<li>Disruption 破坏</li>
+<li>Usurpation 篡夺</li>
+</ul>
+<h3 id="Unauthorized-disclosure"><a href="#Unauthorized-disclosure" class="headerlink" title="Unauthorized disclosure"></a>Unauthorized disclosure</h3><p>A circumstance or event whereby an entity gains acess to data for which the entity is not authorized. 一个实体获得未授权的数据访问权的情况或事件。<br>什么攻击可以引起unauthorized disclosure？</p>
+<ul>
+<li>Exposure: Sensitive data are directly released to an unauthorized entity. 将敏感数据直接暴露给未授权的实体。</li>
+<li>Interception: An unauthorized entity directly accesses sensitive data traveling between authorized sources and denstinations. 未经授权的实体直接访问在授权源和站点之间传输的敏感数据。</li>
+<li>Inference: An unauthorized entity indirectly accesses sensitive data by reasoning from characteristics or by-products of communications. 未经授权的实体通过推理通信的特性或副产品间接访问敏感数据。</li>
+<li>Intrusion: An unauthorized entity gains access to sensitive data by circumventing a system’s security protections. 未经授权的实体绕过系统的安全保护，获取敏感数据。</li>
+</ul>
+<h3 id="Deception"><a href="#Deception" class="headerlink" title="Deception"></a>Deception</h3><p>A circumstance or event that may result in an authorized entity receiving false data and believing it to be true. 可能导致授权实体收到虚假数据并认为其为真实的情况或事件。<br>什么攻击可以引起deception？</p>
+<ul>
+<li>Masquerade 伪装 未经授权的实体通过伪装成授权实体获得对系统的访问权限或执行恶意行为。</li>
+<li>Falsification 篡改 虚假数据欺骗授权实体。</li>
+<li>Repudiation 否认 一个实体通过错误地否认某一行为的责任来欺骗另一个实体。</li>
+</ul>
+<h3 id="Disruption"><a href="#Disruption" class="headerlink" title="Disruption"></a>Disruption</h3><p>A circumstance or event that interrupts or prevents the correct operation of system services and functions. 中断或阻止系统服务和功能正常运行的情况或事件。<br>什么攻击可以引起disruption？</p>
+<ul>
+<li>Incapacitation: Prevents or interrupts system operation by <strong>disabling</strong> a system component. 失能:通过使能系统组件，阻止或中断系统运行。</li>
+<li>Corruption: Undesirably alters system operation by adversely <strong>modifying</strong> system functions or data. 损坏:通过对系统功能或数据的不良修改，对系统运行造成不良影响。</li>
+<li>Obstruction: A threat action that interrupts delivery of system services by <strong>hindering</strong> system operation. 阻碍:指通过阻碍系统运行而中断系统业务的威胁行为。</li>
+</ul>
+<h3 id="Usurpation"><a href="#Usurpation" class="headerlink" title="Usurpation"></a>Usurpation</h3><p>A circumstance or event that results in control of system services or functions by an unauthorized entity. 由未经授权的实体控制系统服务或功能的情况或事件。<br>什么攻击可以引起usurpation？</p>
+<ul>
+<li>Misappropriation: An entity assumes unauthorized logical or physical control of a system resource. 挪用:一个实体对系统资源进行未经授权的逻辑或物理控制。</li>
+<li>Misuse: Causes a system component to perform a function or service that is detrimental to system security. 误用:导致系统组件执行不利于系统安全的功能或服务。</li>
+</ul>
+<h3 id="Threats-to-assets"><a href="#Threats-to-assets" class="headerlink" title="Threats to assets"></a>Threats to assets</h3><ul>
+<li>Hardware<ul>
+<li>Major threat: availability</li>
+<li>Confidentiality</li>
+</ul>
+</li>
+<li>Software<ul>
+<li>Major threat: availability</li>
+<li>Confidentiality, integrity</li>
+</ul>
+</li>
+<li>Data<ul>
+<li>A much more widespread problem is data security</li>
+<li>Availability, confidentiality, integrity</li>
+</ul>
+</li>
+<li>Communication lines and networks: network security</li>
+<li>network security attacks<ul>
+<li>Passive attacks: are in the nature of eavesdropping on, or monitoring of, transmissions (Release of message contents/Traffic analysis) <em>are very difficult to detect because they do not involve any alteration of the data.</em></li>
+<li>Active attacks: involve some modification of tha data stream of the creation of a false stream (replay/masquerade/modification of messages/denial of service)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Countermeasures"><a href="#Countermeasures" class="headerlink" title="Countermeasures"></a>Countermeasures</h2><h3 id="Economy-of-mechanism"><a href="#Economy-of-mechanism" class="headerlink" title="Economy of mechanism"></a>Economy of mechanism</h3><p>The design of security measures should be economical to develop, use and verify.</p>
+<h3 id="Fail-safe-designs"><a href="#Fail-safe-designs" class="headerlink" title="Fail-safe designs"></a>Fail-safe designs</h3><ul>
+<li>Access decisions should be based on permission rather than exclusion</li>
+<li>Default to lack of access</li>
+<li>So if something goes wrong or is forgotten or isn’t done, no security lost.<h3 id="Complete-mediation"><a href="#Complete-mediation" class="headerlink" title="Complete mediation"></a>Complete mediation</h3>Apply security on every access to a protected object. Every access must be checked against the access control mechanism.<h3 id="Open-design"><a href="#Open-design" class="headerlink" title="Open design"></a>Open design</h3>the design of a security mechanism should be open rather than secret.<br>Kerckhoffs principle: A cryptographic system should be secure even if everything about the system, except the key, is public knowledge.<h3 id="Separation-of-privileges"><a href="#Separation-of-privileges" class="headerlink" title="Separation of privileges"></a>Separation of privileges</h3>Provide mechanisms that separate the privileges used for one purpose from those used for another. 提供将用于一个目的的特权与用于另一个目的的特权分开的机制。<h3 id="Least-privilege"><a href="#Least-privilege" class="headerlink" title="Least privilege"></a>Least privilege</h3></li>
+<li>Every process and every user of the system should operate using the least set of privileges necessary to perform the task 系统的每个进程和每个用户都应该使用执行任务所需的最小权限集进行操作</li>
+<li>Require another request to perform another type of access 要求另一个请求来执行另一种类型的访问<h3 id="Least-common-mechanism"><a href="#Least-common-mechanism" class="headerlink" title="Least common mechanism"></a>Least common mechanism</h3>The design should minimize the functions shared by different users, providing mutual security. Coupling leads to possible security breaches.<h3 id="Psychological-acceptability"><a href="#Psychological-acceptability" class="headerlink" title="Psychological acceptability"></a>Psychological acceptability</h3></li>
+<li>Mechanism must be simple to use 机制必须简单易用</li>
+<li>Simple enough that people will use it without thinking about it </li>
+<li>Must rarely or never prevent permissible accesses 必须很少或从不阻止允许的访问</li>
+</ul>
+<h2 id="Computer-security-strategy"><a href="#Computer-security-strategy" class="headerlink" title="Computer security strategy"></a>Computer security strategy</h2><p>A comprehensive security strategy involves three aspects: 复杂的安全策略有三个部分</p>
+<ul>
+<li>Specification/policy</li>
+<li>Implementation/mechanisms<ol>
+<li>prevention</li>
+<li>detection</li>
+<li>response</li>
+<li>recovery</li>
+</ol>
+</li>
+<li>Correctness/assurance</li>
+</ul>
+<h2 id="Assurance-amp-evaluation"><a href="#Assurance-amp-evaluation" class="headerlink" title="Assurance &amp; evaluation"></a>Assurance &amp; evaluation</h2><p>Assurance is expressed as a degree of confidence, not in terms of a formal proof that a design or implementation is correct. 保证被表达为一种信心的程度，而不是一个设计或实现是正确的正式证明。<br>Evaluation is the process of examining a computer product or system with respect to certain criteria. Evaluation involves testing and may also involve formal analytic or mathematical techniques. 评估是根据一定的标准对计算机产品或系统进行检查的过程。评估包括测试，也可能涉及形式分析或数学技术。</p>
+<h2 id="Tools-for-security"><a href="#Tools-for-security" class="headerlink" title="Tools for security"></a>Tools for security</h2><ul>
+<li>Cryptographic tools: Encryption, message authentication code, digital signature, etc.</li>
+<li>Access control: Only let authorized parties access the system</li>
+<li>User authentication</li>
+<li>Intrusion detection/prevention, firewall (IDS: intrusion detection system) (IPS: intrusion prevention system)</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>CAN304 Computer Systems Security</p><p><a href="http://chenzhengde.github.io/2023/02/21/CAN304-Computer-Systems-Security/">http://chenzhengde.github.io/2023/02/21/CAN304-Computer-Systems-Security/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Felix Chen</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-02-21</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2023-02-22</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a><a class="icons" rel="noopener" target="_blank" title="Share Alike" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="icon fab fa-creative-commons-sa"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/XJTLU/">XJTLU</a><a class="link-muted mr-2" rel="tag" href="/tags/Lecture/">Lecture</a><a class="link-muted mr-2" rel="tag" href="/tags/Lab/">Lab</a><a class="link-muted mr-2" rel="tag" href="/tags/CAN304/">CAN304</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=6113d16f12036d00122e6422&amp;product=inline-share-buttons" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/04/04/CPT204-lecture-note/"><span class="level-item">CPT204 lecture note</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'http://chenzhengde.github.io/2023/02/21/CAN304-Computer-Systems-Security/';
+            this.page.identifier = '2023/02/21/CAN304-Computer-Systems-Security/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'my-hexo-website' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed0e.jpg" alt="Felix Chen"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Felix Chen</p><p class="is-size-6 is-block">shit happens</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>XJTLU, Suzhow</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">41</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">24</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/chenzhengde" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/iam_felixchen/"><i class="fab fa-instagram"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Wechat" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed18.jpg"><i class="fab fa-weixin"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Linkedin" href="https://www.linkedin.com/in/正德-陈-b92b351a6/"><i class="fab fa-linkedin"></i></a></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.learningmall.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">LMO</span></span><span class="level-right"><span class="level-item tag">www.learningmall.cn</span></span></a></li><li><a class="level is-mobile" href="https://www.csdn.net/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">CSDN</span></span><span class="level-right"><span class="level-item tag">www.csdn.net</span></span></a></li><li><a class="level is-mobile" href="https://leetcode.com" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Leetcode</span></span><span class="level-right"><span class="level-item tag">leetcode.com</span></span></a></li><li><a class="level is-mobile" href="http://1iin.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">1iin&#039;s blog</span></span><span class="level-right"><span class="level-item tag">1iin.cn</span></span></a></li><li><a class="level is-mobile" href="https://3sanmusen.top/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">三木森的小屋</span></span><span class="level-right"><span class="level-item tag">3sanmusen.top</span></span></a></li><li><a class="level is-mobile" href="https://segmentfault.com/u/1iin" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">1iin</span></span><span class="level-right"><span class="level-item tag">segmentfault.com</span></span></a></li><li><a class="level is-mobile" href="https://segmentfault.com/u/chenyingxi" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">cyx</span></span><span class="level-right"><span class="level-item tag">segmentfault.com</span></span></a></li><li><a class="level is-mobile" href="https://shaysha-pra.github.io/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">俊樹の勉強ブログ</span></span><span class="level-right"><span class="level-item tag">shaysha-pra.github.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Mood-Essay/"><span class="level-start"><span class="level-item">Mood Essay</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/SURF-note/"><span class="level-start"><span class="level-item">SURF note</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/"><span class="level-start"><span class="level-item">XJTLU note</span></span><span class="level-end"><span class="level-item tag">27</span></span></a><ul><li><a class="level is-mobile" href="/categories/XJTLU-note/CAN201/"><span class="level-start"><span class="level-item">CAN201</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/CAN304/"><span class="level-start"><span class="level-item">CAN304</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/CPT203/"><span class="level-start"><span class="level-item">CPT203</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/CPT205/"><span class="level-start"><span class="level-item">CPT205</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/XJTLU-note/INT201/"><span class="level-start"><span class="level-item">INT201</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/blog-note/"><span class="level-start"><span class="level-item">blog note</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/problem-solving/"><span class="level-start"><span class="level-item">problem solving</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Lecture-1-Introduction"><span class="level-left"><span class="level-item">1</span><span class="level-item">Lecture 1. Introduction</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Computer-security-concepts"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">Computer security concepts</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Definition"><span class="level-left"><span class="level-item">1.1.1</span><span class="level-item">Definition</span></span></a></li><li><a class="level is-mobile" href="#CIA-3-key-objectives"><span class="level-left"><span class="level-item">1.1.2</span><span class="level-item">CIA (3 key objectives)</span></span></a></li><li><a class="level is-mobile" href="#术语"><span class="level-left"><span class="level-item">1.1.3</span><span class="level-item">术语</span></span></a></li></ul></li><li><a class="level is-mobile" href="#More-on-threats-attacks-and-assets"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">More on threats, attacks, and assets</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#4-threat-consequences"><span class="level-left"><span class="level-item">1.2.1</span><span class="level-item">4 threat consequences</span></span></a></li><li><a class="level is-mobile" href="#Unauthorized-disclosure"><span class="level-left"><span class="level-item">1.2.2</span><span class="level-item">Unauthorized disclosure</span></span></a></li><li><a class="level is-mobile" href="#Deception"><span class="level-left"><span class="level-item">1.2.3</span><span class="level-item">Deception</span></span></a></li><li><a class="level is-mobile" href="#Disruption"><span class="level-left"><span class="level-item">1.2.4</span><span class="level-item">Disruption</span></span></a></li><li><a class="level is-mobile" href="#Usurpation"><span class="level-left"><span class="level-item">1.2.5</span><span class="level-item">Usurpation</span></span></a></li><li><a class="level is-mobile" href="#Threats-to-assets"><span class="level-left"><span class="level-item">1.2.6</span><span class="level-item">Threats to assets</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Countermeasures"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">Countermeasures</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Economy-of-mechanism"><span class="level-left"><span class="level-item">1.3.1</span><span class="level-item">Economy of mechanism</span></span></a></li><li><a class="level is-mobile" href="#Fail-safe-designs"><span class="level-left"><span class="level-item">1.3.2</span><span class="level-item">Fail-safe designs</span></span></a></li><li><a class="level is-mobile" href="#Complete-mediation"><span class="level-left"><span class="level-item">1.3.3</span><span class="level-item">Complete mediation</span></span></a></li><li><a class="level is-mobile" href="#Open-design"><span class="level-left"><span class="level-item">1.3.4</span><span class="level-item">Open design</span></span></a></li><li><a class="level is-mobile" href="#Separation-of-privileges"><span class="level-left"><span class="level-item">1.3.5</span><span class="level-item">Separation of privileges</span></span></a></li><li><a class="level is-mobile" href="#Least-privilege"><span class="level-left"><span class="level-item">1.3.6</span><span class="level-item">Least privilege</span></span></a></li><li><a class="level is-mobile" href="#Least-common-mechanism"><span class="level-left"><span class="level-item">1.3.7</span><span class="level-item">Least common mechanism</span></span></a></li><li><a class="level is-mobile" href="#Psychological-acceptability"><span class="level-left"><span class="level-item">1.3.8</span><span class="level-item">Psychological acceptability</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Computer-security-strategy"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">Computer security strategy</span></span></a></li><li><a class="level is-mobile" href="#Assurance-amp-evaluation"><span class="level-left"><span class="level-item">1.5</span><span class="level-item">Assurance &amp; evaluation</span></span></a></li><li><a class="level is-mobile" href="#Tools-for-security"><span class="level-left"><span class="level-item">1.6</span><span class="level-item">Tools for security</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-02-21T07:25:16.000Z">2023-02-21</time></p><p class="title"><a href="/2023/02/21/CAN304-Computer-Systems-Security/">CAN304 Computer Systems Security</a></p><p class="categories"><a href="/categories/XJTLU-note/">XJTLU note</a> / <a href="/categories/XJTLU-note/CAN304/">CAN304</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-04T07:01:49.000Z">2022-04-04</time></p><p class="title"><a href="/2022/04/04/CPT204-lecture-note/">CPT204 lecture note</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-02-07T09:01:55.000Z">2022-02-07</time></p><p class="title"><a href="/2022/02/07/CPT208-Design-Life-Cycle/">CPT208 Design Life Cycle</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-19T13:35:37.000Z">2022-01-19</time></p><p class="title"><a href="/2022/01/19/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-part2/">吴恩达机器学习 Part2</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-19T12:13:20.000Z">2022-01-19</time></p><p class="title"><a href="/2022/01/19/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Part1/">吴恩达机器学习 Part1</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/02/"><span class="level-start"><span class="level-item">二月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/02/"><span class="level-start"><span class="level-item">二月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">一月 2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">十一月 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CAN201/"><span class="tag">CAN201</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CAN304/"><span class="tag">CAN304</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT203/"><span class="tag">CPT203</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT204/"><span class="tag">CPT204</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT205/"><span class="tag">CPT205</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CPT208/"><span class="tag">CPT208</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CS224n/"><span class="tag">CS224n</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/INT201/"><span class="tag">INT201</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lab/"><span class="tag">Lab</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lecture/"><span class="tag">Lecture</span><span class="tag">28</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Markdown/"><span class="tag">Markdown</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mood-Essay/"><span class="tag">Mood Essay</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NLP/"><span class="tag">NLP</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tutorial/"><span class="tag">Tutorial</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/XJTLU/"><span class="tag">XJTLU</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dart/"><span class="tag">dart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/flutter/"><span class="tag">flutter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/icarus/"><span class="tag">icarus</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machine-learning/"><span class="tag">machine learning</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/yilia/"><span class="tag">yilia</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%88%AC%E8%99%AB/"><span class="tag">爬虫</span><span class="tag">1</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a><p class="is-size-7"><span>&copy; 2023 Felix Chen</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Github" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/iam_felixchen/"><i class="fab fa-instagram"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Wechat" href="https://pic.imgdb.cn/item/610fc12a5132923bf8b6ed18.jpg"><i class="fab fa-weixin"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
