@@ -3,7 +3,7 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
     
-        gtag('config', 'G-90LF5XQCXG');</script><!--!--><!--!--><!--!--><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-10-01T15:44:35.000Z" title="2023/10/1 下午11:44:35">2023-10-01</time>发表</span><span class="level-item"><time dateTime="2023-10-01T17:04:26.544Z" title="2023/10/2 上午1:04:26">2023-10-02</time>更新</span><span class="level-item">5 分钟读完 (大约731个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/10/01/Duke-ECE550K/">Duke ECE550K</a></h1><div class="content"><h1 id="Lec1-Introduction"><a href="#Lec1-Introduction" class="headerlink" title="Lec1 Introduction"></a>Lec1 Introduction</h1><p>Processors are made of <strong>transistors</strong></p>
+        gtag('config', 'G-90LF5XQCXG');</script><!--!--><!--!--><!--!--><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://pic.imgdb.cn/item/611280695132923bf8d6f94f.png" alt="divide÷" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/chenzhengde"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-10-01T15:44:35.000Z" title="2023/10/1 下午11:44:35">2023-10-01</time>发表</span><span class="level-item"><time dateTime="2023-10-02T07:59:04.934Z" title="2023/10/2 下午3:59:04">2023-10-02</time>更新</span><span class="level-item">13 分钟读完 (大约1905个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/10/01/Duke-ECE550K/">Duke ECE550K</a></h1><div class="content"><h1 id="Lec1-Introduction"><a href="#Lec1-Introduction" class="headerlink" title="Lec1 Introduction"></a>Lec1 Introduction</h1><p>Processors are made of <strong>transistors</strong></p>
 <p><strong>Levels of Abstraction</strong></p>
 <ul>
 <li>Transistors: “electrical switch”</li>
@@ -65,6 +65,7 @@
 </ul>
 <p>所以可以想象电流在电线中是不断向前流动的，只有完全的流过了这个电路，output和各个管线的结果才是我们想象的结果。</p>
 <p><em><strong>CMOS可以构成not gate</strong></em></p>
+<p>这就是一个小小的abstraction，只有interface是有逻辑的，内部实现是transistor实现的</p>
 <hr>
 <h3 id="build-a-gate"><a href="#build-a-gate" class="headerlink" title="build a gate"></a>build a gate</h3><p>build a 2-input NOR gate</p>
 <ul>
@@ -81,6 +82,11 @@
 </li>
 </ul>
 <p><strong>NOTE:</strong> 这两个方程逻辑相等通过<strong>DeMorgan’s Laws</strong>(看纸质笔记或者hw计算) </p>
+<ul>
+<li>bar(A*B) = barA + barB</li>
+<li>bar(A+B) = barA * barB</li>
+</ul>
+<p><strong>两个gates相乘就是串联，相加就是并联</strong></p>
 <p><img src="https://pic.imgdb.cn/item/6519a46cc458853aefc80ddb.png" alt="NOR gate"></p>
 <p>在设计此类图的时候PMOS一定是在output的上沿，NMOS在output下沿。</p>
 <hr>
@@ -98,10 +104,119 @@
 <li>底部有两条的是XOR</li>
 <li>带圈圈的是基础班加NOT</li>
 </ul>
+<p><strong>XOR gate 可以用来表示二进制加法</strong></p>
 <p><img src="https://pic.imgdb.cn/item/6519a672c458853aefc85e79.png" alt="记忆方法"></p>
+<p>可以使用buffer to increase speed</p>
 <hr>
-<h1 id="Lec3"><a href="#Lec3" class="headerlink" title="Lec3"></a>Lec3</h1></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-09-30T14:16:45.000Z" title="2023/9/30 下午10:16:45">2023-09-30</time>发表</span><span class="level-item"><time dateTime="2023-10-01T15:43:31.930Z" title="2023/10/1 下午11:43:31">2023-10-01</time>更新</span><span class="level-item">15 分钟读完 (大约2195个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/09/30/Duke-ECE551K/">Duke ECE551K</a></h1><div class="content"><p>Sept. 30th 2023,从今天开始好好记笔记。<br>开学一个多月，我的评价是快乐不会消失只会转移，一点也乐不出来力。<br>All of Programming</p></div><a class="article-more button is-small is-size-7" href="/2023/09/30/Duke-ECE551K/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-21T04:00:00.000Z" title="2023/7/21 下午12:00:00">2023-07-21</time>发表</span><span class="level-item"><time dateTime="2023-09-30T14:25:46.779Z" title="2023/9/30 下午10:25:46">2023-09-30</time>更新</span><span class="level-item">几秒读完 (大约20个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/07/21/Farewell-XJTLU/">Farewell XJTLU</a></h1><div class="content"><h1 id="Ciao"><a href="#Ciao" class="headerlink" title="Ciao!"></a>Ciao!</h1><p>感谢四年朋友的陪伴<br><img src="https://pic.imgdb.cn/item/65182f3fc458853aef691ef9.jpg"></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-02-22T12:02:40.000Z" title="2023/2/22 下午8:02:40">2023-02-22</time>发表</span><span class="level-item"><time dateTime="2023-03-24T10:18:46.540Z" title="2023/3/24 下午6:18:46">2023-03-24</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/XJTLU-note/">XJTLU note</a><span> / </span><a class="link-muted" href="/categories/XJTLU-note/CAN302/">CAN302</a></span><span class="level-item">20 分钟读完 (大约2958个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/02/22/CAN302-Technologies-for-E-Commerce/">CAN302 Technologies for E-Commerce</a></h1><div class="content"><p>臭狗lzx看这👇<br><img src="https://pic.imgdb.cn/item/624ec937239250f7c511aa66.jpg"><br>Email : <a href="mailto:&#x50;&#105;&#110;&#103;&#x2e;&#x5a;&#x68;&#x61;&#110;&#103;&#x40;&#120;&#106;&#x74;&#x6c;&#x75;&#x2e;&#101;&#x64;&#x75;&#x2e;&#99;&#110;">&#x50;&#105;&#110;&#103;&#x2e;&#x5a;&#x68;&#x61;&#110;&#103;&#x40;&#120;&#106;&#x74;&#x6c;&#x75;&#x2e;&#101;&#x64;&#x75;&#x2e;&#99;&#110;</a><br>Office : EE222</p></div><a class="article-more button is-small is-size-7" href="/2023/02/22/CAN302-Technologies-for-E-Commerce/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-02-21T07:25:16.000Z" title="2023/2/21 下午3:25:16">2023-02-21</time>发表</span><span class="level-item"><time dateTime="2023-03-03T14:23:26.143Z" title="2023/3/3 下午10:23:26">2023-03-03</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/XJTLU-note/">XJTLU note</a><span> / </span><a class="link-muted" href="/categories/XJTLU-note/CAN304/">CAN304</a></span><span class="level-item">17 分钟读完 (大约2510个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/02/21/CAN304-Computer-Systems-Security/">CAN304 Computer Systems Security</a></h1><div class="content"><p>Email: <a href="mailto:&#x6a;&#x69;&#101;&#x2e;&#122;&#x68;&#x61;&#110;&#x67;&#48;&#49;&#x40;&#120;&#x6a;&#x74;&#108;&#117;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#110;">&#x6a;&#x69;&#101;&#x2e;&#122;&#x68;&#x61;&#110;&#x67;&#48;&#49;&#x40;&#120;&#x6a;&#x74;&#108;&#117;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#110;</a><br>Office hours: 2:00-3:00PM, Tue &amp; Wed EE522</p></div><a class="article-more button is-small is-size-7" href="/2023/02/21/CAN304-Computer-Systems-Security/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-04T07:01:49.000Z" title="2022/4/4 下午3:01:49">2022-04-04</time>发表</span><span class="level-item"><time dateTime="2023-03-21T14:17:33.114Z" title="2023/3/21 下午10:17:33">2023-03-21</time>更新</span><span class="level-item">18 分钟读完 (大约2637个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/04/CPT204-lecture-note/">CPT204 lecture note</a></h1><div class="content"><p>lecture的简单笔记记录</p></div><a class="article-more button is-small is-size-7" href="/2022/04/04/CPT204-lecture-note/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-07T09:01:55.000Z" title="2022/2/7 下午5:01:55">2022-02-07</time>发表</span><span class="level-item"><time dateTime="2022-02-17T08:05:21.430Z" title="2022/2/17 下午4:05:21">2022-02-17</time>更新</span><span class="level-item">2 分钟读完 (大约318个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/07/CPT208-Design-Life-Cycle/">CPT208 Design Life Cycle</a></h1><div class="content"><p>Human-Centric Computing</p>
+<h1 id="Lec3-Combinational-Logic"><a href="#Lec3-Combinational-Logic" class="headerlink" title="Lec3 Combinational Logic"></a>Lec3 Combinational Logic</h1><p>three inputs NOR gate<br><img src="https://pic.imgdb.cn/item/651a38b9c458853aeff261df.png" alt="NOR gate and truth table"></p>
+<p><img src="https://pic.imgdb.cn/item/651a3adcc458853aeff316c9.png" alt="diagram of NOR gate"></p>
+<hr>
+<p>在处理多个gate的时候，complementary nature非常重要。</p>
+<p>假如不注意的话就会出现短路的情况（Vcc和Gnd直接连接），烧毁电路板。</p>
+<p>PMOS的方程，应该等于CMOS的方程，例如：<br><img src="https://pic.imgdb.cn/item/651a3be8c458853aeff3a5f3.png"><br>PMOS: ((NotA) or (NotB)) and (NotC)</p>
+<p>NMOS: Not(C or (A and B)) = (NotC) and (Not(A and B)) = (Not C) and ((Not A) or (Not B))</p>
+<p>所以可以得出，正确的情况下，uppull和downpull的两个方程应该是相等的</p>
+<hr>
+<p>所以And gate 是怎么实现的呢：NAND gate后面跟着一个Not gate即可。</p>
+<ul>
+<li>Not(Nand(a, b))</li>
+<li>Nor(NotA, NotB)</li>
+</ul>
+<hr>
+<p><em><strong>Circuits</strong> are made from a network of gates.</em></p>
+<hr>
+<p>不要把两个input直接连在一起，会短路</p>
+<hr>
+<h2 id="Mux"><a href="#Mux" class="headerlink" title="Mux"></a>Mux</h2><p>是一个选择器，input会有正常的input和一个selector，mux通过selector去选择input中的一部分output出来。</p>
+<hr>
+<p>How to make a mux</p>
+<ol>
+<li>Pick between 2 inputs (2to1Mux)</li>
+<li>Make a truth table (S = 0 pick A, S = 1 pick B)<br><img src="https://pic.imgdb.cn/item/651a4370c458853aeff6da4e.png"></li>
+<li>Sum of product to get formula</li>
+<li>Find the rows where the output is 1<br>(!A &amp; B &amp; S) | (A &amp; !B &amp; !S) | (A &amp; B &amp; !S) | (A &amp; B &amp; S)</li>
+<li>Simplifying this formula: (A &amp; !S) | (B &amp; S)</li>
+</ol>
+<p>通过简化过的formula构成2to1的Mux：<br><img src="https://pic.imgdb.cn/item/651a45f7c458853aeff81dda.png" alt="2to1mux"></p>
+<p>通过这个可以进行进一步的组合，2to1Mux变成4to1变成8to1变成16to1变成32to1（通过不断增加selector的bits数量）</p>
+<hr>
+<p><strong>DeMorgan’s Laws</strong><br><img src="https://pic.imgdb.cn/item/651a478dc458853aeff8535f.png" alt="DeMorgan&#39;s Laws"></p>
+<hr>
+<h1 id="Lec4-Number-Representations"><a href="#Lec4-Number-Representations" class="headerlink" title="Lec4 Number Representations"></a>Lec4 Number Representations</h1><p>二进制没啥可说的</p>
+<p>二进制转化为16进制（0x开头），可以把二进制四位四位分开，每一位分别计算，作为16进制的一位。<br><img src="https://pic.imgdb.cn/item/651a4a76c458853aeff9956b.png" alt="二进制十进制16进制转化表"></p>
+<hr>
+<p>需要负数怎么办？</p>
+<p>开头第一位出来，0就是正数，1就是负数</p>
+<p><strong>如何把一个正数变成负数？正数取反+1</strong></p>
+<h2 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a>overflow</h2><p>但是出现了一个问题<br><img src="https://pic.imgdb.cn/item/651a4ecbc458853aeffb2ee3.png"><br>两个positive numbers相加得到一个negative number，这是不对的</p>
+<p>原因是发生了<strong>overflow</strong>！溢出了！</p>
+<p>什么情况是发生了overflow？</p>
+<ul>
+<li><strong>Signed addition: CI != CO of last bit 最后一位的cin和cout不同</strong></li>
+<li>Unsigned addition: CO != 0 of the last bit</li>
+</ul>
+<p>detect in hardware</p>
+<ul>
+<li>signed: XOR CI and CO of last bit</li>
+<li>unsigned: CO of last bit</li>
+</ul>
+<hr>
+<p>减法怎么做？</p>
+<ul>
+<li>A - B = A + ~B + 1</li>
+<li>A-B就是A+B的取反然后cin变成1</li>
+</ul>
+<hr>
+<h2 id="one-hot"><a href="#one-hot" class="headerlink" title="one-hot"></a>one-hot</h2><p>独热编码，懂得都懂</p>
+<hr>
+<h2 id="decoder-amp-encoder"><a href="#decoder-amp-encoder" class="headerlink" title="decoder &amp; encoder"></a>decoder &amp; encoder</h2><p><img src="https://pic.imgdb.cn/item/651a666bc458853aef012c14.png" alt="4 to 2 encoder"><br><img src="https://pic.imgdb.cn/item/651a66bfc458853aef014027.png" alt="2 to 4 decoder"></p>
+<p><strong>Delays</strong></p>
+<ul>
+<li>开关不是instant的。</li>
+<li>gate越多，延迟也就越多。</li>
+<li>wire也有延迟。</li>
+<li>Fan-out: how many gates the output drives<ul>
+<li>related to capacitance</li>
+<li>high fan-out = slow</li>
+<li>sometimes better to replicate logic to reduce its fan-out</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Lec5-Digital-Arithmetic"><a href="#Lec5-Digital-Arithmetic" class="headerlink" title="Lec5 Digital Arithmetic"></a>Lec5 Digital Arithmetic</h1><h2 id="1bit-adder"><a href="#1bit-adder" class="headerlink" title="1bit adder"></a>1bit adder</h2><p><img src="https://pic.imgdb.cn/item/651a6cf2c458853aef02ba4d.png" alt="1bit full adder"><br>一位全加器</p>
+<h2 id="RCA"><a href="#RCA" class="headerlink" title="RCA"></a>RCA</h2><p><strong>ripple carry adder</strong><br><img src="https://pic.imgdb.cn/item/651a700dc458853aef031a9b.png" alt="rca"><br><strong>每一个adder都有两个unit的delay</strong>（因为从input到output需要穿过两个gate），所以rca的delay是很大的，需要一个一个adder的过，N个adder的delay就会是2N。</p>
+<hr>
+<h2 id="CSA"><a href="#CSA" class="headerlink" title="CSA"></a>CSA</h2><p><strong>carry select adder</strong><br><img src="https://pic.imgdb.cn/item/651a7245c458853aef036516.png" alt="32bits CSA"><br>CSA的优点就是可以同时进行不同位数的计算，只需要根据低位的cout选择高位的计算结果拼接上去就可以得出正确结果。</p>
+<p>但这个的问题是用空间换时间，他的delay是会比RCA小，但是所需空间会比RCA大。</p>
+<p>这个的delay取决于一个CSA模块所需要的delay和mux的delay之和（一般来说一个mux的delay约等于2 units）。</p>
+<hr>
+<h2 id="ALU"><a href="#ALU" class="headerlink" title="ALU"></a>ALU</h2><p><strong>Arithmetic Logic Unit</strong></p>
+<ul>
+<li>left shift (&lt;&lt;&gt;&gt;)<ul>
+<li>Moves left, bringing in 0s at right, excess bits “fall off”</li>
+<li>10010001 &lt;&lt; 2 = 01000100</li>
+<li>x &lt;&lt; k corresponds to x*2^k</li>
+<li>想象一下用手把数字往左侧推，然后在右侧的空格里补0</li>
+</ul>
+</li>
+<li>logical (or unsigned) right shift (&gt;&gt;)<ul>
+<li>Moves bits right, bringing in 0s at left, excess bits “fall off” 无脑补0</li>
+<li>10010001 &gt;&gt; 3 = 00010010</li>
+<li>x &gt;&gt;k corresponds to x / 2^k for unsigned x</li>
+</ul>
+</li>
+<li>arithmetic (or signed) right shift (&gt;&gt;)<ul>
+<li>Moves bits right, brining in (sign bit) at left 根据最高位的数字补对应的数字</li>
+<li>10010001 &gt;&gt; 3= 11110010</li>
+<li>x &gt;&gt;k corresponds to x / 2k for signed x</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Floating-point-example"><a href="#Floating-point-example" class="headerlink" title="Floating point example"></a>Floating point example</h2><p>看ppt，IEEE754</p>
+<hr>
+<h1 id="Lec6"><a href="#Lec6" class="headerlink" title="Lec6"></a>Lec6</h1></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-09-30T14:16:45.000Z" title="2023/9/30 下午10:16:45">2023-09-30</time>发表</span><span class="level-item"><time dateTime="2023-10-01T15:43:31.930Z" title="2023/10/1 下午11:43:31">2023-10-01</time>更新</span><span class="level-item">15 分钟读完 (大约2195个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/09/30/Duke-ECE551K/">Duke ECE551K</a></h1><div class="content"><p>Sept. 30th 2023,从今天开始好好记笔记。<br>开学一个多月，我的评价是快乐不会消失只会转移，一点也乐不出来力。<br>All of Programming</p></div><a class="article-more button is-small is-size-7" href="/2023/09/30/Duke-ECE551K/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-21T04:00:00.000Z" title="2023/7/21 下午12:00:00">2023-07-21</time>发表</span><span class="level-item"><time dateTime="2023-09-30T14:25:46.779Z" title="2023/9/30 下午10:25:46">2023-09-30</time>更新</span><span class="level-item">几秒读完 (大约20个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/07/21/Farewell-XJTLU/">Farewell XJTLU</a></h1><div class="content"><h1 id="Ciao"><a href="#Ciao" class="headerlink" title="Ciao!"></a>Ciao!</h1><p>感谢四年朋友的陪伴<br><img src="https://pic.imgdb.cn/item/65182f3fc458853aef691ef9.jpg"></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-02-22T12:02:40.000Z" title="2023/2/22 下午8:02:40">2023-02-22</time>发表</span><span class="level-item"><time dateTime="2023-03-24T10:18:46.540Z" title="2023/3/24 下午6:18:46">2023-03-24</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/XJTLU-note/">XJTLU note</a><span> / </span><a class="link-muted" href="/categories/XJTLU-note/CAN302/">CAN302</a></span><span class="level-item">20 分钟读完 (大约2958个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/02/22/CAN302-Technologies-for-E-Commerce/">CAN302 Technologies for E-Commerce</a></h1><div class="content"><p>臭狗lzx看这👇<br><img src="https://pic.imgdb.cn/item/624ec937239250f7c511aa66.jpg"><br>Email : <a href="mailto:&#80;&#x69;&#x6e;&#x67;&#x2e;&#x5a;&#104;&#x61;&#x6e;&#103;&#x40;&#x78;&#106;&#116;&#x6c;&#x75;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;">&#80;&#x69;&#x6e;&#x67;&#x2e;&#x5a;&#104;&#x61;&#x6e;&#103;&#x40;&#x78;&#106;&#116;&#x6c;&#x75;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;</a><br>Office : EE222</p></div><a class="article-more button is-small is-size-7" href="/2023/02/22/CAN302-Technologies-for-E-Commerce/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-02-21T07:25:16.000Z" title="2023/2/21 下午3:25:16">2023-02-21</time>发表</span><span class="level-item"><time dateTime="2023-03-03T14:23:26.143Z" title="2023/3/3 下午10:23:26">2023-03-03</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/XJTLU-note/">XJTLU note</a><span> / </span><a class="link-muted" href="/categories/XJTLU-note/CAN304/">CAN304</a></span><span class="level-item">17 分钟读完 (大约2510个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/02/21/CAN304-Computer-Systems-Security/">CAN304 Computer Systems Security</a></h1><div class="content"><p>Email: <a href="mailto:&#x6a;&#x69;&#x65;&#46;&#122;&#x68;&#97;&#x6e;&#x67;&#48;&#x31;&#x40;&#120;&#x6a;&#116;&#x6c;&#117;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#110;">&#x6a;&#x69;&#x65;&#46;&#122;&#x68;&#97;&#x6e;&#x67;&#48;&#x31;&#x40;&#120;&#x6a;&#116;&#x6c;&#117;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#110;</a><br>Office hours: 2:00-3:00PM, Tue &amp; Wed EE522</p></div><a class="article-more button is-small is-size-7" href="/2023/02/21/CAN304-Computer-Systems-Security/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-04T07:01:49.000Z" title="2022/4/4 下午3:01:49">2022-04-04</time>发表</span><span class="level-item"><time dateTime="2023-03-21T14:17:33.114Z" title="2023/3/21 下午10:17:33">2023-03-21</time>更新</span><span class="level-item">18 分钟读完 (大约2637个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/04/CPT204-lecture-note/">CPT204 lecture note</a></h1><div class="content"><p>lecture的简单笔记记录</p></div><a class="article-more button is-small is-size-7" href="/2022/04/04/CPT204-lecture-note/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-07T09:01:55.000Z" title="2022/2/7 下午5:01:55">2022-02-07</time>发表</span><span class="level-item"><time dateTime="2022-02-17T08:05:21.430Z" title="2022/2/17 下午4:05:21">2022-02-17</time>更新</span><span class="level-item">2 分钟读完 (大约318个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/07/CPT208-Design-Life-Cycle/">CPT208 Design Life Cycle</a></h1><div class="content"><p>Human-Centric Computing</p>
 <p>The Design Life Cycle<br>It’s a interface/interaction design - an iterative process:<br>design –&gt; implementation –&gt; evaluation –&gt; design</p>
 <ul>
 <li>not always start with design<ul>
